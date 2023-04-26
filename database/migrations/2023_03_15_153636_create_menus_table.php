@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('slug')->nullable();
             $table->string('icono')->nullable();
-            $table->foreignId('padre_id')->nullable()->constrained('menus')
-                    ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('padre_id')->nullable()->constrained('menus')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedInteger('orden');
             $table->timestamps();
         });

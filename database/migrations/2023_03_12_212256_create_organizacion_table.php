@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('email');
             $table->string('telefono');
+            $table->string('telefono2');
+            $table->string('url_web');
             $table->text('quienes_somos');
             $table->text('vision');
             $table->text('mision');
