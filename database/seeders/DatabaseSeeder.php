@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([NavSeeder::class, OrganizacionSeeder::class]);
+        $this->call([NavSeeder::class, OrganizacionSeeder::class, RedesSocialesSeeder::class, SliderSeeder::class,
+    EntradaSeeder::class, SeccionesPrincipalSeeder::class]);
 
     }
 }

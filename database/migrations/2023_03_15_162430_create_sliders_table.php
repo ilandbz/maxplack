@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('titulo')->nullable();
             $table->string('subtitulo')->nullable();
-            $table->string('link')->nullable();
+            $table->string('nombrebutton1', 20)->nullable();
+            $table->string('nombrebutton2', 20)->nullable();
+            $table->string('link1')->nullable();//en el caso que podrian tener talves dos botones basado en la plantilla
+            $table->string('link2')->nullable();
             $table->string('nombreImagen');
+            $table->string('es_activo', 1)->default(1);
             $table->timestamps();
         });
     }

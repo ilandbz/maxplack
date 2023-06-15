@@ -27,6 +27,8 @@ return new class extends Migration
             $table->text('quienes_somos');
             $table->text('vision');
             $table->text('mision');
+            $table->string('logo')->default('logo.png');
+            $table->string('icono')->default('favicon.png');;
             $table->timestamps();
         });
     }

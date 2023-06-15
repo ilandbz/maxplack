@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('entradas', function (Blueprint $table) {
             $table->id();
             $table->string('slug')->unique();
+            $table->string('ruta')->unique();
             $table->string('titulo');
             $table->text('contenido');
             $table->timestamps();

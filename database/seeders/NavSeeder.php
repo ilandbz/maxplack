@@ -13,333 +13,297 @@ class NavSeeder extends Seeder
      */
     public function run(): void
     {
-        Nav::firstOrCreate(['nombre' => 'Home','slug' => '','icono' => '','padre_id' => null,'orden' => 1]);
+        Nav::firstOrCreate(['nombre' => 'Home', 'url' => '/', 'ruta' => 'home','slug' => '/','icono' => '','padre_id' => null,'orden' => 1]);
+
+        Nav::firstOrCreate(['nombre' => 'Nosotros', 'url' => '/nosotros', 'ruta' => 'nosotros','slug' => 'nosotros','icono' => '','padre_id' => null,'orden' => 2 ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Quienes Somos',
+                'url'   => '/quienessomos',
+                'ruta'   => 'nosotros.quienessomos',
+                'slug' => 'quienes-somos',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
+                'orden' => 1,
+            ]);
+
+            Nav::firstOrCreate(['nombre' => 'Unete', 'url' => '/unete', 'ruta' => 'unete','slug' => 'unete','icono' => '','padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),'orden' => 2]);
+
+                Nav::firstOrCreate([
+                    'nombre' => 'CAS',
+                    'url'   => '/unete/cas',
+                    'ruta'   => 'cas',
+                    'slug' => 'nosotros-unete-cas',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
+                    'orden' => 1,
+                ]);
+
+                Nav::firstOrCreate([
+                    'nombre' => '276',
+                    'url'   => '/nosotros/unete/276',
+                    'ruta'   => 'nosotros.unete.276',
+                    'slug' => 'nosotros-unete-276',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
+                    'orden' => 2,
+                ]);
+
+                Nav::firstOrCreate([
+                    'nombre' => 'Practicantes',
+                    'url'   => '/nosotros/unete/Practicantes',
+                    'ruta'   => 'nosotros.unete.practicantes',
+                    'slug' => 'nosotros-unete-practicantes',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
+                    'orden' => 3,
+                ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Mision y Vision',
+                'url'   => '/nosotros/misionvision',
+                'ruta'   => 'nosotros.misionvision',
+                'slug' => 'nosotros-mision-vision',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
+                'orden' => 3,
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Valores',
+                'url'   => '/nosotros/valores',
+                'ruta'   => 'nosotros.valores',
+                'slug' => 'nosotros-valores',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
+                'orden' => 4,
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Directorio',
+                'url'   => '/nosotros/directorio',
+                'ruta'   => 'nosotros.directorio',
+                'slug' => 'nosotros-directorio',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
+                'orden' => 5,
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Organigrama',
+                'url'   => '/nosotros/organigrama',
+                'ruta'   => 'nosotros.organigrama',
+                'slug' => 'nosotros-organigrama',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
+                'orden' => 6,
+            ]);
+
+        Nav::firstOrCreate(['nombre' => 'Municipalidad', 'url' => '/municipalidad', 'ruta' => 'municipalidad','slug' => 'municipalidad','icono' => '','padre_id' => null,'orden' => 4]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Alcalde',
+                'url'   => '/municipalidad/alcalde',
+                'ruta'   => 'municipalidad.alcalde',
+                'slug' => 'municipalidad-alcalde',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Municipalidad')->value('id'),
+                'orden' => 1
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Consejo Munipal',
+                'url'   => '/municipalidad/consejomunicipal',
+                'ruta'   => 'municipalidad.consejomunicipal',
+                'slug' => 'municipalidad-consejomunicipal',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Municipalidad')->value('id'),
+                'orden' => 2
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Areas',
+                'url'   => '/municipalidad/areas',
+                'ruta'   => 'municipalidad.areas',
+                'slug' => 'municipalidad-areas',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Municipalidad')->value('id'),
+                'orden' => 3
+            ]);
+
+
+            Nav::firstOrCreate([
+                'nombre' => 'Servicios',
+                'url'   => '/municipalidad/servicios',
+                'ruta'   => 'municipalidad.servicios',
+                'slug' => 'municipalidad-servicios',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Municipalidad')->value('id'),
+                'orden' => 3,
+            ]);
+    
+                Nav::firstOrCreate([
+                    'nombre' => 'Tramite Administrativo',
+                    'url'   => '/municipalidad/servicios/tramiteadministrativo',
+                    'ruta'   => 'municipalidad.servicios.tramiteadministrativo',
+                    'slug' => 'municipalidad-servicios-tramiteadministrativo',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Servicios')->value('id'),
+                    'orden' => 1,
+                ]);
+    
+                Nav::firstOrCreate([
+                    'nombre' => 'Licencias',
+                    'url'   => '/municipalidad/servicios/licencias',
+                    'ruta'   => 'municipalidad.servicios.licencias',
+                    'slug' => 'municipalidad-servicios-licencias',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Servicios')->value('id'),
+                    'orden' => 2,
+                ]);
+    
+                Nav::firstOrCreate([
+                    'nombre' => 'Servicio de Transporte',
+                    'url'   => '/municipalidad/servicios/transporte',
+                    'ruta'   => 'municipalidad.servicios.transporte',
+                    'slug' => 'municipalidad-servicios-transporte',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Servicios')->value('id'),
+                    'orden' => 3,
+                ]);
+            
+                Nav::firstOrCreate([
+                    'nombre' => 'Servicio Social',
+                    'url'   => '/municipalidad/servicios/social',
+                    'ruta'   => 'municipalidad.servicios.social',
+                    'slug' => 'municipalidad-servicios-social',
+                    'icono' => '',
+                    'padre_id' => Nav::where('nombre', 'Servicios')->value('id'),
+                    'orden' => 4,
+                ]);
+
+        Nav::firstOrCreate(['nombre' => 'Participación Ciudadana', 'url' => '/participacion/ciudadana', 'ruta' => 'participacion.ciudadana','slug' => 'participacion-ciudadana','icono' => '','padre_id' => null,'orden' => 5]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Audiencias Públicas',
+                'url'   => '/participacionciudadana/audienciapublica',
+                'ruta'   => 'participacionciudadana.audienciapublica',
+                'slug' => 'participacionciudadana-audienciapublica',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Participación Ciudadana')->value('id'),
+                'orden' => 1
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Consultas Ciudadanas',
+                'url'   => '/participacionciudadana/consultaciudadana',
+                'ruta'   => 'participacionciudadana.consultaciudadana',
+                'slug' => 'participacionciudadana-consultaciudadana',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Participación Ciudadana')->value('id'),
+                'orden' => 2
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Voluntariado',
+                'url'   => '/participacionciudadana/voluntariado',
+                'ruta'   => 'participacionciudadana.voluntariado',
+                'slug' => 'participacionciudadana-voluntariado',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Participación Ciudadana')->value('id'),
+                'orden' => 3
+            ]);
+
         Nav::firstOrCreate([
-            'nombre' => 'Home 01',
-            'slug' => '/',
+            'nombre' => 'Noticias y Eventos',
+            'url'   => 'noticiaseventos',
+            'ruta'   => 'noticiaseventos',
+            'slug' => 'noticias-eventos',
             'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Home')->value('id'),
-            'orden' => 1
-        ]);
-        Nav::firstOrCreate([
-            'nombre' => 'Home 02',
-            'slug' => 'index-2.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Home')->value('id'),
-            'orden' => 2
-        ]);
-        Nav::firstOrCreate([
-            'nombre' => 'Home 03',
-            'slug' => 'index-3.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Home')->value('id'),
-            'orden' => 3
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses',
-            'slug' => '#',
-            'icono' => '',
-            'padre_id' => null,
-            'orden' => 2,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses Grid',
-            'slug' => '#',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 1,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses 01',
-            'slug' => 'our-courses.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses Grid')->value('id'),
-            'orden' => 1,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses 02',
-            'slug' => 'our-courses-2.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses Grid')->value('id'),
-            'orden' => 2,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses 03',
-            'slug' => 'our-courses-3.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses Grid')->value('id'),
-            'orden' => 3,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses Left Sidebar',
-            'slug' => 'our-courses-left-sidebar.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses Grid')->value('id'),
-            'orden' => 4,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses Right Sidebar',
-            'slug' => 'our-courses-right-sidebar.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses Grid')->value('id'),
-            'orden' => 5,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses',
-            'slug' => '#',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 2,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses List',
-            'slug' => 'our-courses-list.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 1,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses List Left Sidebar',
-            'slug' => 'our-courses-list-left-sidebar.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 2,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses List Right Sidebar',
-            'slug' => 'our-courses-list-right-sidebar.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 3,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Courses Details',
-            'slug' => 'courses-details.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Courses')->value('id'),
-            'orden' => 3,
-        ]);
-
-        //events
-        Nav::firstOrCreate([
-            'nombre' => 'Events',
-            'slug' => '',
-            'icono' => '',
-            'padre_id' => null,
-            'orden' => 3,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Event 01',
-            'slug' => 'event.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Events')->value('id'),
-            'orden' => 1,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Event 02',
-            'slug' => 'event-2.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Events')->value('id'),
-            'orden' => 2,
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Event Details',
-            'slug' => 'event-details.html',
-            'icono' => '',
-            'padre_id' => Nav::where('nombre', 'Events')->value('id'),
-            'orden' => 3,
-        ]);
-        //Pages
-        Nav::firstOrCreate([
-            'nombre' => 'Pages',
-            'slug' => '#',
-            'icono' => '',
-            'padre_id' => null,
-            'orden' => 4,
-        ]);
-        $parentMenu = Nav::where('nombre', 'Pages')->first();
-
-        // Creamos los submenús
-        Nav::firstOrCreate([
-            'nombre' => 'About',
-            'slug' => 'about-us.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 1
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Teachers',
-            'slug' => 'teachers.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 2
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Teachers Details',
-            'slug' => 'teacher-details.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 3
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Gallery',
-            'slug' => 'gallery.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 4
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Gallery Masonry',
-            'slug' => 'gallery-masonry.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 5
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Testimonial',
-            'slug' => 'testimonial.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 6
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'FAQ\'S',
-            'slug' => 'faq.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 7
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Notice',
-            'slug' => 'notice.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 8
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Login',
-            'slug' => 'login.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 9
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Register',
-            'slug' => 'register.html',
-            'icono' => '',
-            'padre_id' => $parentMenu->id,
-            'orden' => 10
-        ]);
-        //shop
-        Nav::firstOrCreate([
-            'nombre' => 'Shop',
-            'slug' => 'shop',
-            'icono' => null,
-            'padre_id' => null,
-            'orden' => 1
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Shop',
-            'slug' => 'shop',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Shop')->value('id'),
-            'orden' => 2
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Shop Left Sidebar',
-            'slug' => 'shop-left-sidebar',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Shop')->value('id'),
-            'orden' => 3
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Shop Right Sidebar',
-            'slug' => 'shop-right-sidebar',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Shop')->value('id'),
-            'orden' => 4
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Shop Details',
-            'slug' => 'shop-details',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Shop')->value('id'),
-            'orden' => 5
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Blog',
-            'slug' => 'blog',
-            'icono' => null,
             'padre_id' => null,
             'orden' => 6
         ]);
-        //blog
+
+            Nav::firstOrCreate([
+                'nombre' => 'Noticias',
+                'url'   => '/noticiaseventos/noticias',
+                'ruta'   => 'noticiaseventos.noticias',
+                'slug' => 'noticiaseventos-noticias',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'orden' => 1
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Comunicados',
+                'url'   => '/noticiaseventos/comunicados',
+                'ruta'   => 'noticiaseventos.comunicados',
+                'slug' => 'noticiaseventos-comunicados',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'orden' => 2
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Galeria',
+                'url'   => '/noticiaseventos/galeria',
+                'ruta'   => 'noticiaseventos.galeria',
+                'slug' => 'noticiaseventos-galeria',
+                'icono' => '',
+                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'orden' => 3
+            ]);
+
         Nav::firstOrCreate([
-            'nombre' => 'Blog',
-            'slug' => 'blog',
+            'nombre' => 'Documentos Oficiales',
+            'url'   => 'documentosoficiales',
+            'ruta'   => 'documentosoficiales',
+            'slug' => 'documentos-oficiales',
             'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Blog')->value('id'),
+            'padre_id' => null,
             'orden' => 7
         ]);
 
+            Nav::firstOrCreate([
+                'nombre' => 'Resolucion',
+                'url'   => '/documentosoficiales/resolucion',
+                'ruta'   => 'documentosoficiales.resolucion',
+                'slug' => 'documentosoficiales-resolucion',
+                'icono' => null,
+                'padre_id' => Nav::where('nombre', 'Documentos Oficiales')->value('id'),
+                'orden' => 1
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Directiva',
+                'url'   => '/documentosoficiales/directiva',
+                'ruta'   => 'documentosoficiales.directiva',
+                'slug' => 'documentosoficiales-directiva',
+                'icono' => null,
+                'padre_id' => Nav::where('nombre', 'Documentos Oficiales')->value('id'),
+                'orden' => 2
+            ]);
+
+            Nav::firstOrCreate([
+                'nombre' => 'Oficio',
+                'url'   => '/documentosoficiales/oficio',
+                'ruta'   => 'documentosoficiales.oficio',
+                'slug' => 'documentosoficiales-oficio',
+                'icono' => null,
+                'padre_id' => Nav::where('nombre', 'Documentos Oficiales')->value('id'),
+                'orden' => 3
+            ]);
+
+
         Nav::firstOrCreate([
-            'nombre' => 'Blog Left Sidebar',
-            'slug' => 'blog-left-sidebar',
+            'nombre' => 'Contactenos',
+            'url'   => '/Contactenos',
+            'ruta'   => 'contactenos',
+            'slug' => 'contactenos',
             'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Blog')->value('id'),
+            'padre_id' => null,
             'orden' => 8
         ]);
 
-        Nav::firstOrCreate([
-            'nombre' => 'Blog Right Sidebar',
-            'slug' => 'blog-right-sidebar',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Blog')->value('id'),
-            'orden' => 9
-        ]);
-
-        Nav::firstOrCreate([
-            'nombre' => 'Blog Details',
-            'slug' => 'blog-details',
-            'icono' => null,
-            'padre_id' => Nav::where('nombre', 'Blog')->value('id'),
-            'orden' => 10
-        ]);
-        Nav::firstOrCreate([
-            'nombre' => 'Contact',
-            'slug' => 'contact',
-            'icono' => 'far fa-envelope',
-            'padre_id' => null,
-            'orden' => 11
-        ]);
     }
 }

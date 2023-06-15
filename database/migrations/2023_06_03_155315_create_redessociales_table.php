@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('secciones_principals', function (Blueprint $table) {
+        Schema::create('redessociales', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('contenido');
-            $table->tinyInteger('es_activo')->default(1);
+            $table->string('titulo', 60);
+            $table->string('url');
+            $table->string('icono');
+            $table->string('colorfondo', 7);
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('secciones_principals');
+        Schema::dropIfExists('redessociales');
     }
 };

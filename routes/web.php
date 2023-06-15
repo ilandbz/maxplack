@@ -25,7 +25,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/intranet', IntranetController::class)->name('intranet');
+// Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
 
+
+
+
+Route::get('/prueba', [HomeController::class,'prueba'])->name('prueba');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -33,3 +38,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/routesEntradas.php';
