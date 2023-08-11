@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('titulo');
             $table->text('contenido');
             $table->tinyInteger('es_activo')->default(1);
+            $table->integer('orden');
             $table->timestamps();
         });
     }

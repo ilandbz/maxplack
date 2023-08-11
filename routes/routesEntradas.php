@@ -1,5 +1,4 @@
 <?php
-
 use App\Models\Entrada;
 use App\Models\Nav;
 use App\Models\Organizacion;

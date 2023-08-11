@@ -8,7 +8,7 @@
                         <div class="footer-link mt-45">
                             <h4 class="footer-title">Informacion Destacada</h4>
                             <ul class="link-list">
-                                <li><a href="about-us.html">Nosotros</a></li>
+                                <li><a href="quienes-somos">Quienes Somos</a></li>
                                 <li><a href="#">Mesa de Partes</a></li>
                                 <li><a href="#">Convocatorias</a></li>
                                 <li><a href="#">Buson de Sugerencias</a></li>
@@ -21,7 +21,7 @@
                             <h4 class="footer-title">Redes Sociales</h4>
                             <ul class="link-list">
                                 @foreach ($redessociales as $red)
-                                    <li><a href="{{$red['url']}}"><i class="{{$red->icono}}"></i> {{$red->titulo}}</a></li>
+                                    <li><a target="_blank" href="{{$red['url']}}"><i class="{{$red->icono}}"></i> {{$red->titulo}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -30,7 +30,13 @@
                         <div class="footer-link mt-45">
                             <h4 class="footer-title">Libro de Reclamaciones</h4>
                             <a href="">
-                                <img src="{{asset('storage/imagenes/libroreclamo.jpg');}}" alt="">
+                                <img src="{{asset('storage/imagenes/reclamaciones.jpg');}}" alt="">
+                            </a>
+                        </div>
+                        <div class="footer-link mt-45">
+                            <h4 class="footer-title">PORTAL WEB</h4>
+                            <a href="https://www.gob.pe/muniambo" target="_blank">
+                                <img src="{{asset('storage/imagenes/portalweb.jpeg');}}" alt="">
                             </a>
                         </div>
                     </div>

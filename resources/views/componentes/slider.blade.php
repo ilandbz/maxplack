@@ -4,7 +4,7 @@
         <div class="single-slider d-flex align-items-center bg_cover" style="background-image: url({{asset('storage/slider/'.$slider->nombreImagen);}});">
             <div class="container">
                 <div class="slider-content">
-                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">{{$slider->titulo}}</h2>
+                    <h2 class="title text-black" data-animation="fadeInLeft" data-delay="0.2s">{{$slider->titulo}}</h2>
                     <p style="color: white">{{$slider->subtitulo}}</p>
                     <ul class="slider-btn">
                         @if($slider->nombrebutton1)

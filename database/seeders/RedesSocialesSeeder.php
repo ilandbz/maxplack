@@ -15,13 +15,13 @@ class RedesSocialesSeeder extends Seeder
     {
         RedSocial::firstOrCreate([
             'titulo' => 'Facebook',
-            'url' => '#',
+            'url' => 'https://www.facebook.com/muniambo.pe',
             'icono' => 'fab fa-facebook',
             'colorfondo' => '#3b5998'
         ]);
         RedSocial::firstOrCreate([
             'titulo' => 'Youtube',
-            'url' => '#',
+            'url' => 'https://www.youtube.com/@municipalidadprovincialdeambo',
             'icono' => 'fab fa-youtube',
             'colorfondo' => '#ff0000'
         ]);

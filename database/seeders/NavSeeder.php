@@ -13,9 +13,44 @@ class NavSeeder extends Seeder
      */
     public function run(): void
     {
-        Nav::firstOrCreate(['nombre' => 'Home', 'url' => '/', 'ruta' => 'home','slug' => '/','icono' => '','padre_id' => null,'orden' => 1]);
+        Nav::firstOrCreate(['nombre' => 'Inicio', 'url' => '/', 'ruta' => 'home','slug' => '/','icono' => '','padre_id' => null,'orden' => 1]);
 
-        Nav::firstOrCreate(['nombre' => 'Nosotros', 'url' => '/nosotros', 'ruta' => 'nosotros','slug' => 'nosotros','icono' => '','padre_id' => null,'orden' => 2 ]);
+
+        Nav::firstOrCreate(['nombre' => 'Ambo', 'url' => '/', 'ruta' => 'ambo','slug' => 'ambo','icono' => '','padre_id' => null,'orden' => 2]);
+
+        Nav::firstOrCreate([
+            'nombre' => 'Historia',
+            'url'   => '/historia',
+            'ruta'   => 'ambo.historia',
+            'slug' => 'ambo-historia',
+            'icono' => '',
+            'padre_id' => Nav::where('nombre', 'Ambo')->value('id'),
+            'orden' => 1,
+        ]);
+
+
+        Nav::firstOrCreate([
+            'nombre' => 'Turismo',
+            'url'   => '/turismo',
+            'ruta'   => 'ambo.turismo',
+            'slug' => 'ambo-turismo',
+            'icono' => '',
+            'padre_id' => Nav::where('nombre', 'Ambo')->value('id'),
+            'orden' => 3,
+        ]);
+
+        Nav::firstOrCreate([
+            'nombre' => 'Informacion Demografica',
+            'url'   => '/informacion-demografica',
+            'ruta'   => 'ambo.informacion.demografica',
+            'slug' => 'informacion-demografica',
+            'icono' => '',
+            'padre_id' => Nav::where('nombre', 'Ambo')->value('id'),
+            'orden' => 3,
+        ]);
+        Nav::firstOrCreate(['nombre' => 'Nosotros', 'url' => '/nosotros', 'ruta' => 'nosotros','slug' => 'nosotros','icono' => '','padre_id' => null,'orden' => 3 ]);
+
+
 
             Nav::firstOrCreate([
                 'nombre' => 'Quienes Somos',
@@ -27,43 +62,12 @@ class NavSeeder extends Seeder
                 'orden' => 1,
             ]);
 
-            Nav::firstOrCreate(['nombre' => 'Unete', 'url' => '/unete', 'ruta' => 'unete','slug' => 'unete','icono' => '','padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),'orden' => 2]);
-
-                Nav::firstOrCreate([
-                    'nombre' => 'CAS',
-                    'url'   => '/unete/cas',
-                    'ruta'   => 'cas',
-                    'slug' => 'nosotros-unete-cas',
-                    'icono' => '',
-                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
-                    'orden' => 1,
-                ]);
-
-                Nav::firstOrCreate([
-                    'nombre' => '276',
-                    'url'   => '/nosotros/unete/276',
-                    'ruta'   => 'nosotros.unete.276',
-                    'slug' => 'nosotros-unete-276',
-                    'icono' => '',
-                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
-                    'orden' => 2,
-                ]);
-
-                Nav::firstOrCreate([
-                    'nombre' => 'Practicantes',
-                    'url'   => '/nosotros/unete/Practicantes',
-                    'ruta'   => 'nosotros.unete.practicantes',
-                    'slug' => 'nosotros-unete-practicantes',
-                    'icono' => '',
-                    'padre_id' => Nav::where('nombre', 'Unete')->value('id'),
-                    'orden' => 3,
-                ]);
 
             Nav::firstOrCreate([
                 'nombre' => 'Mision y Vision',
-                'url'   => '/nosotros/misionvision',
+                'url'   => '/misionvision',
                 'ruta'   => 'nosotros.misionvision',
-                'slug' => 'nosotros-mision-vision',
+                'slug' => 'mision-vision',
                 'icono' => '',
                 'padre_id' => Nav::where('nombre', 'Nosotros')->value('id'),
                 'orden' => 3,
@@ -122,10 +126,10 @@ class NavSeeder extends Seeder
             ]);
 
             Nav::firstOrCreate([
-                'nombre' => 'Areas',
-                'url'   => '/municipalidad/areas',
-                'ruta'   => 'municipalidad.areas',
-                'slug' => 'municipalidad-areas',
+                'nombre' => 'Gerencia Municipal',
+                'url'   => '/municipalidad/gerencia',
+                'ruta'   => 'municipalidad.gerencia',
+                'slug' => 'municipalidad-gerencia',
                 'icono' => '',
                 'padre_id' => Nav::where('nombre', 'Municipalidad')->value('id'),
                 'orden' => 3
@@ -215,22 +219,22 @@ class NavSeeder extends Seeder
             ]);
 
         Nav::firstOrCreate([
-            'nombre' => 'Noticias y Eventos',
-            'url'   => 'noticiaseventos',
-            'ruta'   => 'noticiaseventos',
-            'slug' => 'noticias-eventos',
+            'nombre' => 'Servicios Municipales',
+            'url'   => 'serviciosmunicipales',
+            'ruta'   => 'serviciosmunicipales',
+            'slug' => 'servicios-municipales',
             'icono' => '',
             'padre_id' => null,
             'orden' => 6
         ]);
 
             Nav::firstOrCreate([
-                'nombre' => 'Noticias',
+                'nombre' => 'Museo Historico MANUEL H. CISNEROS ZAVALETA',
                 'url'   => '/noticiaseventos/noticias',
                 'ruta'   => 'noticiaseventos.noticias',
                 'slug' => 'noticiaseventos-noticias',
                 'icono' => '',
-                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'padre_id' => Nav::where('nombre', 'Servicios Municipales')->value('id'),
                 'orden' => 1
             ]);
 
@@ -240,7 +244,7 @@ class NavSeeder extends Seeder
                 'ruta'   => 'noticiaseventos.comunicados',
                 'slug' => 'noticiaseventos-comunicados',
                 'icono' => '',
-                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'padre_id' => Nav::where('nombre', 'Servicios Municipales')->value('id'),
                 'orden' => 2
             ]);
 
@@ -250,7 +254,7 @@ class NavSeeder extends Seeder
                 'ruta'   => 'noticiaseventos.galeria',
                 'slug' => 'noticiaseventos-galeria',
                 'icono' => '',
-                'padre_id' => Nav::where('nombre', 'Noticias y Eventos')->value('id'),
+                'padre_id' => Nav::where('nombre', 'Servicios Municipales')->value('id'),
                 'orden' => 3
             ]);
 
@@ -294,16 +298,6 @@ class NavSeeder extends Seeder
                 'orden' => 3
             ]);
 
-
-        Nav::firstOrCreate([
-            'nombre' => 'Contactenos',
-            'url'   => '/Contactenos',
-            'ruta'   => 'contactenos',
-            'slug' => 'contactenos',
-            'icono' => null,
-            'padre_id' => null,
-            'orden' => 8
-        ]);
 
     }
 }

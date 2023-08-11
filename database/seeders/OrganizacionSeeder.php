@@ -14,20 +14,20 @@ class OrganizacionSeeder extends Seeder
     public function run(): void
     {
         Organizacion::firstorCreate([
-            'ruc' => '123456789',
-            'razon_social' => 'Mi Empresa S.A.C.',
-            'titulo' => 'Mi Empresa S.A.C.',
-            'slogan' => 'Haz realidad tus sueños',
-            'descripcion' => 'Somos una empresa dedicada a brindar soluciones integrales a nuestros clientes.',
-            'director' => 'Juan Pérez',
-            'direccion' => 'Av. Primavera 123',
-            'email' => 'info@miempresa.com',
-            'telefono' => '123456789',
-            'telefono2' => '123456789',
-            'url_web'   => 'www.web.com',
-            'quienes_somos' => 'En Mi Empresa, nos dedicamos a brindar soluciones personalizadas para nuestros clientes...',
-            'vision' => 'Ser líderes en el mercado de soluciones empresariales en el Perú...',
-            'mision' => 'Brindar soluciones integrales y personalizadas a nuestros clientes, con un equipo altamente capacitado...',
+            'ruc' => '20146008926',
+            'razon_social' => 'Municipalidad Provincial de Ambo',
+            'titulo' => 'Municipalidad Provincial de Ambo',
+            'slogan' => 'Tierra de Historia y Tradicion',
+            'descripcion' => 'Municipalidad Provincial de Ambo de Huánuco',
+            'director' => 'Santiago Campos Cayo Leonidas',
+            'direccion' => ' Jr. Constitución N° 353,',
+            'email' => 'mesadepartesvirtual@muniambo.gob.pe',
+            'telefono' => '062-504455',
+            'telefono2' => '',
+            'url_web'   => 'www.muniambo.gob.pe',
+            'quienes_somos' => 'Gobernamos, conducimos y lideramos el desarrollo de la provincia de Ambo, gestionando y promoviendo el desarrollo sostenible e integral, así como el bienestar humano, mediante la concertación institucional y la participación de la sociedad civil organizada.',
+            'vision' => 'Ambo, territorio sostenible, referente en la calidad de vida de su población, con desarrollo competitivo y bajo nivel de riesgo de desastre, cimentado en la atención efectiva al ciudadano.',
+            'mision' => 'Promover el desarrollo local y prestar servicios públicos, en la Provincia de Ambo con eficiencia, eficacia y adecuado control.',
         ]);
     }
 }

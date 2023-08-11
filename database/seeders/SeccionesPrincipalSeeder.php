@@ -15,6 +15,7 @@ class SeccionesPrincipalSeeder extends Seeder
     {
         SeccionesPrincipal::firstOrCreate([
             'titulo'   => 'Top Courses Start',
+            'orden'     => 1,
             'contenido'   => '<!--====== Top Courses Start ======-->
             <section class="top-courses-area">
                 <div class="container">
@@ -229,6 +230,7 @@ class SeccionesPrincipalSeeder extends Seeder
 
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Specialty Start',
+            'orden'     => 2,
             'contenido'     => '<!--====== Specialty Start ======-->
             <div class="specialty-area">
                 <div class="container">
@@ -277,6 +279,7 @@ class SeccionesPrincipalSeeder extends Seeder
         
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Campus Visit Start',
+            'orden'     => 3,
             'contenido'     => '    <!--====== Campus Visit Start ======-->
             <section class="campus-visit-area">
                 <div class="container">
@@ -308,6 +311,7 @@ class SeccionesPrincipalSeeder extends Seeder
 
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Event Start',
+            'orden'     => 4,
             'contenido'     => '    <!--====== Event Start ======-->
             <section class="event-area">
                 <div class="container">
@@ -457,6 +461,7 @@ class SeccionesPrincipalSeeder extends Seeder
 
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Testimonials Start',
+            'orden'     => 5,
             'contenido'     => '    <!--====== Testimonials Start ======-->
             <section class="testimonials-area">
                 <div class="container">
@@ -533,6 +538,7 @@ class SeccionesPrincipalSeeder extends Seeder
 
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Counter Start',
+            'orden'     => 6,
             'contenido'     => '    <!--====== Counter Start ======-->
             <div class="counter-area">
                 <div class="container">
@@ -570,8 +576,9 @@ class SeccionesPrincipalSeeder extends Seeder
         ]);        
 
         SeccionesPrincipal::firstOrCreate([
-            'titulo'        => 'Blog Start',
-            'contenido'     => '    <!--====== Blog Start ======-->
+            'titulo'        => 'Noticias',
+            'orden'     => 7,
+            'contenido'     => '    <!--====== Noticias ======-->
             <section class="blog-area">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -646,9 +653,12 @@ class SeccionesPrincipalSeeder extends Seeder
             <!--====== Blog Ends ======-->'
         ]);    
         
+
         SeccionesPrincipal::firstOrCreate([
             'titulo'        => 'Newsletter Start',
-            'contenido'     => '    <!--====== Newsletter Start ======-->
+            'orden'         => 8,
+            'es_activo'     => 0,
+            'contenido'     => '<!--====== Newsletter Start ======-->
             <section class="newsletter-area">
                 <div class="container">
                     <div class="newsletter-wrapper bg_cover wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" style="background-image: url(edumate/assets/images/newsletter-bg-1.webp);">
@@ -673,8 +683,8 @@ class SeccionesPrincipalSeeder extends Seeder
                 </div>
             </section>
             <!--====== Newsletter Ends ======-->'
-        ]);            
+        ]);
 
-        
+
     }
 }

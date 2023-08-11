@@ -14,31 +14,31 @@ class SliderSeeder extends Seeder
     public function run(): void
     {
         Slider::firstOrCreate([
-            'titulo' => 'Education is the most powerful Weapon',
-            'subtitulo' =>  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia eum minima ipsam tenetur co',
-            'nombrebutton1' => 'View Courses',
-            'nombrebutton2' => 'Learn more',
+            'titulo' => 'Municipalidad Provincial de Ambo',
+            'subtitulo' =>  null,
+            'nombrebutton1' => null,
+            'nombrebutton2' => null,
             'link1' => 'our-courses-left-sidebar.html',
             'link2' => '#',
-            'nombreImagen' => 'slider-1.webp'
+            'nombreImagen' => 'slide1.jpg'
         ]);
         Slider::firstOrCreate([
-            'titulo' => 'Education is the most powerful Weapon',
+            'titulo' => 'Gestion 2023-2029',
             'subtitulo' =>  null,
-            'nombrebutton1' => 'View Courses',
+            'nombrebutton1' => null,
             'nombrebutton2' => null,
             'link1' => 'our-courses-left-sidebar.html',
             'link2' => null,
-            'nombreImagen' => 'slider-2.webp'
+            'nombreImagen' => 'slide2.jpg'
         ]);
         Slider::firstOrCreate([
-            'titulo' => 'Education is the most powerful Weapon 33',
+            'titulo' => null,
             'subtitulo' =>  null,
-            'nombrebutton1' => 'View Courses',
+            'nombrebutton1' => null,
             'nombrebutton2' => null,
             'link1' => 'our-courses-left-sidebar.html',
             'link2' => null,
-            'nombreImagen' => 'slider-2-1.webp'
+            'nombreImagen' => 'slide3.jpg'
         ]);
     }
 }

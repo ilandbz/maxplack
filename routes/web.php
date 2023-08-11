@@ -25,12 +25,18 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/intranet', IntranetController::class)->name('intranet');
-// Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
+
+//Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
 
 
 
 
 Route::get('/prueba', [HomeController::class,'prueba'])->name('prueba');
+Route::get('quienes-somos', [HomeController::class,'quienessomos'])->name('quienessomos');
+Route::get('mision-vision', [HomeController::class,'misionvision'])->name('misionvision');
+Route::get('ambo-historia', [HomeController::class,'historia'])->name('historia');
+Route::get('ambo-turismo', [HomeController::class,'turismo'])->name('turismo');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
