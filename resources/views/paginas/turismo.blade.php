@@ -150,7 +150,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam natus q
                 <div class="d-none" id="pishgacocha">
                         <p style="text-align:justify !important;" class="mb-2">El término Pichgacocha deriva de ti en runashimi: "pichga" = cinco y "cocha" = laguna, se necesita esta denominación en este lugar hay 5 lagunas que se conectan entre sí en forma sucesiva por los arroyos que nacen.</p>
                         <p style="text-align:justify !important;" class="mb-2">Pichgacocha, es un conjunto de cinco super-lagunas, que corresponden a la cordillera oriental de los Andes del Norte, cuyo origen proviene de los arroyos glaciares. El caudal de estas lagunas inter-lagunas se ha mantenido debido a las estaciones fluviales y la presencia de manantiales como consecuencia directa del factor anterior; las lagunas están ubicadas a diferentes niveles y unidas irregularmente por cascadas de agua cristalina.</p>
-                        <p style="text-align:justify !important;" class="mb-2">Pichgacocha está incrustado en la maciza cordillera de la sierra huanuqueña, distribuida en un desorden artístico en diferentes niveles latitudinales. Permanecen unidos entre sí, por hermosas cascadas de agua formando una alegría singular que adorna con sutil encanto las depresiones naturales de la montaña salvaje donde parece revivir, de vez en cuando, el impulso que crea esos fuertes pleistocenos que moldearon el rostro de este parte de la tierra tiene millones de años. Este prodigio de la naturaleza es único a nivel mundial, en el terreno es un recurso turístico, también una campana hidrológica que da origen a la agricultura en las alturas de Conchamarca. Manteniendo casi virgen este paraje. Haga algunos pozos a las cinco lagunas, debido al terreno accidentado. Estos son motivos para visitas cada vez más frecuentes, ya que las autoridades lograron crear trucos, hasta las oportunidades 1961 - 1962. Su potencial turístico, se conoce desde el primer Seminario de Arqueología y Turismo “Ricardo Flores”; celebrada del 25 al 28 de noviembre de 1984, desde donde se informó a los asistentes, personas interesadas en el turismo, de la existencia de este paradisíaco lugar que también se pudo ver desde la primera cascada, desde la camioneta a Huánuco, como invitación y Desafío a los amantes del senderismo y el turismo de aventura.</p>
+                        <p style="text-align:justify !important;" class="mb-2">
+                            Está incrustado en la maciza cordillera de la sierra huanuqueña, distribuida en un desorden artístico en diferentes niveles latitudinales. Permanecen unidos entre sí, por hermosas cascadas de agua formando una alegría singular que adorna con sutil encanto las depresiones naturales de la montaña salvaje donde parece revivir, de vez en cuando, el impulso que crea esos fuertes pleistocenos que moldearon el rostro de este parte de la tierra tiene millones de años. Este prodigio de la naturaleza es único a nivel mundial, en el terreno es un recurso turístico, también una campana hidrológica que da origen a la agricultura en las alturas de CONCHAMARCA. Manteniendo casi virgen este paraje. Haga algunos pozos a las cinco lagunas, debido al terreno accidentado. Estos son motivos para visitas cada vez más frecuentes, ya que las autoridades lograron crear trucos, hasta las oportunidades 1961 - 1962. Su potencial turístico, se conoce desde el primer Seminario de Arqueología y Turismo “Ricardo Flores”; celebrada del 25 al 28 de noviembre de 1984, desde donde se informó a los asistentes, personas interesadas en el turismo, de la existencia de este paradisíaco lugar que también se pudo ver desde la primera cascada, desde la camioneta a Huánuco, como invitación y Desafío a los amantes del senderismo y el turismo de aventura.
+                        </p>
                         <h4>UBICACIÓN</h4>
                         <p style="text-align:justify !important;" class="mb-2">
                             Ubicado en este distrito de Conchamarca, jurisdicción de la provincia de Ambo, a orillas del río Huallaga; a una distancia de 51 km; con una altitud entre 3.700 a 4.000 m.s.n.m.
@@ -158,45 +160,39 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam natus q
 
                 </div>
                 <div class="d-none" id="perricholi">
-
-                        <p style="text-align:justify !important;" class="mb-2">En la región de Huánuco han surgido personajes notables para la historia del Perú, uno de aquellos personajes fue Doña Micaela Villegas, más conocida como “La Perricholi”, una mujer que con su impresionante belleza robó el corazón del Virrey Amat, de quien fue concubina. Y como aquella fuera una de las hijas notables de Huánuco, no podía dejar de tener en Huánuco una residencia que mostrara sus primeros años de vida, y donde actualmente se asienta un museo que es conocido como “La Casa de la Perricholi”.</p>
-                        <p style="text-align:justify !important;" class="mb-2">La Casa de la Perricholi se encuentra en el distrito de Tomayquichua, que se sitúa en la provincia de Ambo. Esta construcción es una pieza de la primera mitad del siglo XVIII, que por la notable mujer que un día poblara sus ambientes, es considerada hoy en día parte del Patrimonio Monumental de la Nación.</p>
-                        <p style="text-align:justify !important;" class="mb-2">La Casa de Micaela Villegas Hurtado, es una típica construcción regional que resalta por su buen estado de conservación, así como también por los muebles de época con los que cuenta. La Casa de la Perricholi se encuentra hecha con el uso de adobe, y tiene una privilegiada ubicación, sobre una colina empinada, que permite que el lugar funcione además como un estupendo mirador.</p>
-                        <p style="text-align:justify !important;" class="mb-2">Quien visite el museo va a poder conocer la habitación donde durmiera Micaela Villegas, en la que todavía se pueden apreciar algunos muebles de época en conjunto con ropa que se usara en el siglo XVIII en compañía de fotografías que permiten conocer la vida, y parte de los recuerdos de su antigua habitante. Para contribuir a rememorar más la época de la Perricholi, en el lugar se ha construido además una réplica de la antigua cocina de la casona, además de un antiguo carruaje usado por la familia.</p>
-                        <p style="text-align:justify !important;" class="mb-2">Si se desea disfrutar de las peculiares celebraciones de este pueblo en relación con la Perricholi, se recomienda visitar la casa el 25 de julio, cuando tiene lugar el Festival de la Perricholi, en la que se realizan actividades como la elección de la Señorita Huánuco, además de exposiciones fotográficas, competencias deportivas, degustación de platos típicos, entre otros.</p>
-                        <p style="text-align:justify !important;" class="mb-2">Antes de llegar a la casa de la Perricholi, el visitante va a tener que pasar por la plaza de armas del distrito de Tomayquichua, donde podrá observa una réplica de la casa de la Perricholi hecha en miniatura.</p>
-
+                    <p style="text-align:justify !important;" class="mb-2">En la región de Huánuco han surgido personajes notables para la historia del Perú, uno de aquellos personajes fue Doña Micaela Villegas, más conocida como “La Perricholi”, una mujer que con su impresionante belleza robó el corazón del Virrey Amat, de quien fue concubina. Y como aquella fuera una de las hijas notables de Huánuco, no podía dejar de tener en Huánuco una residencia que mostrara sus primeros años de vida, y donde actualmente se asienta un museo que es conocido como “La Casa de la Perricholi”.</p>
+                    <p style="text-align:justify !important;" class="mb-2">La Casa de la Perricholi se encuentra en el distrito de TOMAYQUICHUA, que se sitúa en la provincia de Ambo. Esta construcción es una pieza de la primera mitad del siglo XVIII, que por la notable mujer que un día poblara sus ambientes, es considerada hoy en día parte del Patrimonio Monumental de la Nación.</p>
+                    <p style="text-align:justify !important;" class="mb-2">La Casa de Micaela Villegas Hurtado, es una típica construcción regional que resalta por su buen estado de conservación, así como también por los muebles de época con los que cuenta. La Casa de la Perricholi se encuentra hecha con el uso de adobe, y tiene una privilegiada ubicación, sobre una colina empinada, que permite que el lugar funcione además como un estupendo mirador.</p>
+                    <p style="text-align:justify !important;" class="mb-2">Quien visite el museo va a poder conocer la habitación donde durmiera Micaela Villegas, en la que todavía se pueden apreciar algunos muebles de época en conjunto con ropa que se usara en el siglo XVIII en compañía de fotografías que permiten conocer la vida, y parte de los recuerdos de su antigua habitante. Para contribuir a rememorar más la época de la Perricholi, en el lugar se ha construido además una réplica de la antigua cocina de la casona, además de un antiguo carruaje usado por la familia.</p>
+                    <p style="text-align:justify !important;" class="mb-2">Si se desea disfrutar de las peculiares celebraciones de este pueblo en relación con la Perricholi, se recomienda visitar la casa el 25 de julio, cuando tiene lugar el Festival de la Perricholi, en la que se realizan actividades como la elección de la Señorita Huánuco, además de exposiciones fotográficas, competencias deportivas, degustación de platos típicos, entre otros.</p>
+                    <p style="text-align:justify !important;" class="mb-2">Antes de llegar a la casa de la Perricholi, el visitante va a tener que pasar por la plaza de armas del distrito de Tomayquichua, donde podrá observa una réplica de la casa de la Perricholi hecha en miniatura.</p>
                 </div>
                 <div class="d-none" id="hatunuchco">
-
-                        <p style="text-align: justify !important;" class="mb-2">
-                            Jatun Uchco, una misteriosa cueva en la parte alta del cerro Chanchao Pergaypata, cerca de la capilla del señor de exaltación, a 500 metros al sur de la plaza de armas, en el Distrito de Ambo, desde su ubicación es un lugar que se presta para poder observar panorámicamente toda la ciudad de Ambo y el valle del río Huallaga, como resultado de la confluencia de los ríos Huariaca y Huertas o Chaupihuaranga dándole un atractivo adicional.
-                        </p>
-                        <p style="text-align: justify !important;" class="mb-2">
-                            Jatun Uchco es un término runashimi y significa “Hueco grande” Es considerado hoy no solo un lugar turístico, sino un «yacimiento de restos fósiles» y que hasta ahora no ha podido ser explorada en su totalidad, debido a su profundidad y su peligrosidad que desalienta al explorador e investigador más osado y experimentado a estudiarla. Las cámaras en el interior de la cueva son innumerables e irregulares.
-                        </p>
-
+                    <p style="text-align: justify !important;" class="mb-2">
+                        Jatun Uchco, una misteriosa cueva en la parte alta del cerro Chanchao Pergaypata, cerca de la capilla del señor de exaltación, a 500 metros al sur de la plaza de armas, en el Distrito de Ambo, desde su ubicación es un lugar que se presta para poder observar panorámicamente toda la ciudad de Ambo y el valle del río Huallaga, como resultado de la confluencia de los ríos Huariaca y Huertas o Chaupihuaranga dándole un atractivo adicional.
+                    </p>
+                    <p style="text-align: justify !important;" class="mb-2">
+                        Jatun Uchco es un término runashimi y significa “Hueco grande” Es considerado hoy no solo un lugar turístico, sino un «yacimiento de restos fósiles» y que hasta ahora no ha podido ser explorada en su totalidad, debido a su profundidad y su peligrosidad que desalienta al explorador e investigador más osado y experimentado a estudiarla. Las cámaras en el interior de la cueva son innumerables e irregulares.
+                    </p>
                 </div>
                 <div class="d-none" id="huancapata">
-
-                        <div class="container mt-3">
-                            <p style="text-align: justify !important;" class="mb-2">
-                                Construido por los Arquitectos Italianos Santos Benedetti y Lozano Albertini, con piedras y cal, Se culminó su construcción en el año de 1879, tiene una longitud de 25.85 mt. y un ancho de 5.46 mt.
-                            </p>
-                            <p style="text-align: justify !important;" class="mb-2">
-                                Para la construcción del puente fueron empleadas rocas sacadas de diversas canteras (esquistos) y las areniscas en el mismo río Huallaga, lugares de donde probablemente fueron traídas; el 90 % de materiales empleados en la construcción lo conforman las rocas intrusivas o de origen volcánico, (granito).
-                            </p>
-                            <p style="text-align: justify !important;" class="mb-2">
-                                Declarado Patrimonio Cultural de la Nación con R.D. Nº 988/INC DEL 9 De Julio del 2009
-                            </p>
-                        </div>
-                        <h4>
-                            UBICACIÓN
-                        </h4>      
+                    <div class="container mt-3">
                         <p style="text-align: justify !important;" class="mb-2">
-                            Esta ubicado al noreste de la ciudad de Ambo En las coordenadas UTM, 18l 0368159 E – 8880188, enclavado en el río HUALLAGA, uniendo la ciudad de Ambo con el Centro Poblado de Huancapata.
-                        </p>              
-
+                            Construido por los Arquitectos Italianos Santos Benedetti y Lozano Albertini, con piedras y cal, Se culminó su construcción en el año de 1879, tiene una longitud de 25.85 mt. y un ancho de 5.46 mt.
+                        </p>
+                        <p style="text-align: justify !important;" class="mb-2">
+                            Para la construcción del puente fueron empleadas rocas sacadas de diversas canteras (esquistos) y las areniscas en el mismo río Huallaga, lugares de donde probablemente fueron traídas; el 90 % de materiales empleados en la construcción lo conforman las rocas intrusivas o de origen volcánico, (granito).
+                        </p>
+                        <p style="text-align: justify !important;" class="mb-2">
+                            Declarado Patrimonio Cultural de la Nación con R.D. Nº 988/INC DEL 9 De Julio del 2009
+                        </p>
+                    </div>
+                    <h4>
+                        UBICACIÓN
+                    </h4>      
+                    <p style="text-align: justify !important;" class="mb-2">
+                        Esta ubicado al noreste de la ciudad de Ambo En las coordenadas UTM, 18l 0368159 E – 8880188, enclavado en el río HUALLAGA, uniendo la ciudad de Ambo con el Centro Poblado de Huancapata.
+                    </p>              
                 </div>
                 <div class="d-none" id="iglesia">
                     <p style="text-align: justify !important;" class="mb-2">

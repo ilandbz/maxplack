@@ -11,8 +11,8 @@ class IntranetController extends Controller
      */
     public function __invoke()
     {
-        $organizacion = Organizacion::first();
-        return view('intranet.dashboard', compact('organizacion'));
+        // $organizacion = Organizacion::first();
+        // return view('intranet.dashboard', compact('organizacion'));
     }
 
 

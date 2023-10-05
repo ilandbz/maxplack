@@ -1,36 +1,42 @@
-<div>
-    <div id="navigation" class="navigation navigation-landscape">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-2">
-                    <div class="header-logo">
-                        <a href="/"><img src="{{asset('storage/imagenes/'.$organizacion->logo);}}" width="120" height="" alt="Logo"></a>
-                    </div>
-                </div>
-                <div class="col-lg-8 position-static">
-                    <div class="nav-toggle"></div>
-                    <nav class="nav-menus-wrapper">
-                        <ul class="nav-menu">
-                            @foreach($menus as $menuItem)
-                                <li>
-                                    <a href="{{ count($menuItem->children) ? '#' : $menuItem->slug }}" class="@if(str_starts_with(Route::currentRouteName(), $menuItem->ruta)) active @endif">{{ $menuItem->nombre }}</a>
-                                    @if(count($menuItem->children))
-                                        @include('nav', ['menuItems' => $menuItem->children, 'class' => 'nav-dropdown nav-submenu'])
-                                    @endif
-                                </li>
-                            @endforeach
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-2 position-static">
-                    <div class="header-search">
-                        <form action="#">
-                            <input type="text" placeholder="Search">
-                            <button><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
+<!--================= Menu Start Here =================-->
+<div class="react-main-menu">
+    <nav>
+        <!--================= Menu Toggle btn =================-->
+        <div class="menu-toggle">
+            <div class="logo"><a href="index.html" class="logo-text"> <img src="maxplanck/assets/images/logo.png" alt="logo"> </a></div>
+            <button type="button" id="menu-btn">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--================= Menu Structure =================--> 
+        <div class="react-inner-menus">
+            <ul id="backmenu" class="react-menus home react-sub-shadow">
+                @foreach($menus as $menuItem)
+                <li>
+                    <a href="{{ count($menuItem->children) ? '#' : $menuItem->slug }}">
+                        {{ $menuItem->nombre }}
+                    </a>
+                    @if(count($menuItem->children))
+                        @include('nav', ['menuItems' => $menuItem->children])
+                    @endif
+                </li>
+                @endforeach
+            </ul>                                
+            <div class="searchbar-part"> 
+                <div class="react-login">
+                <a href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Log In</a>
+                </div>                                                                       
+                <form class="search-form">
+                    <input type="text" class="form-input" placeholder="Search Course">
+                    <button type="submit" class="form-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </form>
             </div>
         </div>
-    </div>
+    </nav>
 </div>
+<!--=================  Menu End Here  =================-->

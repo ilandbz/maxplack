@@ -14,20 +14,20 @@ class OrganizacionSeeder extends Seeder
     public function run(): void
     {
         Organizacion::firstorCreate([
-            'ruc' => '20146008926',
-            'razon_social' => 'Municipalidad Provincial de Ambo',
-            'titulo' => 'Municipalidad Provincial de Ambo',
-            'slogan' => 'Tierra de Historia y Tradicion',
-            'descripcion' => 'Municipalidad Provincial de Ambo de Huánuco',
-            'director' => 'Santiago Campos Cayo Leonidas',
-            'direccion' => ' Jr. Constitución N° 353,',
-            'email' => 'mesadepartesvirtual@muniambo.gob.pe',
-            'telefono' => '062-504455',
+            'ruc' => '20321370242',
+            'razon_social' => 'INSTITUTO DE EDUCACION SUPERIOR TECNOLOGICO PUBLICO MAX PLANCK DE AMBO',
+            'titulo' => 'INSTITUTO DE EDUCACION SUPERIOR TECNOLOGICO PUBLICO MAX PLANCK DE AMBO',
+            'slogan' => 'Somos una Institución de nivel Superior Revalidada en continua expansión de nuevas carreras profes',
+            'descripcion' => 'Somos una Institución de nivel Superior Revalidada en continua expansión de nuevas carreras profes',
+            'director' => '',
+            'direccion' => 'AV. JAVIER PRADO NRO. S/N HUANCAPATA (COSTADO DEL VIVERO DE LA MUNICIPALIDAD) HUANUCO - AMBO - AMBO',
+            'email' => '',
+            'telefono' => '',
             'telefono2' => '',
-            'url_web'   => 'www.muniambo.gob.pe',
-            'quienes_somos' => 'Gobernamos, conducimos y lideramos el desarrollo de la provincia de Ambo, gestionando y promoviendo el desarrollo sostenible e integral, así como el bienestar humano, mediante la concertación institucional y la participación de la sociedad civil organizada.',
-            'vision' => 'Ambo, territorio sostenible, referente en la calidad de vida de su población, con desarrollo competitivo y bajo nivel de riesgo de desastre, cimentado en la atención efectiva al ciudadano.',
-            'mision' => 'Promover el desarrollo local y prestar servicios públicos, en la Provincia de Ambo con eficiencia, eficacia y adecuado control.',
+            'url_web'   => '',
+            'quienes_somos' => '',
+            'vision' => '',
+            'mision' => '',
         ]);
     }
 }

@@ -20,16 +20,18 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return Inertia::render('Dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/intranet', IntranetController::class)->name('intranet');
 
+
+Route::get('/intranet', function () {
+    return view('intranet.app');
+});
+
 //Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
-
-
-
 
 Route::get('/prueba', [HomeController::class,'prueba'])->name('prueba');
 Route::get('quienes-somos', [HomeController::class,'quienessomos'])->name('quienessomos');
