@@ -3,14 +3,14 @@
     <head>
         <!--================= Meta tag =================-->
         <meta charset="utf-8">
-        <title>INSTITUTO DE EDUCACION SUPERIOR TECNOLOGICO PUBLICO MAX PLANCK</title>
-        <meta name="description" content="">
-        <!--================= Responsive Tag =================-->
+        <title>{{$organizacion->titulo}}</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--================= Favicon =================-->
-        <link rel="apple-touch-icon" href="maxplanck/assets/images/fav.png">
-        <link rel="shortcut icon" type="image/x-icon" href="maxplanck/assets/images/fav.png">        
+        <meta name="description" content="{{$organizacion->descripcion}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="{{ Storage::url('imagenes/'.$organizacion->icono) }}" type="image/webp"> 
         <!--================= Bootstrap V5 css =================-->
         <link rel="stylesheet" type="text/css" href="maxplanck/assets/css/bootstrap.min.css">
         <!--================= Menus css =================-->
@@ -36,7 +36,7 @@
         <!--================= Preloader Section Start Here =================-->        
         <div id="react__preloader">
             <div id="react__circle_loader"></div>
-            <div class="react__loader_logo"><img src="maxplanck/assets/images/preload.png" alt="Preload"></div>
+            <div class="react__loader_logo p-0 m-0"><img src="{{ Storage::url('imagenes/loader.png') }}" alt="Preload"></div>
         </div>        
         <!--================= Preloader Section End Here =================-->
 
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <div class="topbar-contact">
-                               <ul>                                   
+                               <ul>
                                    <li>
                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                        <a href="tel:(+1)3344999999"> {{ $organizacion->telefono }}</a>
@@ -85,62 +85,7 @@
             <div class="react-wrapper-inner">
                 
                 <!--================= Slider Section Start Here =================-->
-                <div class="react-slider-part">
-                    <div class="home-sliders home2 owl-carousel">
-                        <div class="single-slide">
-                            <div class="slider-img">
-                                <img class="desktop" src="maxplanck/assets/images/slider/1.jpg" alt="Slider Image 1">
-                                <img class="mobile" src="maxplanck/assets/images/slider/11.jpg" alt="Slider Image 1">
-                            </div>
-                            <div class="container">
-                                <div class="slider-content">
-                                    <div class="content-part">
-                                        <span class="slider-pretitle">Great Quality Cocial life</span>
-                                        <h2 class="slider-title">
-                                            Discover the world of<br>
-                                            possible university.
-                                        </h2>
-                                        <div class="slider-btn">
-                                            <a href="about.html" class="react-btn-border">Admissions</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event__video-btn--play">
-                                <a href="https://www.youtube.com/watch?v=e5Hc2B50Z7c" class="event__video-btn--play-btn custom-popup">
-                                    <i class="arrow_triangle-right"></i>
-                                    <em>Watch Video <br>Intro</em>
-                                </a>
-                                </div>
-                            </div>                        
-                        </div>
-                        <div class="single-slide">
-                            <div class="slider-img">
-                                <img class="desktop" src="maxplanck/assets/images/slider/2.jpg" alt="Slider Image 1">
-                                <img class="mobile" src="maxplanck/assets/images/slider/12.jpg" alt="Slider Image 1">
-                            </div>
-                            <div class="container">
-                                <div class="slider-content">
-                                    <div class="content-part">
-                                        <span class="slider-pretitle">Great Quality Cocial life</span>
-                                        <h2 class="slider-title">
-                                            Discover the world of<br>
-                                            possible university.
-                                        </h2>
-                                        <div class="slider-btn">
-                                            <a href="about.html" class="react-btn-border">Admissions</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event__video-btn--play">
-                                <a href="https://www.youtube.com/watch?v=e5Hc2B50Z7c" class="event__video-btn--play-btn custom-popup">
-                                    <i class="arrow_triangle-right"></i>
-                                    <em>Watch Video <br>Intro</em>
-                                </a>
-                                </div>
-                            </div>                        
-                        </div>
-                    </div>
-                </div>
+                @include('componentes.slider')
                 <!--================= Slider Section End Here =================--> 
 
                 <!--=================  Service Section Start Here ================= -->

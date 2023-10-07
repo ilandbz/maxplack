@@ -28,6 +28,7 @@ class OrganizacionSeeder extends Seeder
             'quienes_somos' => '',
             'vision' => '',
             'mision' => '',
+            'icono' => 'favicon.ico'
         ]);
     }
 }

@@ -1,23 +1,33 @@
-<!--====== Slider Start ======-->
-<section class="slider-area slider-active">
-    @foreach ($sliders as $slider)
-        <div class="single-slider d-flex align-items-center bg_cover" style="background-image: url({{asset('storage/slider/'.$slider->nombreImagen);}});">
+<div class="react-slider-part">
+    <div class="home-sliders home2 owl-carousel">
+        @foreach ($sliders as $slider)
+        <div class="single-slide">
+            <div class="slider-img">
+                <img class="desktop" src="{{asset('storage/slider/'.$slider->nombreImagen);}}" alt="{{$slider->titulo}}">
+                <img class="mobile" src="maxplanck/assets/images/slider/12.jpg" alt="Slider Image 1">
+            </div>
             <div class="container">
                 <div class="slider-content">
-                    <h2 class="title text-black" data-animation="fadeInLeft" data-delay="0.2s">{{$slider->titulo}}</h2>
-                    <p style="color: white">{{$slider->subtitulo}}</p>
-                    <ul class="slider-btn">
+                    <div class="content-part">
+                        <span class="slider-pretitle">{{$slider->titulo}}</span>
+                        <h2 class="slider-title">
+                            {{$slider->subtitulo}}
+                        </h2>
                         @if($slider->nombrebutton1)
-                        <li><a data-animation="fadeInUp" data-delay="0.6s" class="main-btn main-btn-2" href="our-courses-left-sidebar.html">{{$slider->nombrebutton1}}</a></li>
+                        <div class="slider-btn">
+                            <a href="{{$slider->link1}}" class="react-btn-border">{{$slider->nombrebutton1}}</a>
+                        </div>                        
                         @endif
-                        @if($slider->nombrebutton2)
-                        <li><a data-animation="fadeInUp" data-delay="1s" class="main-btn" href="#">{{$slider->nombrebutton2}}</a></li>
-                        @endif
-                    </ul>
+                    </div>
                 </div>
-            </div>
-        </div>    
-    @endforeach
-</section>
-
-<!--====== Slider Ends ======-->
+                {{-- <div class="event__video-btn--play">
+                <a href="https://www.youtube.com/watch?v=e5Hc2B50Z7c" class="event__video-btn--play-btn custom-popup">
+                    <i class="arrow_triangle-right"></i>
+                    <em>Watch Video <br>Intro</em>
+                </a>
+                </div> --}}
+            </div>                        
+        </div>  
+        @endforeach
+    </div>
+</div>

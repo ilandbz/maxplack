@@ -12165,11 +12165,11 @@ body.event-page .react-upcoming__event .event__card .event_time {
   position: absolute;
 }
 .react__loader_logo img {
-  width: 40px;
+  width: 100px;
 }
 #react__circle_loader {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-style: solid;
   border-width: 5px;
   border-color: #465fe9 #465fe9 #d5eaff #d5eaff;
