@@ -91,10 +91,7 @@
                 <!--=================  Service Section Start Here ================= -->
                 <div class="react_popular_topics pt---100 pb---70">
                     <div class="container"> 
-                        <div class="react__title__section text-left">
-                            <h2 class="react__tittle">Academics</h2>
-                            <img src="maxplanck/assets/images/line.png" alt="image">
-                        </div>                       
+                  
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="item__inner">                                    
@@ -102,8 +99,8 @@
                                         <img src="maxplanck/assets/images/service/1.png" alt="image">
                                     </div>
                                     <div class="react-content">
-                                        <h3 class="react-title"><a href="coureses-grid.html">Let’s Talk Science</a></h3>
-                                        <a href="#" class="r__link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                        <h3 class="react-title"><a href="coureses-grid.html">TITULACION</a></h3>
+                                        <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                     </div>                                    
                                 </div>
                             </div>
@@ -113,8 +110,8 @@
                                         <img src="maxplanck/assets/images/service/2.png" alt="image">
                                     </div>
                                     <div class="react-content">
-                                        <h3 class="react-title"><a href="coureses-grid.html">Innovative Courses</a></h3>
-                                        <a href="#" class="r__link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                        <h3 class="react-title"><a href="coureses-grid.html">BIBLIOTECA VIRTUAL</a></h3>
+                                        <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                     </div>                                    
                                 </div>
                             </div>
@@ -124,8 +121,8 @@
                                         <img src="maxplanck/assets/images/service/3.png" alt="image">
                                     </div>
                                     <div class="react-content">
-                                        <h3 class="react-title"><a href="coureses-grid.html">Cloud Storage</a></h3>
-                                        <a href="#" class="r__link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                        <h3 class="react-title"><a href="coureses-grid.html">ADMISION</a></h3>
+                                        <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                     </div>                                    
                                 </div>
                             </div>
@@ -135,8 +132,8 @@
                                         <img src="maxplanck/assets/images/service/4.png" alt="image">
                                     </div>
                                     <div class="react-content">
-                                        <h3 class="react-title"><a href="coureses-grid.html">Online Education</a></h3>
-                                        <a href="#" class="r__link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                        <h3 class="react-title"><a href="coureses-grid.html">MESA DE PARTES</a></h3>
+                                        <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                     </div>                                    
                                 </div>
                             </div>
@@ -146,8 +143,44 @@
                 <!--=================  Service Section End Here ================= -->
 
                 <!--=================  About Section Start Here ================= -->
+
+                
                 <div class="about__area about__area_one p-relative pt---10 pb---120">
-                    <div class="container">                        
+                    <div class="container">
+                        @if (isset($popup))
+                            <div class="modal fade" id="modalpopup" tabindex="600" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalpopupLabel">
+                                                {{$popup->titulo}}&nbsp;&nbsp;&nbsp;
+                                                @if ($popup->link!='#')
+                                                <a target="_blank" class="btn btn-primary" href="{{$popup->link}}" role="button">
+                                                    Ver Más <i class="fas fa-chevron-circle-down"></i>
+                                                </a>                                                    
+                                                @endif
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="react-clients react-clientso p-0 m-0">
+                                                <div class="client-slider owl-carousel p-0">
+                                                    @foreach($popup->imagenesPopup as $row)
+                                                    <div class="single-client p-2">
+                                                        <div class="container-fluid">
+                                                            <a href="{{$row->link}}">
+                                                                <img src="{{ Storage::url('popup/'.$row->nombreImagen) }}" class="w-fluid" width="" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="about__image">
@@ -157,81 +190,14 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="about__content">
-                                    <h2 class="about__title">Welcome to <br> <em>Echooling LMS Platform</em></h2>
-                                    <p class="about__paragraph">Education is both the act of teaching knowledge to others and<br> the act of receiving knowledge from someone else.</p>
-                                    <p class="about__paragraph2"> Have questions?  <a href="#"> Get Free Guide </a></p>
-                                    <p>Education also refers to the knowledge received through schooling instruction <br>and to the institution of teaching as a whole. The main purpose of education <br>is the integral development of a person.</p>
-                                    <ul>
-                                        <li><a href="about.html" class="more-about"> Read More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></li>
-                                        <li class="last-li">
-                                            <em>Get Support</em>
-                                            <a href="mailto:support@react.com">support@react.com</a>
-                                        </li>
-                                    </ul>
+                                    <h2 class="about__title">Sobre Nosotros</h2>
+                                    <p class="about__paragraph">{{$organizacion->quienes_somos}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--================= About Section End Here ================= -->
-
-                <!--=================  Campus Section Start Here ================= -->
-                <div class="campus_sec pt---100 pb---110">
-                    <div class="container">
-                        <div class="react__title__section text-center">
-                            <h2 class="react__tittle">Campus Life</h2>
-                            <img src="maxplanck/assets/images/line.png" alt="image">
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="about__content">
-                                    <ul>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="maxplanck/assets/images/campus/1.svg" alt="image">
-                                            </div>
-                                            <div class="text">
-                                                <h4>Do More, Stress Less</h4>
-                                                <p>Why I say old chap that is spiffing he legged <br>it in my flat easy peasy.</p>
-                                            </div>
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="maxplanck/assets/images/campus/2.svg" alt="image">
-                                            </div>
-                                            <div class="text">
-                                                <h4>The Business Intelligence</h4>
-                                                <p>Why I say old chap that is spiffing he legged <br>it in my flat easy peasy.</p>
-                                            </div>
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <img src="maxplanck/assets/images/campus/3.svg" alt="image">
-                                            </div>
-                                            <div class="text">
-                                                <h4>System Administration</h4>
-                                                <p>Why I say old chap that is spiffing he legged <br>it in my flat easy peasy.</p>
-                                            </div>
-                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                                        </li>
-                                    </ul>  
-                                </div>                              
-                            </div>
-                            <div class="col-lg-5">                                
-                                <div class="about__image">
-                                    <img src="maxplanck/assets/images/campus/4.png" alt="image">
-                                    <img class="shape-1" src="maxplanck/assets/images/campus/shape.png" alt="image">
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="more-about"> More about Campus Life <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                        </div>
-                    </div>
-                </div>
-                <!--================= Campus Section End Here ================= -->
 
                 <!--================= Popular Course Section Start Here =================-->
                 <div class="popular__course__area pt---100 pb---100">
@@ -713,5 +679,14 @@
         <script src="maxplanck/assets/js/plugins.js"></script>       
 		<!--================= Main js =================-->
         <script src="maxplanck/assets/js/main.js"></script>
+
+    <!-- Script para abrir el modal automáticamente -->
+    <script>
+        $(document).ready(function(){
+          $('#modalpopup').modal('show');
+        })
+
+    </script>
+
     </body>
 </html>

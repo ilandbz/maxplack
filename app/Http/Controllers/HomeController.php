@@ -6,6 +6,7 @@ use App\Models\Enlace;
 use App\Models\Organizacion;
 use App\Models\Menu;
 use App\Models\Nav;
+use App\Models\Popup;
 use App\Models\RedSocial;
 use App\Models\SeccionesPrincipal;
 use App\Models\Slider;
@@ -15,7 +16,10 @@ class HomeController extends Controller
 {
     public function __invoke(){
         $data['sliders']=Slider::where('es_activo', 1)->get();
-
+        $data['popup']=Popup::with('imagenesPopup')
+        ->where('es_activo', 1)
+        ->orderBy('created_at', 'desc')
+        ->first();
         $data['secciones']=SeccionesPrincipal::where('es_activo', 1)->get();
         $data['organizacion'] = Organizacion::first();
         $data['redessociales'] = RedSocial::where('url', '!=', '#')->get();

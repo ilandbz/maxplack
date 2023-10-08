@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('popups', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('link');
+            $table->string('link')->default('#');
             $table->unsignedTinyInteger('es_activo')->default(1);
             $table->timestamps();
         });

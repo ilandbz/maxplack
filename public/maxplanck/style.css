@@ -442,7 +442,10 @@ ul {
 .react-header {
   background: #fff;
   position: relative;
-  z-index: 9999;
+  z-index: 999;
+}
+.modal {
+    z-index: 1050; /* Un valor alto, mayor que el de la mayoría de los elementos en la página */
 }
 .react-header .react-inner-menus {
   display: flex;
@@ -12202,7 +12205,7 @@ body.event-page .react-upcoming__event .event__card .event_time {
   bottom: 40px;
   right: 15px;
   transition: all 0.5s ease;
-  z-index: 99999;
+  z-index: 999;
   cursor: pointer;
   display: none;
   background: green;

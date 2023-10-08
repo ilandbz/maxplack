@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ImagenPopup extends Model
 {
     use HasFactory;
+    protected $fillable =['nombreImagen', 'popup_id'];
+
+
 }
