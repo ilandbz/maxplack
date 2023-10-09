@@ -17,9 +17,10 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "dayjs": "^1.11.10",
         "jwt-decode": "^3.1.2",
         "pinia": "^2.0.35",
-        "sweetalert": "^2.1.2",
+        "sweetalert2": "^11.7.32",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.1.6"
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
     <head>
         <!--================= Meta tag =================-->
         <meta charset="utf-8">
@@ -26,6 +26,7 @@
         <!--================= Animations css =================-->
         <link rel="stylesheet" type="text/css" href="maxplanck/assets/css/animations.css">  
         <!--================= style css =================-->
+        <link type="text/css" rel="stylesheet" href="{{ asset("/fontawesome6/css/all.min.css") }}">
         <link rel="stylesheet" type="text/css" href="maxplanck/style.css">
         <!--================= Custom Spacing css =================-->
         <link rel="stylesheet" type="text/css" href="maxplanck/assets/css/custom-spacing.css">
@@ -203,105 +204,79 @@
                 <div class="popular__course__area pt---100 pb---100">
                     <div class="container">
                         <div class="react__title__section text-center">
-                            <h2 class="react__tittle">Popular Courses</h2>
+                            <h2 class="react__tittle">Programas de Estudio</h2>
                             <img src="maxplanck/assets/images/line.png" alt="image">
                         </div>
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <div class="course__item mb-30">
                                     <div class="course__thumb">
                                         <a href="coureses-single.html"><img src="maxplanck/assets/images/course/1.png" alt="image"></a>
                                     </div>
                                     <div class="course__inner">
-                                        <ul>
-                                            <li>UX Design</li>
-                                            <li>24 Lessons</li>
+                                        <ul class="list-unstyled d-flex justify-content-between">
+                                            <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
+                                            <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                         </ul>
-                                        <h3 class="react-course-title"><a href="coureses-single.html">Dave conservatoire is the<br> Entirely free online.</a></h3>
+                                        <h2 class="react-course-title text-center"><a href="coureses-single.html">Enfermeria Tecnica</a></h2>
                                         <div class="course__card-icon d-flex align-items-center">
                                             <div class="course__card-icon--1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                                <span>77 Students</span>
+                                                <span>77 Estudiantes</span>
                                             </div>                                            
                                             <div class="react__user">
-                                                $68.00
+                                                Creditos : 134
                                             </div>
                                         </div>
                                     </div>                                    
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <div class="course__item mb-30">
                                     <div class="course__thumb">
                                         <a href="coureses-single.html"><img src="maxplanck/assets/images/course/2.png" alt="image"></a>
                                     </div>
                                     <div class="course__inner">
-                                        <ul>
-                                            <li>UX Design</li>
-                                            <li>39 Lessons</li>
+                                        <ul class="list-unstyled d-flex justify-content-between">
+                                            <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
+                                            <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                         </ul>
-                                        <h3 class="react-course-title"><a href="coureses-single.html">Strategy law and <br> Organization foundation.</a></h3>
+                                        <h2 class="react-course-title text-center"><a href="coureses-single.html">Produccion Agropecuaria</a></h2>
                                         <div class="course__card-icon d-flex align-items-center">
                                             <div class="course__card-icon--1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                                <span>99 Students</span>
+                                                <span>99 Estudiantes</span>
                                             </div>                                            
                                             <div class="react__user">
-                                                $99.00
+                                                Creditos : 134
                                             </div>
                                         </div>
                                     </div>                                    
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                                 <div class="course__item mb-30">
                                     <div class="course__thumb">
                                         <a href="coureses-single.html"><img src="maxplanck/assets/images/course/3.png" alt="image"></a>
                                     </div>
                                     <div class="course__inner">
-                                        <ul>
-                                            <li>UX Design</li>
-                                            <li>20 Lessons</li>
+                                        <ul class="list-unstyled d-flex justify-content-between">
+                                            <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
+                                            <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                         </ul>
-                                        <h3 class="react-course-title"><a href="coureses-single.html">Python for Data Science & <br> Machine Learning</a></h3>
+                                        <h2 class="react-course-title text-center"><a href="coureses-single.html">Mecanica Automotriz</a></h2>
                                         <div class="course__card-icon d-flex align-items-center">
                                             <div class="course__card-icon--1">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                                <span>68 Students</span>
+                                                <span>68 Estudiantes</span>
                                             </div>                                            
                                             <div class="react__user">
-                                                $79.00
+                                                Creditos : 134
                                             </div>
                                         </div>
                                     </div>                                    
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="course__item mb-30">
-                                    <div class="course__thumb">
-                                        <a href="coureses-single.html"><img src="maxplanck/assets/images/course/4.png" alt="image"></a>
-                                    </div>
-                                    <div class="course__inner">
-                                        <ul>
-                                            <li>UX Design</li>
-                                            <li>26 Lessons</li>
-                                        </ul>
-                                        <h3 class="react-course-title"><a href="coureses-single.html">The complete web develop <br>Ment bootcamp.</a></h3>
-                                        <div class="course__card-icon d-flex align-items-center">
-                                            <div class="course__card-icon--1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                                <span>84 Students</span>
-                                            </div>                                            
-                                            <div class="react__user">
-                                                $120.00
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="view-courses"> View All Courses <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                         </div>
                     </div>
                 </div>
@@ -315,30 +290,27 @@
                                 <div class="row">
                                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
                                         <div class="count__content">
-                                            <p class="count__content--paragraph">Successfully <br>Trained</p>
-                                            <h3 class="count__content--title-1 counter">1478</h3>
-                                            <p class="count__content--paragraph2">Enrolled Learners</p>                                            
+                                            <p class="count__content--paragraph">Estudiantes</p>
+                                            <h3 class="count__content--title-1 counter">1478</h3>                                       
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
                                         <div class="count__content">
-                                            <p class="count__content--paragraph">Available <br>Courses</p>
+                                            <p class="count__content--paragraph">Graduados</p>
                                             <h3 class="count__content--title-1 counter">1731</h3>
-                                            <p class="count__content--paragraph2">Countrywide Awards</p>                                            
+                                       
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
                                         <div class="count__content">
-                                            <p class="count__content--paragraph">Scheduled <br>Events</p>
-                                            <h3 class="count__content--title-1 counter">280</h3>
-                                            <p class="count__content--paragraph2">Success Events</p>                                            
+                                            <p class="count__content--paragraph">Años de Creacion Institucional</p>
+                                            <h3 class="count__content--title-1 counter">280</h3>                                      
                                         </div>
                                     </div>
                                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
                                         <div class="count__content">
-                                            <p class="count__content--paragraph">Getting <br>Featured on</p>
-                                            <h3 class="count__content--title-1 counter">1045</h3>
-                                            <p class="count__content--paragraph2">Online Courses</p>                                            
+                                            <p class="count__content--paragraph">Programas de Estudio</p>
+                                            <h3 class="count__content--title-1 counter">3</h3>                                       
                                         </div>
                                     </div>
                                 </div>
@@ -352,7 +324,7 @@
                 <div class="react-upcoming__event blog__area">
                     <div class="container">
                         <div class="react__title__section text-center">
-                            <h2 class="react__tittle">Upcoming Events</h2>
+                            <h2 class="react__tittle">Eventos Academicos</h2>
                             <img src="maxplanck/assets/images/line.png" alt="image">
                         </div>
                         <div class="event-slider owl-carousel">
@@ -419,7 +391,7 @@
                 <div class="react-clients react-clientso home-testimonial pt---90 pb---120">
                     <div class="container">
                         <div class="react__title__section text-center">
-                            <h2>What our student saying</h2>
+                            <h2>Testimonio de Estudiantes</h2>
                             <img src="maxplanck/assets/images/line.png" alt="image">
                         </div>
                         <div class="container">
@@ -470,7 +442,7 @@
                 <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
                     <div class="container blog__width">
                         <div class="react__title__section text-center">                           
-                            <h2 class="react__tittle"> Echooling News and Blogs </h2>
+                            <h2 class="react__tittle"> Noticias y Comunicados </h2>
                             <img src="maxplanck/assets/images/line.png" alt="image">
                         </div>
                         <div class="row">
@@ -578,53 +550,51 @@
                         <div class="col-lg-3 md-mb-30">
                             <div class="footer-widget footer-widget-1">
                                 <div class="footer-logo white">
-                                    <a href="index.html" class="logo-text"> <img src="maxplanck/assets/images/footer-logo.png" alt="logo"></a>
+                                    <a href="/" class="logo-text"> <img src="{{ Storage::url('imagenes/'.$organizacion->logo) }}" alt="logo"></a>
                                 </div>
-                                <h5 class="footer-subtitle">There are course and event custom <br>
-                                post types so you can easily create and<br> manage course, events.</h5>
+                                <h5 class="footer-subtitle">{{ $organizacion->slogan }}</h5>
                                 <ul class="footer-address">
-                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+(402)76244183"> +(402) 762 441 83 </a></li>
-                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:info@yourdmain.com"> info@echooling.com </a></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+(402)76244183"> +(51) {{$organizacion->telefono}} </a></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:info@yourdmain.com"> {{$organizacion->email}} </a></li>
                                 </ul>                               
                             </div>
                         </div>
                         <div class="col-lg-3 md-mb-30">
                             <div class="footer-widget footer-widget-2">
-                                <h3 class="footer-title">About Us</h3>
+                                <h3 class="footer-title">Acerca de Nosotros</h3>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="coureses-grid.html">Courses</a></li>
-                                        <li><a href="#">Events</a></li>
-                                        <li><a href="#">Career</a></li>
-                                        <li><a href="profile.html">Become a Teacher</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="/nosotros">Nosotros</a></li>
+                                        <li><a href="coureses-grid.html">Cursos</a></li>
+                                        <li><a href="#">Eventos</a></li>
+                                        <li><a href="#">Galeria</a></li>
+                                        <li><a href="profile.html">Convocatorias</a></li>
+                                        <li><a href="contact.html">Contactenos</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 md-mb-30">
                             <div class="footer-widget footer-widget-3">
-                                <h3 class="footer-title">Useful Links</h3>
+                                <h3 class="footer-title">Modulos</h3>
                                 <div class="footer-menu">
                                     <ul>
-                                        <li><a href="#">Browse Library</a></li>
-                                        <li><a href="#">Library</a></li>
-                                        <li><a href="#">Partners</a></li>
-                                        <li><a href="blog.html">News & Blog</a></li>
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Tutorials</a></li>
+                                        <li><a href="#">Mesa de Partes</a></li>
+                                        <li><a href="#">Biblioteca Virtual</a></li>
+                                        <li><a href="#">Directorio</a></li>
+                                        <li><a href="blog.html">Noticias</a></li>
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="footer-widget footer-widget-4">
-                                <h3 class="footer-title">Newsletter</h3> 
+                                <h3 class="footer-title">Notificame</h3> 
                                 <div class="footer3__form">
-                                    <p>Get the latest Echooling news <br>delivered to you inbox</p>
+                                    <p>Consigue las ultimas noticias en tu bandeja</p>
                                     <form action="#">
-                                        <input type="email" placeholder="Enter your email">
+                                        <input type="email" placeholder="Ingresa Tu Email">
                                         <button class="footer3__form-1">
                                             <i class="arrow_right"></i>
                                         </button>

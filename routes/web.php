@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -17,18 +18,29 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'intranet'], function () {
+    Route::get('/', function () {
+        return view('intranet.app');
+    });
+    Route::get('login', function () {
+        return view('intranet.app');
+    });
+});
+
 
 Route::get('/', HomeController::class)->name('home');
 
-// Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/intranet', IntranetController::class)->name('intranet');
 
 
-Route::get('/intranet', function () {
-    return view('intranet.app');
+// Route::get('/intranet', function () {
+//     return view('intranet.app');
+// });
+
+
+Route::group(['middleware' => ['auth:sanctum']],function(){
+    Route::post('/logout',[AuthController::class,'logout']);
+    Route::get('/usuario-session-data',[UserController::class,'mostrarDatoUsuario']);
+
 });
 
 //Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');

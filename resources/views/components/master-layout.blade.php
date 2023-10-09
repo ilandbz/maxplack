@@ -11,13 +11,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="{{ asset("plugins/overlayscrollbars/css/overlayscrollbars.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("adminlte4/plugins/overlayscrollbars/css/overlayscrollbars.min.css") }}">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset("plugins/fontawesome-free/css/all.min.css") }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset("adminlte4/plugins/fontawesome-free/css/all.min.css") }}">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset("plugins/bootstrap-icon/bootstrap-icons.min.css") }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset("adminlte4/plugins/bootstrap-icon/bootstrap-icons.min.css") }}">
 
-        <link type="text/css" rel="stylesheet" href="{{ asset("app/css/adminlte.min.css") }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset("adminlte4/css/adminlte.min.css") }}">
 
         <!-- Scripts -->
         @routes
@@ -28,10 +28,10 @@
         <div class="wrapper" id="wrapper">
             <App></App>
 
-            <script src="{{ asset("plugins/overlayscrollbars/js/overlayscrollbars.browser.es6.min.js") }}"></script>
-            <script src="{{ asset("plugins/popper/popper.min.js") }}"></script>
-            <script src="{{ asset("plugins/bootstrap/js/bootstrap.min.js") }}"></script>
-            <script src="{{ asset("app/js/adminlte.min.js") }}"></script>
+            <script src="{{ asset("adminlte4/plugins/overlayscrollbars/js/overlayscrollbars.browser.es6.min.js") }}"></script>
+            <script src="{{ asset("adminlte4/plugins/popper/popper.min.js") }}"></script>
+            <script src="{{ asset("adminlte4/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
+            <script src="{{ asset("adminlte4/js/adminlte.min.js") }}"></script>
 
             <script>
                 const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
