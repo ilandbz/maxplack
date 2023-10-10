@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue';
 import {useAutenticacion} from '@/Composables/autenticacion';
 
     const user = ref({
-        username:'',
+        name:'',
         pasword:'',
         remember:false,
         errors:[]
@@ -33,13 +33,13 @@ import {useAutenticacion} from '@/Composables/autenticacion';
                     <div class="col-md-12 mb-2">
                         <div class="input-group ">
                             <input type="text" class="form-control" placeholder="Nombre de Usuario"
-                                v-model="user.username"
-                                :class="{ 'is-invalid' : errors.username }"/>
+                                v-model="user.name"
+                                :class="{ 'is-invalid' : errors.name }"/>
                             <div class="input-group-text">
                                 <span class="fa-solid fa-user"></span>
                             </div>
                         </div>
-                        <small class="text-danger" v-for="error in errors.username"
+                        <small class="text-danger" v-for="error in errors.name"
                             :key="error">{{ error }}</small>
                     </div>
                 </div>

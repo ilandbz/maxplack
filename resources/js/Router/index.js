@@ -13,12 +13,12 @@ import Login from '@/Pages/Auth/Login.vue'
 
 const routes = [
     {
-        path: '/intranet/login',name: 'Login', component: Login,
-        meta: {layout: LayoutLogin}
+        path: '/intranet/principal', name:'Intranet', component: Principal ,
+        meta:{layout: LayoutDefault}
     },
     {
-        path: '/intranet', name:'Intranet', component: Principal ,
-        meta:{layout: LayoutDefault}
+        path: '/intranet/login',name: 'Login', component: Login,
+        meta: {layout: LayoutLogin}
     },
 ]
 

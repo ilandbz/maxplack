@@ -1,41 +1,41 @@
 <script setup>
 import { ref, toRefs } from 'vue';
-// import useHelper from '@/Helpers';
-// import { useAutenticacion } from '@/Composables/autenticacion';
+import useHelper from '@/Helpers';
+import { useAutenticacion } from '@/Composables/autenticacion';
 
-    // const props = defineProps({
-    //     usuario: Object
-    // });
+    const props = defineProps({
+        usuario: Object
+    });
 
-    // const { logoutUsuario }= useAutenticacion();
-    // const { Swal } = useHelper();
-    // const {usuario} = toRefs(props)
+    const { logoutUsuario }= useAutenticacion();
+    const { Swal } = useHelper();
+    const {usuario} = toRefs(props)
 
-    // const logout = async() => {
-    //     await logoutUsuario(usuario.value.id)
-    // }
+    const logout = async() => {
+        await logoutUsuario(usuario.value.id)
+    }
 
-    // const cerrarSesion = async() => {
-    //     Swal.fire({
-    //         title:'¿Está seguro de Cerrar Sesión?',
-    //         text:'ASISTENCIA APP',
-    //         icon:'question',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Si',
-    //         cancelButtonText: 'No'
-    //     }).then((result) => {
-    //         if(result.isConfirmed) {
-    //             logout()
-    //         }
-    //     })
-    // }
+    const cerrarSesion = async() => {
+        Swal.fire({
+            title:'¿Está seguro de Cerrar Sesión?',
+            text:'ASISTENCIA APP',
+            icon:'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if(result.isConfirmed) {
+                logout()
+            }
+        })
+    }
 </script>
 
 <template>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nobis voluptatibus necessitatibus distinctio praesentium, impedit iste, sit voluptates architecto at ab eius ea numquam. Ratione voluptatem doloremque nostrum consectetur hic?
-    <!-- <nav class="app-header navbar navbar-expand bg-body">
+    
+    <nav class="app-header navbar navbar-expand bg-body">
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -89,5 +89,5 @@ import { ref, toRefs } from 'vue';
                 </li>
             </ul>
         </div>
-    </nav> -->
+    </nav>
 </template>

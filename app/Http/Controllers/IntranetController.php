@@ -9,10 +9,9 @@ class IntranetController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function __invoke()
+    public function index()
     {
-        // $organizacion = Organizacion::first();
-        // return view('intranet.dashboard', compact('organizacion'));
+        return view('intranet.app');
     }
 
 

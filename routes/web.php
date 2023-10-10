@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IntranetController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
@@ -18,19 +19,22 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix' => 'intranet'], function () {
-    Route::get('/', function () {
-        return view('intranet.app');
-    });
-    Route::get('login', function () {
-        return view('intranet.app');
-    });
-});
+// Route::group(['prefix' => 'intranet'], function () {
+//     Route::get('/', function () {
+//         return view('intranet.app');
+//     });
+//     Route::get('login', function () {
+//         return view('intranet.app');
+//     });
+// });
 
+Route::get('/intranet',[IntranetController::class,'index']);
+
+Route::get('/intranet/{path}',[IntranetController::class,'index'])->where('path','.*');
 
 Route::get('/', HomeController::class)->name('home');
 
-
+Route::post('/intranet/login',[LoginController::class,'validarLogin']);
 
 // Route::get('/intranet', function () {
 //     return view('intranet.app');
