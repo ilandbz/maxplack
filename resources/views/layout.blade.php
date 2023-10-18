@@ -111,7 +111,7 @@
                                         <img src="maxplanck/assets/images/service/2.png" alt="image">
                                     </div>
                                     <div class="react-content">
-                                        <h3 class="react-title"><a href="coureses-grid.html">BIBLIOTECA VIRTUAL</a></h3>
+                                        <h3 class="react-title"><a href="https://elibro.net/es/lc/ietpmaxplanck/inicio/">BIBLIOTECA VIRTUAL</a></h3>
                                         <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                     </div>                                    
                                 </div>
