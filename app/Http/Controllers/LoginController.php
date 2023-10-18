@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
+use App\Models\MenuRole;
 use App\Models\User;
+use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -12,7 +14,7 @@ class LoginController extends Controller
 {
     public function validarLogin(LoginRequest $request)
     {
-        //$request->validated();
+        $request->validated();
 
         $credenciales = ['name' => $request->name, 'password' => $request->password, 'es_activo' => 1];
 
@@ -24,25 +26,22 @@ class LoginController extends Controller
             {
                 if(auth()->attempt($credenciales))
                 {
-                    $user = User::find(Auth::user()->id);
-                    
-                    $permiso = [];
-                    $menu = [];
-                    //$permisos = $user->obtenerPermisos($user->role_id)->toArray();
-                    //array_merge($permisos,$permiso);
+                    $user = auth()->user();
 
-                    //$menus = $user->obtenerMenus($user->role_id)->toArray();
-                    //array_merge($menus,$menu);
+                    $usuario = User::with('role:id,nombre')
+                                    ->where('id',$user->id)->first()
+                    ;
 
+                    $success['token'] = $user->createToken('token-api')->plainTextToken;
+                    $success['user'] = $usuario->id;
 
-                    // $success['user']['permisos'] = $permisos;
-                    // $success['user']['menus'] = $menus;
+                    $success = JWT::encode($success,env('VITE_SECRET_KEY'),'HS256');
 
-                    return response()->json($user,200);
+                    return response()->json($success,200);
 
                 } else {
                     return response()->json([
-                        'errors' => ['name' => 'Usuario Suspendido']
+                        'errors' => ['email' => 'Usuario Suspendido']
                     ],422);
                 }
             }
@@ -54,8 +53,22 @@ class LoginController extends Controller
         }
         else {
             return response([
-                'errors' => [ 'name' => 'Usuario no válido']
+                'errors' => [ 'email' => 'Email no válido']
             ], 422);
         }
+    }
+    public function logout(Request $request)
+    {
+        // $user = DB::table('personal_access_tokens')
+        //         ->where('tokenable_id',$request->id)
+        //         ->delete();
+        Auth::user()->tokens->each(function($token,$key){
+            $token->delete()  ;
+        });
+
+        return response()->json([
+            'ok' => 1,
+            'mensaje' =>'Sessión cerrada Satisfactoriamiente'
+        ], 200);
     }
 }

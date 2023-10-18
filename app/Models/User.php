@@ -53,5 +53,11 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class, 'role_id');
     }
-
+    public function obtenerMenus($roles)
+    {
+        return Menu::join('menu_role as mr','menus.id','=','mr.menu_id')
+                        ->select('menus.id','menus.nombre','menus.slug','menus.icono')
+                        ->where('mr.role_id',$roles)
+                        ->orderBy('menus.id','asc')->get();
+    }
 }

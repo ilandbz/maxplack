@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
@@ -19,15 +20,12 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::group(['prefix' => 'intranet'], function () {
-//     Route::get('/', function () {
-//         return view('intranet.app');
-//     });
-//     Route::get('login', function () {
-//         return view('intranet.app');
-//     });
-// });
 
+Route::group(['middleware' => ['auth:sanctum']],function(){
+    Route::post('/logout',[LoginController::class,'logout']);
+    Route::get('/intranet/usuario-session-data',[UserController::class,'mostrarDatoUsuario']);
+
+});
 Route::get('/intranet',[IntranetController::class,'index']);
 
 Route::get('/intranet/{path}',[IntranetController::class,'index'])->where('path','.*');
@@ -41,11 +39,7 @@ Route::post('/intranet/login',[LoginController::class,'validarLogin']);
 // });
 
 
-Route::group(['middleware' => ['auth:sanctum']],function(){
-    Route::post('/logout',[AuthController::class,'logout']);
-    Route::get('/usuario-session-data',[UserController::class,'mostrarDatoUsuario']);
 
-});
 
 //Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
 
@@ -60,6 +54,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+Route::group(['prefix' => 'noticia', 'middleware' => ['auth:sanctum']], function () {
+    Route::get('mostrar', [NoticiaController::class, 'show']);
+    Route::post('actualizar', [NoticiaController::class, 'update']);
+    Route::post('eliminar', [NoticiaController::class, 'destroy']);
+    Route::post('guardar', [NoticiaController::class, 'store']);
+    Route::get('listar', [NoticiaController::class, 'listar']);
+    Route::post('subir-imagen', [NoticiaController::class, 'subirImagen']);
+});
 require __DIR__.'/auth.php';
 require __DIR__.'/routesEntradas.php';

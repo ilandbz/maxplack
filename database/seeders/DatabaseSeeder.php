@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
             PopupSeeder::class,
             ImagenPopupSeeder::class,
             RoleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            MenuSeeder::class
         ]);
 
     }

@@ -10,6 +10,7 @@ import LayoutDefault from '@/Layouts/AppLayoutDefault.vue'
 import Principal from '@/Pages/Principal.vue'
 // import Usuario from '@/Pages/usuarios/Inicio.vue'
 import Login from '@/Pages/Auth/Login.vue'
+import Noticia from '@/Pages/noticias/Inicio.vue'
 
 const routes = [
     {
@@ -20,6 +21,14 @@ const routes = [
         path: '/intranet/login',name: 'Login', component: Login,
         meta: {layout: LayoutLogin}
     },
+    {
+        path: '/intranet/noticia',name: 'Noticia', component: Noticia,
+        meta: {layout: LayoutDefault}
+    },
+
+
+
+    
 ]
 
 export default createRouter({

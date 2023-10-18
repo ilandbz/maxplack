@@ -3,8 +3,8 @@ import { storeToRefs } from 'pinia';
 import { useUsuarioStore } from '@/Store';
 import jwt_decode from 'jwt-decode';
 export default function useDatosSession() {
-    const user_id = localStorage.getItem('userSession') ? JSON.parse( JSON.stringify(jwt_decode(localStorage.getItem('userSession')).user)) : null
-    ;
+    const user_id = localStorage.getItem('userSession') ? JSON.parse( JSON.stringify(jwt_decode(localStorage.getItem('userSession')).user)) : null;
+
     const usuarioStore = useUsuarioStore();
     const  menuactivo = ref();
     const { usuario, menus, role } = storeToRefs(usuarioStore)

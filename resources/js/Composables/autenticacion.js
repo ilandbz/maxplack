@@ -30,12 +30,12 @@ export const useAutenticacion = () => {
     }
 
     const logoutUsuario = async() => {
-        const respuesta = await axios.post('logout')
+        const respuesta = await axios.post('/logout')
 
         if(respuesta.data.ok==1)
         {
             localStorage.removeItem('userSession')
-            window.location.href="/"
+            window.location.href="/intranet/login"
         }
     }
 

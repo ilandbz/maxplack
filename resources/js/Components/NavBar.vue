@@ -44,7 +44,7 @@ import { useAutenticacion } from '@/Composables/autenticacion';
                     </a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                    <a href="/principal" class="nav-link">Home</a>
+                    <a href="/intranet/principal" class="nav-link">Home</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -55,28 +55,18 @@ import { useAutenticacion } from '@/Composables/autenticacion';
                 </li>
                 <li class="nav-item dropdown user-menu">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <img src="public/img/avatar.png" class="user-image rounded-circle shadow" alt="User Image">
+                        <img src="/imagenes/ironman.png" class="user-image rounded-circle shadow" alt="User Image">
                         <span class="d-none d-md-inline">{{ usuario.username }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                         <li class="user-header text-bg-primary">
-                            <img :src="imgAvatar" class="rounded-circle shadow" alt="User Image">
+                            <img src="/imagenes/ironman.png" class="rounded-circle shadow" alt="User Image">
                             <p>
                                 {{ usuario.username }}
                             </p>
                         </li>
                         <li class="user-body">
-                            <div class="row">
-                                <div class="col-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </div>
+
                         </li>
                         <li class="user-footer">
                             <a href="perfil" class="btn btn-default btn-flat">Mi Perfil</a>

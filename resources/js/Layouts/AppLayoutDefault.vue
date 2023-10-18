@@ -1,5 +1,5 @@
 <script setup>
-    //import { cargarClasesPrincipalLayout } from '@/Helpers';
+    import { cargarClasesPrincipalLayout } from '@/Helpers';
     import { onMounted } from 'vue';
     import useDatosSession from '@/Composables/session';
     //import PreLoader from '@/Components/PreLoader.vue';
@@ -7,11 +7,10 @@
     import SideBar from '@/Components/SideBar.vue';
     import Footer from '@/Components/Footer.vue';
 
-    const { usuario } = useDatosSession();
-    // const {usuario, menus } = useDatosSession();
-    //onMounted(() => {
-        //cargarClasesPrincipalLayout();
-    //})
+    const { usuario, menus } = useDatosSession();
+    onMounted(() => {
+        cargarClasesPrincipalLayout();
+    })
 </script>
 
 <template>
