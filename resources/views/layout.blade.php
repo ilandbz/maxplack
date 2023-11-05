@@ -550,7 +550,7 @@
                         <div class="col-lg-3 md-mb-30">
                             <div class="footer-widget footer-widget-1">
                                 <div class="footer-logo white">
-                                    <a href="/" class="logo-text"> <img src="{{ Storage::url('imagenes/'.$organizacion->logo) }}" class="img-fluid" alt="logo"></a>
+                                    <a href="/" class="logo-text"> <img src="{{ Storage::url('imagenes/'.$organizacion->logo) }}" class="img-fluid" width="160px" alt="logo"></a>
                                 </div>
                                 <h5 class="footer-subtitle">{{ $organizacion->slogan }}</h5>
                                 <ul class="footer-address">
