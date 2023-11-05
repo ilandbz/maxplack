@@ -10,64 +10,61 @@ const props = defineProps({
 const { form, currentPage } = toRefs(props)
 const {
     errors, respuesta, agregarNoticia, actualizarNoticia,
-    subirImagen, carpetaNoticias
+    subirImagen, actualizarNoticiaConImagen
 } = useNoticia();
 const  emit  =defineEmits(['onListar'])
 const crud = {
     'nuevo': async() => {
-
         let formData = new FormData();
         formData.append('imagen', file.value);
-        formData.append('noticia_id', 20);
-        await subirImagen(formData)
-        // if(errors.value)
-        //     {
-        //         form.value.errors = errors.value
-        //     }
-        // mostrarProgressBar.value = true;
-        // if(prRespuesta.value.nombreimagen)
-        // {
-        //     //formimagen.value.imagen = prRespuesta.value.nombreimagen
-        //     Toast.fire({icon:'success', title:prRespuesta.value.mensaje})
-        //     emit('onListarImagenes', producto.value.id)
-        //     inputimagen.src = carpetaProductos+formimagen.value.imagen;
-        // }
-
-
-        // await agregarNoticia(form.value)
-        // form.value.errors = []
-        // if(errors.value)
-        // {
-        //     form.value.errors = errors.value
-        // }
-        // if(respuesta.value.ok==1){
-        //     form.value.errors = []
-        //     hideModal('#modalnoticia')
-        //     Toast.fire({icon:'success', title:respuesta.value.mensaje})
-        //     emit('onListar', currentPage.value)
-        // }
-    },
-    'editar': async() => {
-        await actualizarNoticia(form.value)
+        formData.append('titulo', form.value.titulo);
+        formData.append('subtitulo', form.value.subtitulo);
+        formData.append('slug', form.value.slug);
+        formData.append('contenido', form.value.contenido);
+        await agregarNoticia(formData)
         form.value.errors = []
         if(errors.value)
-        {
-            form.value.errors = errors.value
-        }
+            {
+                form.value.errors = errors.value
+            }
         if(respuesta.value.ok==1){
             form.value.errors = []
             hideModal('#modalnoticia')
             Toast.fire({icon:'success', title:respuesta.value.mensaje})
             emit('onListar', currentPage.value)
         }
+    },
+    'editar': async() => {
+        if(file.value === null){
+            await actualizarNoticia(form.value)
+        }else{
+            let formData = new FormData();
+            formData.append('id', form.value.id);
+            formData.append('imagen', file.value);
+            formData.append('titulo', form.value.titulo);
+            formData.append('subtitulo', form.value.subtitulo);
+            formData.append('slug', form.value.slug);
+            formData.append('contenido', form.value.contenido); 
+            await actualizarNoticiaConImagen(formData)
+            form.value.errors = []
+        }
+        if(errors.value)
+            {
+                form.value.errors = errors.value
+            }
+        if(respuesta.value.ok==1){
+            form.value.errors = []
+            hideModal('#modalnoticia')
+            Toast.fire({icon:'success', title:respuesta.value.mensaje})
+            emit('onListar', currentPage.value)
+        } 
     }
 }
 const file = ref(null);
-const cambiarfoto = (e)=>{
+const cambiarImagen = (e)=>{
     file.value = e.target.files[0]
     if (file) {
-        inputimagen.src = URL.createObjectURL(file.value);
-        //progress.value=0;
+        form.value.imagen=URL.createObjectURL(file.value);
     }
 }
 const guardar = () => {
@@ -102,7 +99,7 @@ const guardar = () => {
                             </div>
                             <div class="mb-3">
                                 <label for="slug" class="form-label">Slug </label>
-                                <input type="text" class="form-control" v-model="form.slug" :class="{ 'is-invalid': form.errors.slug }">
+                                <input type="text" readonly class="form-control" v-model="form.slug" :class="{ 'is-invalid': form.errors.slug }">
                                 <small class="text-danger" v-for="error in form.errors.slug" :key="error">{{ error
                                         }}</small>
                             </div>  
@@ -112,16 +109,18 @@ const guardar = () => {
                                 <small class="text-danger" v-for="error in form.errors.contenido" :key="error">{{ error
                                         }}</small>
                             </div>
+                            <div class="mb-3">
+
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="imagen" class="form-label">Imagen Preliminar</label>
-                                <input class="form-control" type="file" accept="image/*" @change="cambiarfoto">
+                                <input class="form-control" type="file" accept="image/*" @change="cambiarImagen">
                                 <div class="card">
-                                    <img id="inputimagen" :src="carpetaNoticias+form.imagen" class="img-fluid img-thumbnail">
+                                    <img id="inputImagen" :src="form.imagen" class="img-fluid img-thumbnail">
                                 </div>
-                                <small class="text-danger" v-for="error in form.errors.imagen" :key="error">{{ error
-                                        }}</small>
+                                <small class="text-danger" v-for="error in form.errors.imagen" :key="error">{{ error }}<br></small>
                             </div>  
                         </div>
                     </div>

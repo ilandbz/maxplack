@@ -1,15 +1,15 @@
 <script setup>
   import useNoticia from '@/Composables/noticia.js';
   import NoticiaForm from './Form.vue'
+  import Imagenform from './Imagen.vue'
   import useHelper from '@/Helpers';  
   import { ref, onMounted } from 'vue';
   const { openModal, Toast, Swal } = useHelper();
-  const show_tipo = ref("Habilitados")
   const {
         errors, noticias, noticia, 
         obtenerNoticia, obtenerNoticias, 
-        eliminarNoticia,
-        respuesta
+        eliminarNoticia,obtenerImagenes, imagenes,
+        respuesta, carpetaNoticias
     } = useNoticia();
     const form = ref({
         id:'',
@@ -17,8 +17,15 @@
         subtitulo : '',
         slug : '',
         contenido : '',
-        imagen: 'default.webp',
+        imagen_id:'',
+        imagen: carpetaNoticias+'default.webp',
         estadoCrud:'',
+        errors:[]
+    });
+    const formimagen = ref({
+        id:'',
+        noticia_id:'',
+        nombreimagen:carpetaNoticias+'default.webp',
         errors:[]
     });
     const limpiar = ()=> {
@@ -27,7 +34,8 @@
         form.value.subtitulo='',
         form.value.slug='',
         form.value.contenido='',
-        form.value.imagen='default.webp',
+        form.value.imagen_id='',
+        form.value.imagen=carpetaNoticias+'default.webp',
         form.value.estadoCrud = '',
         form.value.errors = []
         errors.value = []
@@ -40,8 +48,9 @@
             form.value.titulo=noticia.value.titulo;
             form.value.subtitulo=noticia.value.subtitulo;
             form.value.slug=noticia.value.slug;
-            form.value.contenido=noticia.value.contenido; 
-            form.value.imagen=noticia.value.imagen
+            form.value.contenido=noticia.value.contenido;
+            form.value.imagen_id=noticia.value.imagen.id 
+            form.value.imagen=carpetaNoticias+noticia.value.imagen.nombreimagen
         }
     }
     const editar = (id) => {
@@ -57,6 +66,16 @@
         openModal('#modalnoticia')
         document.getElementById("modalnoticiaLabel").innerHTML = 'Nueva Noticia';
     }
+    const listaImagenes = async(id) =>{
+        await obtenerImagenes(id)
+    }
+    const nuevaImagen = (id) => {
+        formimagen.value.noticia_id = id
+        formimagen.value.nombreimagen=carpetaNoticias+'default.webp'
+        document.getElementById("modalimagenLabel").innerHTML = 'Nueva Imagen';
+        listaImagenes(id)
+        openModal('#modalimagen')
+    }    
     const listarNoticias = async(page=1) => {
         dato.value.page= page
         await obtenerNoticias(dato.value)
@@ -86,9 +105,6 @@
             listarNoticias()
         }
     }
-
-
-
     //paginacion
     const isActived = () => {
         return noticias.value.current_page
@@ -97,7 +113,6 @@
     const dato = ref({
         page:'',
         buscar:'',
-        show_tipo : 'habilitados',
         paginacion: 10
     });
     const buscar = () => {
@@ -123,21 +138,6 @@
             from ++
         }
         return pagesArray
-    }
-    const mostrarTodos = async () => {
-        show_tipo.value = 'Todos'
-        dato.value.show_tipo = 'todos'
-        listarNoticias()
-    }
-    const mostrarHabilitados = async () => {
-        show_tipo.value = 'Habilitados'
-        dato.value.show_tipo = 'habilitados'
-        listarNoticias()
-    }
-    const mostrarEliminados = async () => {
-        show_tipo.value = 'Eliminados'
-        dato.value.show_tipo = 'eliminados'
-        listarNoticias()
     }
     // CARGA
     onMounted(() => {
@@ -175,14 +175,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <button data-bs-toggle="dropdown" class="btn btn-indigo btn-block">
-                        Mostrar <i class="icon ion-ios-arrow-down tx-11 mg-l-3"></i>{{noticia.buscar}}
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="" class="dropdown-item" @click.prevent="mostrarTodos">Todos</a>
-                        <a href="" class="dropdown-item" @click.prevent="mostrarHabilitados">Habilitados</a>
-                        <a href="" class="dropdown-item" @click.prevent="mostrarEliminados">Eliminados</a>
-                    </div>
+
                 </div>
                 <div class="col-md-5">
                     <div class="input-group mb-1">
@@ -239,7 +232,7 @@
                         <table class="table table-bordered table-hover table-sm table-striped">
                             <thead class="table-dark">
                                 <tr>
-                                    <th colspan="7" class="text-center">Noticias {{ show_tipo }}</th>
+                                    <th colspan="7" class="text-center">Noticias</th>
                                 </tr>
                                 <tr>
                                     <th>#</th>
@@ -282,7 +275,10 @@
                                         </button>&nbsp;
                                         <button class="btn btn-danger btn-sm" title="Eliminar" @click.prevent="eliminar(noticia.id)">
                                             <i class="fas fa-trash"></i>
-                                        </button>
+                                        </button>&nbsp;
+                                        <button class="btn btn-primary btn-sm" title="Agregar Imagenes" @click.prevent="nuevaImagen(noticia.id)">
+                                            <i class="fas fa-camera"></i>
+                                        </button>&nbsp;
                                     </td>
                                 </tr>
                             </tbody>
@@ -341,4 +337,5 @@
         </div>
     </div>
     <NoticiaForm :form="form" @onListar="listarNoticias" :currentPage="noticias.current_page"></NoticiaForm>
+    <Imagenform :form="formimagen" :imagenes="imagenes"></Imagenform>
 </template>

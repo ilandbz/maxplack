@@ -14,7 +14,7 @@ export const useUsuarioStore = defineStore("usuario", {
             const user_id = localStorage.getItem('userSession') ? 
                 JSON.parse( JSON.stringify(jwt_decode(localStorage.getItem('userSession')).user)) 
                 : null;
-            this.usuario = await axios.get('usuario-session-data/',{params:{id:user_id}}).then((respuesta) => respuesta.data)
+            this.usuario = await axios.get('/intranet/usuario-session-data/',{params:{id:user_id}}).then((respuesta) => respuesta.data)
             if(this.usuario)
             {
                 this.role = this.usuario.role

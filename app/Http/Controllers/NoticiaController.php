@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\noticia\UpdateConImagenRequest;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,14 +22,24 @@ class NoticiaController extends Controller
             'contenido'        => $request->contenido,
             'user_id'          => Auth::user()->id,
         ]);
+        $file = $request->file('imagen');
+        $nombre_archivo = ImagenNoticia::generarNombreImagen($noticia->id,$file);
+        Storage::disk('noticias')->put($noticia->id.'/'.$nombre_archivo,File::get($file));
+        ImagenNoticia::create([
+            'noticia_id' => $noticia->id,
+            'nombreimagen' =>$noticia->id.'/'.$nombre_archivo
+        ]);
         return response()->json([
             'ok' => 1,
             'mensaje' => 'Noticia Registrado satisfactoriamente'
         ],200);
     }
     public function destroy(Request $request){
-        $noticia = Noticia::where('id', $request->id);
-        $noticia->delete();
+        $noticia = Noticia::find($request->id);
+        //$imagenesnoticia = ImagenNoticia::where('noticia_id',$request->id)->first();
+
+        Storage::disk('noticias')->deleteDirectory($noticia->id);
+        $noticia->delete(); 
         return response()->json([
             'ok' => 1,
             'mensaje' => 'Noticia eliminado satisfactoriamente'
@@ -47,8 +58,23 @@ class NoticiaController extends Controller
             'mensaje' => 'Noticia modificado satisfactoriamente'
         ],200);
     }
+    public function updateconimagen(UpdateConImagenRequest $request){
+        $noticia = Noticia::with('imagen')->where('id',$request->id)->first();
+        $noticia->update([
+            'titulo'           => $request->titulo,
+            'subtitulo'        => $request->subtitulo,
+            'slug'             => $request->slug,
+            'contenido'        => $request->contenido,
+        ]);
+        $file = $request->file('imagen');
+        Storage::disk('noticias')->put($noticia->imagen->nombreimagen,File::get($file));
+        return response()->json([
+            'ok' => 1,
+            'mensaje' => 'Noticia modificado satisfactoriamente'
+        ],200);
+    }    
     public function show(Request $request){
-        $noticia=Noticia::where('id', $request->id)->first();
+        $noticia=Noticia::with('imagen')->where('id', $request->id)->first();
         return $noticia;
     }
     public function listar(Request $request){
@@ -61,19 +87,14 @@ class NoticiaController extends Controller
                 ->orWhere('slug', 'LIKE', '%'.$buscar.'%');
         })->paginate($paginacion);
     }
-    public function subirImagen(Request $request){
-        $file = $request->file('imagen');
-        $nombre_archivo = ImagenNoticia::generarNombreImagen($request->noticia_id,$file);
-        Storage::disk('noticias')->put($request->noticia_id.'/'.$nombre_archivo,File::get($file));
-        ImagenNoticia::create([
-            'noticia_id' => $request->noticia_id,
-            'nombreimagen' =>$request->noticia_id.'/'.$nombre_archivo
-        ]);
-        return response()->json([
-            'ok' => 1,
-            'mensaje' => 'Imagen Subido Exitosamente',
-            'nombreimagen' => $nombre_archivo
-        ],200);
-        return response()->json(['success' => false]);
+    public function imagenes(Request $request){
+        return ImagenNoticia::where('noticia_id', $request->id)->get();
     }
+    public function subirImagen(Request $request){
+        ImagenNoticia::create([
+            'noticia_id' => $request->noticia_iid,
+            'nombreimagen' =>$request->nombreimagen
+        ]);
+    }
+
 }

@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { getConfigHeader, getdataParamsPagination } from '@/Helpers'
 export default function useNoticia() {
     const noticias = ref([])
+    const imagenes = ref([])
     const errors = ref('')
     const noticia = ref({})
     const respuesta = ref([])
@@ -14,6 +15,10 @@ export default function useNoticia() {
     const obtenerNoticias = async(data) => {
         let respuesta = await axios.get('/noticia/listar' + getdataParamsPagination(data),getConfigHeader())
         noticias.value =respuesta.data
+    }
+    const obtenerImagenes = async(id) =>{
+        let respuesta = await axios.get('/noticia/mostrar-imagenes?id=' + id,getConfigHeader())
+        imagenes.value =respuesta.data        
     }
     const subirImagen = async(data) =>{
         errors.value = ''
@@ -66,6 +71,22 @@ export default function useNoticia() {
             }
         }
     }
+    const actualizarNoticiaConImagen = async(data) => {
+        errors.value = ''
+        try {
+            let respond = await axios.post('/noticia/actualizar-con-imagen',data,getConfigHeader())
+            errors.value =''
+            if(respond.data.ok==1){
+                respuesta.value=respond.data
+            }
+
+        } catch (error) {
+            errors.value=""
+            if(error.response.status === 422) {
+                errors.value = error.response.data.errors
+            }
+        }
+    }    
     const eliminarNoticia = async(id) => {
         const respond = await axios.post('/noticia/eliminar', {id:id},getConfigHeader())
         if(respond.data.ok==1)
@@ -76,6 +97,7 @@ export default function useNoticia() {
     return {
         errors, noticias, noticia, obtenerNoticia, obtenerNoticias, 
         agregarNoticia, actualizarNoticia, eliminarNoticia, respuesta,
-        subirImagen, carpetaNoticias
+        subirImagen, carpetaNoticias, actualizarNoticiaConImagen,
+        obtenerImagenes, imagenes
     }
 }

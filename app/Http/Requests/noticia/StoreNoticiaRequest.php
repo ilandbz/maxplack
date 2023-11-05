@@ -25,6 +25,7 @@ class StoreNoticiaRequest extends FormRequest
     {
 
         return [
+            'imagen' => 'required|image|mimes:jpg,jpeg,png,gif,webp|file|max:2000', 
             'titulo'     => 'required|string',
             'subtitulo'  => 'required|string',
             'slug'       => 'required|string|unique:noticias,slug',

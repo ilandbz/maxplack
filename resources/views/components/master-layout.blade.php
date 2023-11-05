@@ -19,10 +19,13 @@
 
         <link type="text/css" rel="stylesheet" href="{{ asset("adminlte4/css/adminlte.min.css") }}">
 
+              
+
         <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js'])
         {{-- @inertiaHead --}}
+
     </head>
     <body>
         <div class="wrapper" id="wrapper">

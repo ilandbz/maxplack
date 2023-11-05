@@ -61,6 +61,8 @@ Route::group(['prefix' => 'noticia', 'middleware' => ['auth:sanctum']], function
     Route::post('guardar', [NoticiaController::class, 'store']);
     Route::get('listar', [NoticiaController::class, 'listar']);
     Route::post('subir-imagen', [NoticiaController::class, 'subirImagen']);
+    Route::post('actualizar-con-imagen', [NoticiaController::class, 'updateconimagen']);
+    Route::get('mostrar-imagenes', [NoticiaController::class, 'imagenes']);
 });
 require __DIR__.'/auth.php';
 require __DIR__.'/routesEntradas.php';
