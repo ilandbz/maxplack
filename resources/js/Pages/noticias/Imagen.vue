@@ -2,15 +2,17 @@
 import { toRefs, ref,onMounted } from 'vue';
 import useNoticia from '@/Composables/noticia.js';
 import useHelper from '@/Helpers';  
-const { hideModal, Toast, slugify } = useHelper();
+const { hideModal, Toast, slugify, Swal } = useHelper();
 const props = defineProps({
     form: Object,
     imagenes: Array
 });
 const { form, imagenes } = toRefs(props)
 const {
-    errors, respuesta, carpetaNoticias
+    errors, respuesta, carpetaNoticias, subirImagen,
+    eliminarImagen
 } = useNoticia();
+const  emit  =defineEmits(['cargarImagenes'])
 const file = ref(null);
 const cambiarImagen = (e)=>{
     file.value = e.target.files[0]
@@ -18,24 +20,43 @@ const cambiarImagen = (e)=>{
         form.value.nombreimagen=URL.createObjectURL(file.value);
     }
 }
-const subirImagen = async() => {
+const guardarImagen = async() => {
     let formData = new FormData();
+    formData.append('noticia_id', form.value.noticia_id);
     formData.append('imagen', file.value);
-    formData.append('titulo', form.value.titulo);
-    formData.append('subtitulo', form.value.subtitulo);
-    formData.append('slug', form.value.slug);
-    formData.append('contenido', form.value.contenido);
-    await agregarNoticia(formData)
+    await subirImagen(formData)
     form.value.errors = []
     if(errors.value)
-        {
-            form.value.errors = errors.value
-        }
+    {
+        form.value.errors = errors.value
+    }
     if(respuesta.value.ok==1){
-        // form.value.errors = []
-        // hideModal('#modalnoticia')
-        // Toast.fire({icon:'success', title:respuesta.value.mensaje})
-        // emit('onListar', currentPage.value)
+        form.value.errors = []
+        Toast.fire({icon:'success', title:respuesta.value.mensaje})
+        emit('cargarImagenes', form.value.noticia_id)
+    }
+}
+const eliminar = (id) => {
+        Swal.fire({
+            title: '¿Estás seguro de Eliminar?',
+            text: "Noticias",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Eliminalo!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                eliminarImg(id)
+            }
+        })
+    }
+const eliminarImg=async(id)=>{
+    await eliminarImagen(id)
+    if(respuesta.value.ok==1)
+    {
+        Toast.fire({icon:'success', title:respuesta.value.mensaje})
+        emit('cargarImagenes', form.value.noticia_id)
     }
 }
 </script>
@@ -55,9 +76,11 @@ const subirImagen = async() => {
                             <div class="mb-3">
                                 <label for="imagen" class="form-label">Imagen Preliminar</label>
                                 <div class="input-group mb-3">
-                                    <input class="form-control" type="file" accept="image/*" @change="cambiarImagen">
-                                    <button type="button" class="btn btn-info">Subir</button>
-                                </div>                                  
+                                    <input class="form-control" type="file" accept="image/*" @change="cambiarImagen" :class="{ 'is-invalid': form.errors.imagen }">
+                                    <button type="button" class="btn btn-info" @click="guardarImagen">Subir</button>
+                                </div>   
+                                <small class="text-danger" v-for="error in form.errors.imagen" :key="error">{{ error
+                                        }}<br></small>                         
                             </div>
                           
                             <div class="mt-6">
@@ -95,7 +118,7 @@ const subirImagen = async() => {
                                     <td>{{ index + 1 }}</td>
                                     <td><div style="max-width: 120px;"><img class="img-fluid" :src="carpetaNoticias + imagen.nombreimagen"></div></td>
                                     <td>
-                                        <button class="btn btn-danger btn-sm" title="Eliminar" @click.prevent="eliminar(imagen.id)">
+                                        <button class="btn btn-danger btn-sm" v-if="index>0" title="Eliminar" @click.prevent="eliminar(imagen.id)">
                                             <i class="fas fa-trash"></i>
                                         </button>&nbsp;
                                     </td>
@@ -107,7 +130,6 @@ const subirImagen = async() => {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ import Principal from '@/Pages/Principal.vue'
 // import Usuario from '@/Pages/usuarios/Inicio.vue'
 import Login from '@/Pages/Auth/Login.vue'
 import Noticia from '@/Pages/noticias/Inicio.vue'
+import Archivo from '@/Pages/Archivos/Inicio.vue'
 
 const routes = [
     {
@@ -25,7 +26,10 @@ const routes = [
         path: '/intranet/noticia',name: 'Noticia', component: Noticia,
         meta: {layout: LayoutDefault}
     },
-
+    {
+        path: '/intranet/archivo',name: 'Archivos', component: Archivo,
+        meta: {layout: LayoutDefault}
+    },
 
 
     

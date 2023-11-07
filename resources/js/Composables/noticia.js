@@ -30,9 +30,7 @@ export default function useNoticia() {
                 }
             })
             errors.value =''
-            if(response.data.nombreimagen){
-                respuesta.value=response.data
-            }
+            respuesta.value=response.data
         } catch (error) {
             errors.value=""
             if(error.response.status === 422) {
@@ -94,10 +92,17 @@ export default function useNoticia() {
             respuesta.value = respond.data
         }
     }
+    const eliminarImagen = async(id) => {
+        const respond = await axios.post('/noticia/eliminar-imagen', {id:id},getConfigHeader())
+        if(respond.data.ok==1)
+        {
+            respuesta.value = respond.data
+        }
+    }    
     return {
         errors, noticias, noticia, obtenerNoticia, obtenerNoticias, 
         agregarNoticia, actualizarNoticia, eliminarNoticia, respuesta,
         subirImagen, carpetaNoticias, actualizarNoticiaConImagen,
-        obtenerImagenes, imagenes
+        obtenerImagenes, imagenes, eliminarImagen
     }
 }

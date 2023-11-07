@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\noticia\StoreNoticiaRequest;
 use App\Http\Requests\noticia\UpdateNoticiaRequest;
+use App\Http\Requests\noticia\StoreImagenRequest;
 use App\Models\ImagenNoticia;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -90,11 +91,29 @@ class NoticiaController extends Controller
     public function imagenes(Request $request){
         return ImagenNoticia::where('noticia_id', $request->id)->get();
     }
-    public function subirImagen(Request $request){
+    public function subirImagen(StoreImagenRequest $request){
+        $file = $request->file('imagen');
+        $nombre_archivo = ImagenNoticia::generarNombreImagen($request->noticia_id,$file);
         ImagenNoticia::create([
-            'noticia_id' => $request->noticia_iid,
-            'nombreimagen' =>$request->nombreimagen
+            'noticia_id' => $request->noticia_id,
+            'nombreimagen' =>$request->noticia_id.'/'.$nombre_archivo
         ]);
+        Storage::disk('noticias')->put($request->noticia_id.'/'.$nombre_archivo,File::get($file));
+        return response()->json([
+            'ok' => 1,
+            'mensaje' => 'Imagen Subido Satisfactoriamente'
+        ],200);
+    }
+    public function eliminarImagen(Request $request){
+        $registro = ImagenNoticia::find($request->id);
+        if (Storage::disk('noticias')->exists($registro->nombreimagen)) {
+            Storage::disk('noticias')->delete($registro->nombreimagen);
+        } 
+        $registro->delete(); 
+        return response()->json([
+            'ok' => 1,
+            'mensaje' => 'Imagen eliminado satisfactoriamente'
+        ],200);
     }
 
 }

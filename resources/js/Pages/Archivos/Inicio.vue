@@ -1,7 +1,6 @@
 <script setup>
   import useNoticia from '@/Composables/noticia.js';
   import NoticiaForm from './Form.vue'
-  import Imagenform from './Imagen.vue'
   import useHelper from '@/Helpers';  
   import { ref, onMounted } from 'vue';
   const { openModal, Toast, Swal } = useHelper();
@@ -337,5 +336,4 @@
         </div>
     </div>
     <NoticiaForm :form="form" @onListar="listarNoticias" :currentPage="noticias.current_page"></NoticiaForm>
-    <Imagenform :form="formimagen" :imagenes="imagenes" @cargarImagenes="listaImagenes"></Imagenform>
 </template>
