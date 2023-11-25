@@ -53,13 +53,14 @@ class LoginController extends Controller
         }
         else {
             return response([
-                'errors' => [ 'email' => 'Email no válido']
+                'errors' => [ 'name' => 'Usuario no válido']
             ], 422);
         }
     }
     public function logout(Request $request)
     {
-        // $user = DB::table('personal_access_tokens')
+
+         // $user = DB::table('personal_access_tokens')
         //         ->where('tokenable_id',$request->id)
         //         ->delete();
         Auth::user()->tokens->each(function($token,$key){

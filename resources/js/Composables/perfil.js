@@ -7,7 +7,7 @@ export default function usePerfil() {
     const actualizarPerfil = async(data) => {
         errors.value = ''
         try {
-            let respond = await axios.post('actualizar-perfil',data,getConfigHeader())
+            let respond = await axios.post('/actualizar-perfil',data,getConfigHeader())
             errors.value =''
             if(respond.data.ok==1){
                 respuesta.value=respond.data
@@ -24,7 +24,7 @@ export default function usePerfil() {
     const cambiarClave = async(data) => {
         errors.value = ''
         try {
-            let respond = await axios.post('cambiar-clave',data,getConfigHeader())
+            let respond = await axios.post('/cambiar-clave',data,getConfigHeader())
             errors.value =''
             if(respond.data.ok==1){
                 respuesta.value=respond.data

@@ -17,6 +17,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "clipboard": "^2.0.11",
         "dayjs": "^1.11.10",
         "jwt-decode": "^3.1.2",
         "pinia": "^2.0.35",

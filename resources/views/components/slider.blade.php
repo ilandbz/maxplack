@@ -3,8 +3,8 @@
         @foreach ($sliders as $slider)
         <div class="single-slide">
             <div class="slider-img">
-                <img class="desktop" src="{{asset('storage/slider/'.$slider->nombreImagen);}}" alt="{{$slider->titulo}}">
-                <img class="mobile" src="maxplanck/assets/images/slider/12.jpg" alt="Slider Image 1">
+                <img class="desktop" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="{{$slider->titulo}}">
+                <img class="mobile" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="Slider Image 1">
             </div>
             <div class="container">
                 <div class="slider-content">

@@ -11,7 +11,8 @@ class IntranetController extends Controller
      */
     public function index()
     {
-        return view('intranet.app');
+        $organizacion = Organizacion::first();
+        return view('intranet.app', compact('organizacion'));
     }
 
 

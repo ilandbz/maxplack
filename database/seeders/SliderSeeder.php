@@ -38,7 +38,7 @@ class SliderSeeder extends Seeder
             'nombrebutton2' => null,
             'link1' => 'our-courses-left-sidebar.html',
             'link2' => null,
-            'nombreImagen' => 'slide3.jpg'
+            'nombreImagen' => 'slider-3.webp'
         ]);
     }
 }

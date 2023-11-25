@@ -124,6 +124,7 @@ export default function useHelper() {
         return (![null,'', undefined].includes(fecha)) ? dayjs(fecha).tz(time_zone).format(formato) 
             : dayjs().tz(time_zone).format(formato)
     }
+    
     const slugify = (text) => {
         return text
         .toString()

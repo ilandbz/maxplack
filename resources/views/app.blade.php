@@ -11,7 +11,4 @@
 @else
 @include('componentes.inicio')
 @endif
-
-
-
 @endsection

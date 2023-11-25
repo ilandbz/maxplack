@@ -31,7 +31,6 @@ export const useAutenticacion = () => {
 
     const logoutUsuario = async() => {
         const respuesta = await axios.post('/logout')
-
         if(respuesta.data.ok==1)
         {
             localStorage.removeItem('userSession')

@@ -8,21 +8,21 @@ export default function useUsuario() {
     const respuesta = ref([])
 
     const obtenerUsuario = async(id) => {
-        let respuesta = await axios.get('usuario/mostrar?id='+id,getConfigHeader())
+        let respuesta = await axios.get('/usuario/mostrar?id='+id,getConfigHeader())
         usuario.value = respuesta.data
     }
     const listaUsuarios = async()=>{
-        let respuesta = await axios.get('usuario/listar',getConfigHeader())
+        let respuesta = await axios.get('/usuario/listar',getConfigHeader())
         usuarios.value = respuesta.data        
     }
     const obtenerUsuarios = async(data) => {
-        let respuesta = await axios.get('usuario/listar-'+data.show_tipo + getdataParamsPagination(data),getConfigHeader())
+        let respuesta = await axios.get('/usuario/listar-'+data.show_tipo + getdataParamsPagination(data),getConfigHeader())
         usuarios.value =respuesta.data
     }
     const agregarUsuario = async(data) => {
         errors.value = ''
         try {
-            let respond = await axios.post('usuario/guardar',data,getConfigHeader())
+            let respond = await axios.post('/usuario/guardar',data,getConfigHeader())
             errors.value =''
             if(respond.data.ok==1){
                 respuesta.value=respond.data
@@ -37,7 +37,7 @@ export default function useUsuario() {
     const actualizarUsuario = async(data) => {
         errors.value = ''
         try {
-            let respond = await axios.post('usuario/actualizar',data,getConfigHeader())
+            let respond = await axios.post('/usuario/actualizar',data,getConfigHeader())
             errors.value =''
             if(respond.data.ok==1){
                 respuesta.value=respond.data
@@ -51,7 +51,7 @@ export default function useUsuario() {
         }
     }
     const eliminarUsuario = async(id) => {
-        const respond = await axios.post('usuario/eliminar', {id:id},getConfigHeader())
+        const respond = await axios.post('/usuario/eliminar', {id:id},getConfigHeader())
         if(respond.data.ok==1){
             respuesta.value = respond.data
         }
@@ -59,7 +59,7 @@ export default function useUsuario() {
     const resetClaveUsuario = async(id) => {
         errors.value = ''
         try {
-            let respond = await axios.post('usuario/reset-password',{id:id},getConfigHeader())
+            let respond = await axios.post('/usuario/reset-password',{id:id},getConfigHeader())
             errors.value =''
             if(respond.data.ok==1){
                 respuesta.value=respond.data

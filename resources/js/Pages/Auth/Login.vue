@@ -4,7 +4,7 @@ import {useAutenticacion} from '@/Composables/autenticacion';
 
     const user = ref({
         name:'',
-        pasword:'',
+        password:'',
         remember:false,
         errors:[]
     });

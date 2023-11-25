@@ -34,15 +34,6 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::post('/intranet/login',[LoginController::class,'validarLogin']);
 
-// Route::get('/intranet', function () {
-//     return view('intranet.app');
-// });
-
-
-
-
-//Route::get('/nosotros', [HomeController::class,'nosotros'])->name('nosotros.quienessomos');
-
 Route::get('/prueba', [HomeController::class,'prueba'])->name('prueba');
 Route::get('quienes-somos', [HomeController::class,'quienessomos'])->name('quienessomos');
 Route::get('mision-vision', [HomeController::class,'misionvision'])->name('misionvision');
@@ -54,16 +45,18 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::group(['prefix' => 'noticia', 'middleware' => ['auth:sanctum']], function () {
-    Route::get('mostrar', [NoticiaController::class, 'show']);
-    Route::post('actualizar', [NoticiaController::class, 'update']);
-    Route::post('eliminar', [NoticiaController::class, 'destroy']);
-    Route::post('guardar', [NoticiaController::class, 'store']);
-    Route::get('listar', [NoticiaController::class, 'listar']);
-    Route::post('subir-imagen', [NoticiaController::class, 'subirImagen']);
-    Route::post('subir-imagen', [NoticiaController::class, 'subirImagen']);
-    Route::post('eliminar-imagen', [NoticiaController::class, 'eliminarImagen']);
-    Route::get('mostrar-imagenes', [NoticiaController::class, 'imagenes']);
-});
+// Route::group(['prefix' => 'noticia', 'middleware' => ['auth:sanctum']], function () {
+//     Route::get('mostrar', [NoticiaController::class, 'show']);
+//     Route::post('actualizar', [NoticiaController::class, 'update']);
+//     Route::post('eliminar', [NoticiaController::class, 'destroy']);
+//     Route::post('guardar', [NoticiaController::class, 'store']);
+//     Route::get('listar', [NoticiaController::class, 'listar']);
+//     Route::post('subir-imagen', [NoticiaController::class, 'subirImagen']);
+//     Route::post('actualizar-con-imagen', [NoticiaController::class, 'updateconimagen']);
+//     Route::post('eliminar-imagen', [NoticiaController::class, 'eliminarImagen']);
+//     Route::get('mostrar-imagenes', [NoticiaController::class, 'imagenes']);
+
+// });
 require __DIR__.'/auth.php';
 require __DIR__.'/routesEntradas.php';
+require __DIR__.'/intranet.php';

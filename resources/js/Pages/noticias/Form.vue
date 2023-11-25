@@ -10,11 +10,16 @@ const props = defineProps({
 const { form, currentPage } = toRefs(props)
 const {
     errors, respuesta, agregarNoticia, actualizarNoticia,
-    subirImagen, actualizarNoticiaConImagen
+    actualizarNoticiaConImagen
 } = useNoticia();
 const  emit  =defineEmits(['onListar'])
+
+
+
 const crud = {
+    
     'nuevo': async() => {
+        form.value.contenido= $('#summernote').val();
         let formData = new FormData();
         formData.append('imagen', file.value);
         formData.append('titulo', form.value.titulo);
@@ -35,16 +40,17 @@ const crud = {
         }
     },
     'editar': async() => {
+        form.value.contenido= $('#summernote').val();
         if(file.value === null){
             await actualizarNoticia(form.value)
         }else{
             let formData = new FormData();
             formData.append('id', form.value.id);
             formData.append('imagen', file.value);
-            formData.append('titulo', form.value.titulo);
-            formData.append('subtitulo', form.value.subtitulo);
-            formData.append('slug', form.value.slug);
-            formData.append('contenido', form.value.contenido); 
+            formData.append('titulo', form.value.titulo ?? '');
+            formData.append('subtitulo', form.value.subtitulo ?? '');
+            formData.append('slug', form.value.slug ?? '');
+            formData.append('contenido', form.value.contenido ?? ''); 
             await actualizarNoticiaConImagen(formData)
             form.value.errors = []
         }
@@ -104,12 +110,6 @@ const guardar = () => {
                                         }}</small>
                             </div>  
                             <div class="mb-3">
-                                <label for="contenido" class="form-label">Contenido </label>
-                                <textarea v-model="form.contenido" class="form-control" :class="{ 'is-invalid': form.errors.contenido }" rows="6"></textarea>
-                                <small class="text-danger" v-for="error in form.errors.contenido" :key="error">{{ error
-                                        }}</small>
-                            </div>
-                            <div class="mb-3">
 
                             </div>
                         </div>
@@ -122,6 +122,14 @@ const guardar = () => {
                                 </div>
                                 <small class="text-danger" v-for="error in form.errors.imagen" :key="error">{{ error }}<br></small>
                             </div>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="contenido" class="form-label">Contenido </label>
+                            <textarea id="summernote" v-model="form.contenido" class="form-control" :class="{ 'is-invalid': form.errors.contenido }" rows="10">
+                            </textarea>
+                            <small class="text-danger" v-for="error in form.errors.contenido" :key="error">{{ error }}</small>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 export const defineTitle = (title) => {
-    document.title =title + ' | RED SALUD HCO'
+    document.title =title + ' | IESTP MAXPLANCK'
 }
 
 export const getdataParamsPagination = ( data) => {

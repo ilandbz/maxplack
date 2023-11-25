@@ -12,7 +12,7 @@ export default function useMenuRole() {
         roleMenus.value = ''
         role.value = ''
         try {
-            let respuesta = await axios.get('menu-role/menu-roles/',{params : data},getConfigHeader())
+            let respuesta = await axios.get('/menu-role/menu-roles/',{params : data},getConfigHeader())
             roleMenus.value =respuesta.data.role.menus
             role.value = respuesta.data.role
         } catch (error) {
@@ -24,7 +24,7 @@ export default function useMenuRole() {
     const agregarMenuRole= async(data)=> {
         errors.value = ''
         try {
-            let respuesta = await axios.post('menu-role/menu-role-guardar',data,getConfigHeader())
+            let respuesta = await axios.post('/menu-role/menu-role-guardar',data,getConfigHeader())
             errors.value =''
             if(respuesta.data.ok==1){
                 mrRespuesta.value=respuesta.data
@@ -41,7 +41,7 @@ export default function useMenuRole() {
     const listarMenus = async() => {
         errors.value = ''
         try {
-            let respuesta = await axios.get('menu-role/mostrar-menus/',getConfigHeader)
+            let respuesta = await axios.get('/menu-role/mostrar-menus/',getConfigHeader)
             menus.value =respuesta.data
         } catch (error) {
             if(error.response.status === 422) {

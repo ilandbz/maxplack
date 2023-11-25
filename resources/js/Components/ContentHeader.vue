@@ -24,7 +24,7 @@ const icono = route.meta.icono;
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item"><a href="/principal">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/intranet/principal">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
                             {{ route.name }}
                         </li>

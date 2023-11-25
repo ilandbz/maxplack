@@ -50,6 +50,20 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'imagenes' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imagenes'),
+            'url' => env('APP_URL').'/storage/imagenes',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+        'slider' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/slider'),
+            'url' => env('APP_URL').'/storage/slider',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
         'archivos' => [
             'driver' => 'local',
             'root' => storage_path('app/public/archivos'),
