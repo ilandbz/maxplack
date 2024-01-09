@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('subtitulo')->nullable();
             $table->string('slug')->unique();
             $table->text('contenido');
+            $table->date('fecha_publicacion');
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });

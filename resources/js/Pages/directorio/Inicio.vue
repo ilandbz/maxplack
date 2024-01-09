@@ -34,6 +34,7 @@
         celular : '',
         foto : carpetaFotos+'default.png',
         estadoCrud:'',
+        link:'',
         errors:[]
     });
     const limpiar = ()=> {
@@ -45,6 +46,7 @@
         form.value.celular = '',
         form.value.email = '',
         form.value.foto = carpetaFotos+'default.png',
+        form.value.link = '',
         form.value.errors = []
         errors.value = []
     }
@@ -59,6 +61,7 @@
             form.value.cargo_id=directorio.value.cargo_id;
             form.value.celular=directorio.value.celular;
             form.value.foto=carpetaFotos+directorio.value.foto;
+            form.value.link=directorio.value.link;
             form.value.email=directorio.value.email;
         }
     }
@@ -229,7 +232,7 @@
                             <table class="table table-bordered table-hover table-sm table-striped">
                                 <thead class="table-dark">
                                     <tr>
-                                        <th colspan="7" class="text-center">Registros</th>
+                                        <th colspan="8" class="text-center">Registros</th>
                                     </tr>
                                     <tr>
                                         <th>#</th>
@@ -238,6 +241,7 @@
                                         <th>Area</th>
                                         <th>Cargo</th>
                                         <th>Foto</th>
+                                        <th>Link</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -254,6 +258,7 @@
                                         <td>{{ directorio.area.nombre }}</td>
                                         <td>{{ directorio.cargo.nombre }}</td>
                                         <td align="center"><img :src="carpetaFotos + directorio.foto" class="img-fluid" style="max-width: 180px;" alt=""></td>
+                                        <td>{{ directorio.link }}</td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" title="Editar" @click.prevent="editar(directorio.id)">
                                                 <i class="fas fa-edit"></i>

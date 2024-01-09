@@ -35,6 +35,22 @@ export default function usePopup() {
             }
         }
     }
+    const cambiarEstado = async(id)=>{
+        errors.value = ''
+        try {
+            let respond = await axios.get('/popup/cambiar-estado?id='+id,getConfigHeader())
+            errors.value =''
+            if(respond.data.ok==1){
+                respuesta.value=respond.data
+            }
+
+        } catch (error) {
+            errors.value=""
+            if(error.response.status === 422) {
+                errors.value = error.response.data.errors
+            }
+        }
+    }
     const actualizarPopup = async(data) => {
         errors.value = ''
         try {
@@ -91,6 +107,6 @@ export default function usePopup() {
         errors, popups, listaPopups, popup, obtenerPopup, obtenerPopups, 
         agregarPopup, actualizarPopup, eliminarPopup, respuesta,
         carpetaPopup, obtenerImagenes, subirImagen, eliminarImagen,
-        imagenes
+        imagenes, cambiarEstado
     }
 }

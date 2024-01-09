@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('archivo_documento_gestions', function (Blueprint $table) {
+        Schema::create('menu_role', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->foreignId('documento_gestion_id')->constrained('documento_gestions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('menu_id')->constrained('menus')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('role_id')->constrained('roles')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('archivo_documento_gestions');
+        Schema::dropIfExists('menu_role');
     }
 };

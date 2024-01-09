@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('infraestructuras', function (Blueprint $table) {
+        Schema::create('archivos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombreImagen');
-            $table->unsignedTinyInteger('es_activo')->default(1);
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->string('nombrearchivo');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('infraestructuras');
+        Schema::dropIfExists('archivos');
     }
 };

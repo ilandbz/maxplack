@@ -21,11 +21,18 @@ class DatabaseSeeder extends Seeder
             EntradaSeeder::class,
             SeccionesPrincipalSeeder::class,
             EnlaceSeeder::class,
-            PopupSeeder::class,
-            ImagenPopupSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
-            MenuSeeder::class
+            MenuSeeder::class,
+            EtapaConvocatoriaSeeder::class,
+            TipoConvocatoriaSeeder::class,
+            CargoSeeder::class,
+            AreaSeeder::class,
+            DirectorioSeeder::class,
+            PopupSeeder::class,
+            ComunicadoSeeder::class,
+            NoticiaSeeder::class,
+            ImagenNoticiaSeeder::class
         ]);
 
     }

@@ -5,7 +5,7 @@
   import useHelper from '@/Helpers';  
   import ContentHeader from '@/Components/ContentHeader.vue';
   import { ref, onMounted } from 'vue';
-  const { openModal, Toast, Swal } = useHelper();
+  const { openModal, Toast, Swal, formatoFecha } = useHelper();
   const {
         errors, noticias, noticia, 
         obtenerNoticia, obtenerNoticias, 
@@ -18,6 +18,7 @@
       icon: "fas fa-newspaper",
       vista: ""
     });
+    const hoy= formatoFecha(null,"YYYY-MM-DD")
     const form = ref({
         id:'',
         titulo:'',
@@ -27,6 +28,7 @@
         imagen_id:'',
         imagen: carpetaNoticias+'default.webp',
         estadoCrud:'',
+        fecha_publicacion: hoy,
         errors:[]
     });
     
@@ -45,6 +47,7 @@
         form.value.imagen_id='',
         form.value.imagen=carpetaNoticias+'default.webp',
         form.value.estadoCrud = '',
+        form.value.fecha_publicacion = hoy,
         form.value.errors = []
         errors.value = []
     }
@@ -58,6 +61,7 @@
             form.value.slug=noticia.value.slug;
             form.value.contenido=noticia.value.contenido;
             form.value.imagen_id=noticia.value.imagen.id 
+            form.value.fecha_publicacion=noticia.value.fecha_publicacion 
             form.value.imagen=carpetaNoticias+noticia.value.imagen.nombreimagen
         }
     }
@@ -65,6 +69,7 @@
         limpiar();
         await obtenerDatos(id)
         form.value.estadoCrud = 'editar'
+        $('.note-editable').html(form.value.contenido);
         document.getElementById("modalnoticiaLabel").innerHTML = 'Editar Noticia';
         $('#summernote').html(form.value.contenido);
         $('.note-editable').html(form.value.contenido);
@@ -73,6 +78,7 @@
     const nuevo = () => {
         limpiar()
         form.value.estadoCrud = 'nuevo'
+        $('.note-editable').html(form.value.contenido);
         openModal('#modalnoticia')
         document.getElementById("modalnoticiaLabel").innerHTML = 'Nueva Noticia';
     }
@@ -253,6 +259,7 @@
                                         <th>Subtitulo</th>
                                         <th>Slug</th>
                                         <th>Contenido</th>
+                                        <th>Fecha Pub.</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -282,6 +289,7 @@
                                                 {{ noticia.contenido }}
                                             </template>
                                         </td>
+                                        <td>{{ noticia.fecha_publicacion }}</td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" title="Editar" @click.prevent="editar(noticia.id)">
                                                 <i class="fas fa-edit"></i>

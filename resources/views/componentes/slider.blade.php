@@ -3,8 +3,8 @@
         @foreach ($sliders as $slider)
         <div class="single-slide">
             <div class="slider-img">
-                <img class="desktop" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="{{$slider->titulo}}">
-                <img class="mobile" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="Slider Image 1">
+                <img class="desktop" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="{{$slider->titulo}}" style="height: 500px">
+                <img class="mobile" src="{{ Storage::url('slider/'.$slider->nombreImagen) }}" alt="{{$slider->titulo}}" style="height: 500px">
             </div>
             <div class="container">
                 <div class="slider-content">
@@ -20,12 +20,6 @@
                         @endif
                     </div>
                 </div>
-                {{-- <div class="event__video-btn--play">
-                <a href="https://www.youtube.com/watch?v=e5Hc2B50Z7c" class="event__video-btn--play-btn custom-popup">
-                    <i class="arrow_triangle-right"></i>
-                    <em>Watch Video <br>Intro</em>
-                </a>
-                </div> --}}
             </div>                        
         </div>  
         @endforeach

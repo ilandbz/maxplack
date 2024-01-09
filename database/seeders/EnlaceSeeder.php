@@ -17,17 +17,7 @@ class EnlaceSeeder extends Seeder
             'title'         => 'Indeci',
             'link'          => "http://www.indeci.gob.pe/",
             'nombreImagen'  => "indeci.jpg"
-        ]);
-        Enlace::firstOrCreate([
-            'title'         => 'Gobierno Regional de Huanuco',
-            'link'          => "https://www.regionhuanuco.gob.pe/",
-            'nombreImagen'  => "gorehco.png"
-        ]);   
-        Enlace::firstOrCreate([
-            'title'         => 'Municipalidad de Huanuco',
-            'link'          => "https://www.munihuanuco.gob.pe/",
-            'nombreImagen'  => "munihco.png"
-        ]);   
+        ]); 
         Enlace::firstOrCreate([
             'title'         => 'OSCE',
             'link'          => "https://www.gob.pe/osce",
@@ -42,6 +32,31 @@ class EnlaceSeeder extends Seeder
             'title'         => 'INEI',
             'link'          => "http://www.inei.gob.pe/",
             'nombreImagen'  => "inei.jpg"
+        ]); 
+        Enlace::firstOrCreate([
+            'title'         => 'RENIEC',
+            'link'          => "https://www.reniec.gob.pe/portal/masServiciosLinea.htm",
+            'nombreImagen'  => "reniec.png"
+        ]); 
+        Enlace::firstOrCreate([
+            'title'         => 'SUNAT',
+            'link'          => "https://www.sunat.gob.pe/",
+            'nombreImagen'  => "sunat.jpg"
+        ]); 
+        Enlace::firstOrCreate([
+            'title'         => 'SENCICO',
+            'link'          => "https://cursos.sencico.gob.pe/",
+            'nombreImagen'  => "sencico.png"
+        ]);
+        Enlace::firstOrCreate([
+            'title'         => 'INVIERTE PE',
+            'link'          => "https://ofi5.mef.gob.pe/ssi/ssi/Index",
+            'nombreImagen'  => "inviertepe.png"
+        ]);
+        Enlace::firstOrCreate([
+            'title'         => 'SUNARP',
+            'link'          => "https://www.sunarp.gob.pe/serviciosenlinea/portal/index.html",
+            'nombreImagen'  => "sunarp.png"
         ]);   
 
     }

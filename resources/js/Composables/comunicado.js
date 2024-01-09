@@ -6,7 +6,7 @@ export default function useComunicado() {
     const errors = ref('')
     const comunicado = ref({})
     const respuesta = ref([])
-    const carpetaComunicado =  '/storage/comunicado/';
+    const carpetaComunicado =  '/storage/comunicados/';
     const obtenerComunicado = async(id) => {
         let respuesta = await axios.get('/comunicado/mostrar?id='+id,getConfigHeader())
         comunicado.value = respuesta.data

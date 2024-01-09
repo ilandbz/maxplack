@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('nombreImagen');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

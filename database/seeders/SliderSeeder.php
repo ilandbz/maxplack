@@ -14,7 +14,7 @@ class SliderSeeder extends Seeder
     public function run(): void
     {
         Slider::firstOrCreate([
-            'titulo' => 'Municipalidad Provincial de Ambo',
+            'titulo' => 'SLIDE TITULO',
             'subtitulo' =>  null,
             'nombrebutton1' => null,
             'nombrebutton2' => null,
@@ -23,7 +23,7 @@ class SliderSeeder extends Seeder
             'nombreImagen' => 'slide1.jpg'
         ]);
         Slider::firstOrCreate([
-            'titulo' => 'Gestion 2023-2029',
+            'titulo' => 'slide 2 titulo',
             'subtitulo' =>  null,
             'nombrebutton1' => null,
             'nombrebutton2' => null,
@@ -38,7 +38,7 @@ class SliderSeeder extends Seeder
             'nombrebutton2' => null,
             'link1' => 'our-courses-left-sidebar.html',
             'link2' => null,
-            'nombreImagen' => 'slider-3.webp'
+            'nombreImagen' => 'slide3.jpg'
         ]);
     }
 }

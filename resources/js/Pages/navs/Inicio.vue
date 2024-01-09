@@ -30,6 +30,7 @@
         icono : '',
         padre_id : '',
         orden : '',  
+        ruta : '',
         estadoCrud:'',
         errors:[]
 
@@ -41,6 +42,7 @@
         form.value.icono='',
         form.value.padre_id='',
         form.value.orden= '',
+        form.value.ruta= '',
         form.value.estadoCrud = '',          
         form.value.errors = []
         errors.value = []
@@ -53,6 +55,7 @@
             form.value.nombre=nav.value.nombre;
             form.value.slug=nav.value.slug;
             form.value.icono=nav.value.icono;
+            form.value.ruta=nav.value.ruta;
             form.value.padre_id=nav.value.padre_id;
             form.value.orden= nav.value.orden;  
         }

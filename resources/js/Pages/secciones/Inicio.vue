@@ -26,7 +26,79 @@
     const form = ref({
         id:'',
         titulo : '',
-        contenido : '',
+        contenido : `
+            <section class="blog-area">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-9">
+                            <div class="section-title-2 text-center">
+                                <h2 class="title">TITULO</h2>
+                                <span class="line"></span>
+                                <p>Subtitulo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-wrapper">
+                        <div class="row-wrapper blog-active">
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-1.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 Mayo, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 1</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-2.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 May, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 2</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-3.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 May, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 3</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `,
         orden : '',
         estadoCrud:'',
         errors:[]
@@ -35,7 +107,79 @@
     const limpiar = ()=> {
         form.value.id='',
         form.value.titulo='',
-        form.value.contenido='',
+        form.value.contenido=`
+            <section class="blog-area">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-9">
+                            <div class="section-title-2 text-center">
+                                <h2 class="title">TITULO</h2>
+                                <span class="line"></span>
+                                <p>Subtitulo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-wrapper">
+                        <div class="row-wrapper blog-active">
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-1.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 Mayo, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 1</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-2.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 May, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 2</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-col">
+                                <div class="single-blog mt-30">
+                                    <div class="blog-image">
+                                        <a href="blog-details.html">
+                                            <img src="/edumate/assets/images/blog-3.webp" width="370" height="250" alt="blog">
+                                        </a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="meta">
+                                            <li><a href="#">25 May, 2020</a></li>
+                                            <li><a href="#">por: Alex</a></li>
+                                            <li><a href="#">12 comentarios</a></li>
+                                        </ul>
+                                        <h4 class="blog-title"><a href="blog-details.html">Anuncio 3</a></h4>
+                                        <a href="blog-details.html" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `,
         form.value.orden='',
         form.value.estadoCrud = '',          
         form.value.errors = []
@@ -56,7 +200,8 @@
         await obtenerDatos(id)
         form.value.estadoCrud = 'editar'
         document.getElementById("modalseccionLabel").innerHTML = 'Editar Seccion';
-        $('#summernote').html(form.value.contenido);
+        //$('#summernote').html(form.value.contenido);
+        // $('.note-editable').html(form.value.contenido);
         $('.note-editable').html(form.value.contenido);
         openModal('#modalseccion')
     }
@@ -227,8 +372,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Titulo</th>
-                                        <th>Acciones</th>
                                         <th>Orden</th>
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

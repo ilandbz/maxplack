@@ -11,7 +11,7 @@
   const {
         popups, errors, popup, respuesta,
         obtenerPopups, obtenerPopup, eliminarPopup,
-        carpetaPopup, obtenerImagenes, imagenes
+        carpetaPopup, obtenerImagenes, imagenes, cambiarEstado,
     } = usePopup();
     const titleHeader = ref({
       titulo: "Popup",
@@ -54,6 +54,14 @@
     //     formImagen.value.errors = []
     //     errors.value = []        
     // };
+    const cambEstado= async(id)=>{
+        await cambiarEstado(id)
+        if(respuesta.value.ok==1){
+            Toast.fire({icon:'success', title:respuesta.value.mensaje})
+            listarPopups()
+        }
+
+    }
     const listaImagenes = async(id) =>{
         await obtenerImagenes(id)
     }
@@ -247,6 +255,7 @@
                                         <th>#</th>
                                         <th>Titulo</th>
                                         <th>Link</th>
+                                        <th>Estado</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -260,6 +269,10 @@
                                         <td>{{ index + popups.from }}</td>
                                         <td>{{ popup.titulo }}</td>
                                         <td><a target="_blank" :title="popup.link" :href="popup.link"><i class="fas fa-link"></i></a> </td>
+                                        <td>
+                                            <span class="badge bg-success" v-if="popup.es_activo==1" @click="cambEstado(popup.id)" style="cursor: pointer;">Activo</span>
+                                            <span class="badge bg-secondary" v-else @click="cambEstado(popup.id)" style="cursor: pointer;">Inactivo</span>
+                                        </td>
                                         <td>
                                             <button class="btn btn-warning btn-sm" title="Editar" @click.prevent="editar(popup.id)">
                                                 <i class="fas fa-edit"></i>

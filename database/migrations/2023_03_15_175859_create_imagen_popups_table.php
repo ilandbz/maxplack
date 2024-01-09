@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nombreImagen');
             $table->foreignId('popup_id')->constrained('popups')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('link')->default('#');
             $table->timestamps();
         });
     }

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('celular')->nullable();
             $table->string('foto')->default('default.png');
+            $table->text('link')->nullable();
+            $table->text('funciones')->nullable();
             $table->unsignedTinyInteger('es_activo')->default(1);
             $table->timestamps();
         });

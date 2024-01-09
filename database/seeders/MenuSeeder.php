@@ -170,6 +170,13 @@ class MenuSeeder extends Seeder
                 'orden' => Menu::where('nombre', 'Configuraciones')->max('orden')+1,
             ],
             [
+                'nombre' => 'Navegacion',
+                'slug' => 'navegacion',
+                'icono' => 'fas fa-bars',
+                'padre_id' => Menu::where('nombre', 'Configuraciones')->value('id'),
+                'orden' => Menu::where('nombre', 'Configuraciones')->max('orden')+1,
+            ],            
+            [
                 'nombre' => 'Enlaces Externos',
                 'slug' => 'enlaces',
                 'icono' => 'fas fa-external-link-alt',
@@ -231,30 +238,5 @@ class MenuSeeder extends Seeder
             $menu = Menu::firstorCreate($item);
             $role1->menus()->attach($menu->id);
         }       
-
-        // $role1->menus()->sync([
-        //     $menu1->id, 
-        //     $menu2->id,
-        //     $menu3->id,
-        //     $menu4->id, 
-        //     $menu5->id,
-        //     $menu6->id,
-        //     $menu7->id,
-        //     $menu8->id,
-        //     $menu9->id,
-        //     $menu10->id,
-        //     $menu11->id,
-        //     $menu12->id,
-        //     $menu13->id,
-        //     $menu14->id,
-        //     $menu15->id,
-        //     $menu16->id,
-        //     $menu17->id,
-        //     $menu18->id,
-        //     $menu19->id,
-        //     $menu20->id,
-        //     $menu21->id,
-
-        // ]);
     }
 }

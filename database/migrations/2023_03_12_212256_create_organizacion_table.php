@@ -22,13 +22,13 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('email');
             $table->string('telefono');
-            $table->string('telefono2');
+            $table->string('telefono2')->nullable();
             $table->string('url_web');
             $table->text('quienes_somos');
             $table->text('vision');
             $table->text('mision');
             $table->string('logo')->default('logo.png');
-            $table->string('icono')->default('favicon.png');;
+            $table->string('icono')->default('favicon.ico');;
             $table->timestamps();
         });
     }

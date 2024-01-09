@@ -3,7 +3,7 @@
     <nav>
         <!--================= Menu Toggle btn =================-->
         <div class="menu-toggle">
-            <div class="logo"><a href="/" class="logo-text"> <img src="{{ Storage::url('imagenes/'.$organizacion->logo) }}" alt="logo" width="160px" style="max-width: 160px"> </a></div>
+            <div class="logo"><a href="/" class="logo-text"> <img src="{{ Storage::url('imagenes/'.$organizacion->logo) }}" alt="logo" width="90px" style="max-width: 160px"> </a></div>
             <button type="button" id="menu-btn">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

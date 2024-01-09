@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('slug')->nullable();
+            $table->string('slug')->unique();
             $table->string('icono')->nullable();
             $table->foreignId('padre_id')->nullable()->constrained('menus')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedInteger('orden');

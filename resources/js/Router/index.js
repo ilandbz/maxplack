@@ -10,6 +10,7 @@ import Login from '@/Pages/Auth/Login.vue'
 import Noticia from '@/Pages/noticias/Inicio.vue'
 import Profile from '@/Pages/Profile/Inicio.vue'
 import Menu from '@/Pages/menus/Inicio.vue'
+import Navegacion from '@/Pages/navs/Inicio.vue'
 import Cargo from '@/Pages/cargos/Inicio.vue'
 import Slider from '@/Pages/slider/Inicio.vue'
 import Convocatoria from '@/Pages/convocatoria/Inicio.vue'
@@ -121,6 +122,10 @@ const routes = [
         path: '/intranet/secciones', name:'Secciones', component: Seccion ,
         meta:{layout: LayoutDefault}
     },
+    {
+        path: '/intranet/navegacion', name:'Navegacion', component: Navegacion ,
+        meta:{layout: LayoutDefault}
+    },    
 ]
 
 export default createRouter({
