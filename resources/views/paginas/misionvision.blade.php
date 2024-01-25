@@ -1,139 +1,59 @@
-<!doctype html>
-<html class="no-js" lang="es">
+@extends('layout')
 
-<head>
-    <meta charset="utf-8">
-    <!--====== Title ======-->
-    <title>{{$organizacion->titulo}}</title>
-    <meta name="description" content="{{$organizacion->descripcion}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{'organizacion/imagenes/'.$organizacion->icono}}" type="image/webp">
-    <!-- CSS
-    ============================================ -->
-    <!--===== Vendor CSS (Bootstrap & Icon Font) =====-->
-    <link rel="stylesheet" href="edumate/assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="edumate/assets/css/plugins/fontawesome.min.css">
-    <link rel="stylesheet" href="edumate/assets/css/plugins/default.css">
-    <!--===== Plugins CSS (All Plugins Files) =====-->
-    <link rel="stylesheet" href="edumate/assets/css/plugins/animate.min.css">
-    <link rel="stylesheet" href="edumate/assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="edumate/assets/css/plugins/magnific-popup.css">
-
-    <!--- owl carousel CSS-->
-    <link rel="stylesheet" href="componentes/owlcarousel/css/owl.carousel.css" />
-
-    <!--====== Main Style CSS ======-->
-    <!-- <link rel="stylesheet" href="edumate/assets/css/style.css"> -->
-    <link rel="stylesheet" href="edumate/assets/css/style.css">
-</head>
-
-<body>
-    <!--====== Header Start ======-->
-    <header class="header-area">
-        <div class="header-top">
-            <div class="container">
-                <div class="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
-                    <div class="header-top-left mt-10">
-                        <ul class="header-meta">
-                            <li><a href="mailto://{{$organizacion->email}}">{{$organizacion->email}}</a></li>
-                        </ul>
+@section('body-content')
+<!--================= Wrapper Start Here =================-->
+<div class="react-wrapper">
+    <div class="react-wrapper-inner">
+        <!--================= Breadcrumbs Section Start Here =================-->
+        <div class="react-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <img class="desktop" src="maxplanck/assets/images/breadcrumbs/1.jpg" alt="Breadcrumbs">
+                <img class="mobile" src="maxplanck/assets/images/breadcrumbs/1.jpg" alt="Breadcrumbs">
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title">{{$titulo}}</h1>
+                            <div class="back-nav">
+                                <ul>
+                                    <li><a href="">Home</a></li>
+                                    <li>{{$titulo}}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header-top-right mt-1">
-                        <div class="header-link">
-                            <a class="notice" href="{{route('intranet')}}">Intranet</a>
-                            <a data-animation="fadeInUp" data-delay="1s" class="main-btn p-2 bg-white" href="#"><img src="{{asset('storage/imagenes/portaltransparencia.png');}}" width="90px" alt=""></a>
+                </div>
+            </div>                
+        </div>
+        <!--================= Breadcrumbs Section End Here =================-->
+
+        <!--=================  About Section Start Here ================= -->
+        <div class="about__area about__area_one p-relative pt---100 pb---120">
+            <div class="container">                        
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about__image">
+                            <img src="maxplanck/assets/images/about/ab.png" alt="About">
+                            <img class="react__shape__ab" src="maxplanck/assets/images/about/badge.png" alt="Shape Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content">
+                            <h2 class="about__title">MISION</h2>
+                            <p class="about__paragraph">{{$organizacion->mision}}</p>
+                        </div>
+                        <div class="about__content">
+                            <h2 class="about__title">VISION</h2>
+                            <p class="about__paragraph">{{$organizacion->vision}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <x-navigation :organizacion="$organizacion" :menus="$menus"></x-navigation>
-    </header>
-    <!--====== Header Ends ======-->
-<!--====== Page Banner Start ======-->
+        <!--================= About Section End Here ================= -->
 
-<section class="page-banner">
-    <div class="page-banner-bg bg_cover" style="background-image: url(edumate/assets/images/pagebanner.jpeg);">
-        <div class="container">
-            <div class="banner-content text-center">
-                <h2 class="title">{{$titulo}}</h2>
-            </div>
-        </div>
+        
     </div>
-</section>
-
-<!--====== Page Banner Ends ======-->
-
-
-
-<section class="about-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="about-content mt-40">
-                    <h2 class="about-title"><span>MISION</span> </h2>
-                    <span class="line"></span>
-                    <p>{{$organizacion->mision}}</p>
-                    <br><br><br><br>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-content mt-40">
-                    <h2 class="about-title">VISION</span> </h2>
-                    <span class="line"></span>
-                    <p>{{$organizacion->vision}}</p>
-                    <br><br><br><br>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-<!--====== About Ends ======-->
-
-
-
-
-
-
-        @include('componentes.footer')
-
-
-
-
-    <!--====== BACK TOP TOP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-    <!--====== Jquery js ======-->
-    <script src="edumate/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="edumate/assets/js/vendor/modernizr-3.7.1.min.js"></script>
-
-    <!--====== All Plugins js ======-->
-    <script src="edumate/assets/js/plugins/popper.min.js"></script>
-    <script src="edumate/assets/js/plugins/bootstrap.min.js"></script>
-    <script src="edumate/assets/js/plugins/slick.min.js"></script>
-    <script src="edumate/assets/js/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="edumate/assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="edumate/assets/js/plugins/isotope.pkgd.min.js"></script>
-    <script src="edumate/assets/js/plugins/wow.min.js"></script>
-    <script src="edumate/assets/js/plugins/ajax-contact.js"></script>
-
-
-<!-- owl-carousel min js  --> 
-<script src="componentes/owlcarousel/js/owl.carousel.js"></script> 
-
-<!-- scripts js --> 
-<script src="componentes/owlcarousel/js/scripts.js"></script>
-
-
-    <!--====== Main Activation  js ======-->
-    <script src="edumate/assets/js/main.js"></script>
-    @routes
-    {{-- @vite(['resources/js/app.js']) --}}
-</body>
-
-</html>
+</div>
+<!--================= Wrapper End Here =================-->
+@include('componentes.footer')
+@endsection

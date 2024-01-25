@@ -27,6 +27,7 @@ class HomeController extends Controller
         $data['menus'] = Nav::with('children')->whereNull('padre_id')->get();
         return view('app', $data);
     }
+    
     public function nosotros(){
         $data['sliders']=Slider::where('es_activo', 1)->get();
         $data['secciones']=SeccionesPrincipal::where('es_activo', 1)->get();

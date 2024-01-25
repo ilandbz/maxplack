@@ -31,8 +31,8 @@ class NavSeeder extends Seeder
             [
                 'nombre' => 'Misión y Visión',
                 'url'   => 'mision-y-vision/',
-                'ruta'   => 'nosotros.mision-y-vision',
-                'slug' => 'nosotros-mision-y-vision',
+                'ruta'   => 'misionvision',
+                'slug' => 'mision-vision',
                 'icono' => '',
                 'padre_id' => $padreNosotros->id,
                 'orden' => 2,
