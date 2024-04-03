@@ -95,4 +95,17 @@ class PopupController extends Controller
             'mensaje' => 'Imagen eliminado satisfactoriamente'
         ],200);
     }
+    public function cambiarEstado(Request $request){
+        $popup = Popup::find($request->id);
+        if($popup->es_activo==0){
+            $popup->es_activo=1;
+        }else{
+            $popup->es_activo=0;
+        }
+        $popup->save();
+        return response()->json([
+            'ok' => 1,
+            'mensaje' => 'Estado Cambiado'
+        ],200);
+    }
 }

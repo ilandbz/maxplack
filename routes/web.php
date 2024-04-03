@@ -46,7 +46,7 @@ Route::get('ambo-historia', [HomeController::class,'historia'])->name('historia'
 Route::get('ambo-turismo', [HomeController::class,'turismo'])->name('turismo');
 Route::get('ambo-turismo', [HomeController::class,'turismo'])->name('turismo');
 Route::get('gerencia-municipal', [HomeController::class, 'gerenciaMunicipal'])->name('gerencia.municipal');
-
+Route::get('directorio-institucional', [HomeController::class, 'directorio'])->name('directorio.institucional');
 
 Route::get('gerencia-atencion-ciudadano', [HomeController::class, 'gerenciaOficinaAtencion'])->name('atencion-ciudadano');
 Route::get('gerencia-oficina-administracion', [HomeController::class, 'gerenciaOficinaAdministracion'])->name('oficina-administracion');

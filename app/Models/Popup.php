@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Popup extends Model
 {
+    protected $fillable = ['titulo', 'link'];
     use HasFactory;
 
 /**

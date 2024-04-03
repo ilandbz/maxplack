@@ -18,7 +18,7 @@ class UserController extends Controller
         $usuario = User::create([
             'name'          => $request->name,
             'role_id'           => $request->role_id,
-            'password'          => Hash::make($request->numero_dni),
+            'password'          => Hash::make($request->password),
         ]);
         return response()->json([
             'ok' => 1,
@@ -140,5 +140,14 @@ class UserController extends Controller
                 ]
             ],422);
         }
+    }
+    public function destroy(Request $request){
+        $user = User::where('id', $request->id)
+                    ->first();
+        $user->delete();
+        return response()->json([
+            'ok' => 1,
+            'mensaje' => 'Usuario Eliminado con Exito'
+        ],200);
     }
 }

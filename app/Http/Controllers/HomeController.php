@@ -62,7 +62,17 @@ class HomeController extends Controller
         $data['pagina']='paginas.misionvision';
         return view('paginas.misionvision', $data); 
     }
-
+    public function directorio(){
+        $data['sliders']=Slider::where('es_activo', 1)->get();
+        $data['secciones']=SeccionesPrincipal::where('es_activo', 1)->get();
+        $data['organizacion'] = Organizacion::first();
+        $data['menus'] = Nav::with('children')->whereNull('padre_id')->get();
+        $data['redessociales'] = RedSocial::get();
+        $data['enlaces'] = Enlace::get();
+        $data['titulo']='DIRECTORIO INSTITUCIONAL';
+        $data['pagina']='paginas.directorio';
+        return view('paginas.directorio', $data); 
+    }
 
     public function historia(){
         $data['sliders']=Slider::where('es_activo', 1)->get();
