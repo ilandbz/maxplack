@@ -30,6 +30,7 @@
         dni : '',
         area_id : '',
         cargo_id : '',
+        funciones : '',
         email : '',
         celular : '',
         foto : carpetaFotos+'default.png',
@@ -44,6 +45,7 @@
         form.value.area_id = '',
         form.value.cargo_id = '',
         form.value.celular = '',
+        form.value.funciones = '',
         form.value.email = '',
         form.value.foto = carpetaFotos+'default.png',
         form.value.link = '',
@@ -60,6 +62,7 @@
             form.value.area_id=directorio.value.area_id;
             form.value.cargo_id=directorio.value.cargo_id;
             form.value.celular=directorio.value.celular;
+            form.value.funciones=directorio.value.funciones;
             form.value.foto=carpetaFotos+directorio.value.foto;
             form.value.link=directorio.value.link;
             form.value.email=directorio.value.email;

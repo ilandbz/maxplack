@@ -67,6 +67,12 @@ Route::get('estudios-proyectos', [HomeController::class,'estudiosProyectos'])->n
 Route::get('acondicionamiento-territorial', [HomeController::class,'acondicionamientoTerritorial'])->name('municipalidad.acondicionamiento');
 Route::get('riesgo-desastre', [HomeController::class,'riesgoDesastre'])->name('municipalidad.riesgo.desastre');
 
+Route::get('produccion-agropecuaria', [HomeController::class,'produccionAgropecuaria'])->name('produccion.agropecuaria');
+Route::get('enfermeria-tecnica', [HomeController::class,'enfermeriaTecnica'])->name('enfermeria.tecnica');
+Route::get('mecanica-automotriz', [HomeController::class,'mecanicaAutomotriz'])->name('mecanica.automotriz');
+Route::get('noticia', [HomeController::class,'noticia'])->name('noticia');
+Route::get('galeria', [HomeController::class,'galeria'])->name('galeria');
+Route::get('galeria-imagenes', [HomeController::class,'galeriaImagenes'])->name('galeriaImagenes');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -32,6 +32,14 @@
         <link rel="stylesheet" type="text/css" href="maxplanck/assets/css/custom-spacing.css">
         <!--================= Responsive css =================-->
         <link rel="stylesheet" type="text/css" href="maxplanck/assets/css/responsive.css">
+
+
+        <link href="carousel/css/animate.css" rel="stylesheet" type="text/css">
+        <link href="carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="carousel/css/styles.css">
+
+
+
     </head>
     <body> 
         <!--================= Preloader Section Start Here =================-->        
@@ -104,12 +112,21 @@
 		<!--================= Main js =================-->
         <script src="maxplanck/assets/js/main.js"></script>
 
+
+
+        <script src="carousel/js/wow.min.js"></script>
+        <script src="carousel/js/owl.carousel.min.js"></script>
+        <script src="carousel/js/venobox.min.js"></script>
+        <script src="carousel/js/custom-scripts.js"></script>
+
+
+
     <!-- Script para abrir el modal automáticamente -->
     <script>
         $(document).ready(function(){
           $('#modalpopup').modal('show');
         })
     </script>
-
+    @yield('miscript')
     </body>
 </html>

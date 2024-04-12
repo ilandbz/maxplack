@@ -101,8 +101,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about__image">
-                            <img src="maxplanck/assets/images/about/ab.png" alt="About">
-                            <img class="react__shape__ab" src="maxplanck/assets/images/about/badge.png" alt="Shape Image">
+                            <img src="imagenes/princ.jpg" alt="About">
+                            <img class="react__shape__ab" src="storage/imagenes/loader.png" width="100" alt="Max Planck">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -127,17 +127,18 @@
                     <div class="col-lg-4">
                         <div class="course__item mb-30">
                             <div class="course__thumb">
-                                <a href="coureses-single.html"><img src="maxplanck/assets/images/course/1.png" alt="image"></a>
+                                <a href="enfermeria-tecnica"><img src="maxplanck/assets/images/course/1.png" alt="image"></a>
                             </div>
                             <div class="course__inner">
                                 <ul class="list-unstyled d-flex justify-content-between">
                                     <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
                                     <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                 </ul>
-                                <h2 class="react-course-title text-center"><a href="coureses-single.html">Enfermeria Tecnica</a></h2>
+                                <h2 class="react-course-title text-center"><a href="enfermeria-tecnica">Enfermeria Tecnica</a></h2>
                                 <div class="course__card-icon d-flex align-items-center">
                                     <div class="course__card-icon--1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                         <span>77 Estudiantes</span>
                                     </div>                                            
                                     <div class="react__user">
@@ -150,14 +151,14 @@
                     <div class="col-lg-4">
                         <div class="course__item mb-30">
                             <div class="course__thumb">
-                                <a href="coureses-single.html"><img src="maxplanck/assets/images/course/2.png" alt="image"></a>
+                                <a href="produccion-agropecuaria"><img src="maxplanck/assets/images/course/2.png" alt="image"></a>
                             </div>
                             <div class="course__inner">
                                 <ul class="list-unstyled d-flex justify-content-between">
                                     <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
                                     <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                 </ul>
-                                <h2 class="react-course-title text-center"><a href="coureses-single.html">Produccion Agropecuaria</a></h2>
+                                <h2 class="react-course-title text-center"><a href="produccion-agropecuaria">Produccion Agropecuaria</a></h2>
                                 <div class="course__card-icon d-flex align-items-center">
                                     <div class="course__card-icon--1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -173,14 +174,14 @@
                     <div class="col-lg-4">
                         <div class="course__item mb-30">
                             <div class="course__thumb">
-                                <a href="coureses-single.html"><img src="maxplanck/assets/images/course/3.png" alt="image"></a>
+                                <a href="mecanica-automotriz"><img src="maxplanck/assets/images/course/3.png" alt="image"></a>
                             </div>
                             <div class="course__inner">
                                 <ul class="list-unstyled d-flex justify-content-between">
                                     <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
                                     <li><i class="fas fa-clock"></i> Horas : 3240</li>
                                 </ul>
-                                <h2 class="react-course-title text-center"><a href="coureses-single.html">Mecanica Automotriz</a></h2>
+                                <h2 class="react-course-title text-center"><a href="mecanica-automotriz">Mecanica Automotriz</a></h2>
                                 <div class="course__card-icon d-flex align-items-center">
                                     <div class="course__card-icon--1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -236,224 +237,130 @@
         </div>
         <!--================= Counter Section End Here =================-->
 
-        <!--================= Upcoming Event Section Start Here =================-->
-        <div class="react-upcoming__event blog__area">
-            <div class="container">
-                <div class="react__title__section text-center">
-                    <h2 class="react__tittle">Eventos Academicos</h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-                <div class="event-slider owl-carousel">
-                    <div class="event__card">
-                        <div class="event__card--content">
-                            <div class="event__card--content-area">
-                                <div class="event__card--date"><em>10</em> April, 2022</div>
-                                <div class="event_time">10:30 AM - 12:30PM</div>
-                                <h3 class="event__card--title"><a href="#">A Better Alternative To <br> Grading Student Writing</a></h3>
-                                <div class="event_location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</div>
-                                <a class="event__card--link" href="#"> Find Out More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event__card">
-                        <div class="event__card--content">
-                            <div class="event__card--content-area">
-                                <div class="event__card--date"><em>14</em> February, 2022</div>
-                                <div class="event_time">12:00 AM - 01:30PM</div>
-                                <h3 class="event__card--title"><a href="#">12 Things Successful <br> Mompreneurs</a></h3>
-                                <div class="event_location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</div>
-                                <a class="event__card--link" href="#"> Find Out More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event__card">
-                        <div class="event__card--content">
-                            <div class="event__card--content-area">
-                                <div class="event__card--date"><em>26</em> March, 2022</div>
-                                <div class="event_time">01:30 AM - 02:00PM</div>
-                                <h3 class="event__card--title"><a href="#">Ethics in AI Live Event<br> Machines Judging.</a></h3>
-                                <div class="event_location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</div>
-                                <a class="event__card--link" href="#"> Find Out More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event__card">
-                        <div class="event__card--content">
-                            <div class="event__card--content-area">
-                                <div class="event__card--date"><em>19</em> April, 2022</div>
-                                <div class="event_time">03:00 AM - 04:30PM</div>
-                                <h3 class="event__card--title"><a href="#">The Importance Of <br> Intrinsic Motivation.</a></h3>
-                                <div class="event_location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</div>
-                                <a class="event__card--link" href="#"> Find Out More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event__card">
-                        <div class="event__card--content">
-                            <div class="event__card--content-area">
-                                <div class="event__card--date"><em>10</em> April, 2022</div>
-                                <div class="event_time">10:30 AM - 12:30PM</div>
-                                <h3 class="event__card--title"><a href="#">A Better Alternative To <br> Grading Student Writing</a></h3>
-                                <div class="event_location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</div>
-                                <a class="event__card--link" href="#"> Find Out More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>                        
-            </div>
-        </div>
-        <!--================= Upcoming Event Section End Here =================-->
-        <!--================= Clients Section Start Here =================--> 
-        <div class="react-clients react-clientso home-testimonial pt---90 pb---120">
-            <div class="container">
-                <div class="react__title__section text-center">
-                    <h2>Testimonio de Estudiantes</h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-                <div class="container">
-                    <div class="client-slider owl-carousel">
-                        <div class="single-client">
-                            <div class="client-bottom">                                        
-                                <span class="client-author"><img src="maxplanck/assets/images/testimonial/testimonial.png" alt="Testimonials"> </span>
-                            </div>                                    
-                            <div class="client-content">
-                                <span class="client-title">Justin Case <em> Student</em></span>
-                                <p>Nulla porttitor accumsan tincidunt. vamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in.</p>
-                                <div class="testimonial__ratings">
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star_alt"></em>
-                                    <span><em>4.9</em> (14 Reviews)</span>
-                                </div>
-                                <img class="comma" src="maxplanck/assets/images/testimonial/coma.png" alt="image">
-                            </div>                                
-                        </div>
-                        <div class="single-client">
-                            <div class="client-bottom">                                        
-                                <span class="client-author"><img src="maxplanck/assets/images/testimonial/testimonial.png" alt="Testimonials"> </span>
-                            </div>                                    
-                            <div class="client-content">
-                                <span class="client-title">Justin Case <em> Student</em></span>
-                                <p>Nulla porttitor accumsan tincidunt. vamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium ut lacinia in.</p>
-                                <div class="testimonial__ratings">
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star"></em>
-                                    <em class="icon_star_alt"></em>
-                                    <span><em>4.9</em> (14 Reviews)</span>
-                                </div>
-                                <img class="comma" src="maxplanck/assets/images/testimonial/coma.png" alt="image">
-                            </div>                                 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>             
-        <!--================= Clients Section End Here =================--> 
 
         <!--================= Blog Section Start Here =================-->
         <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
             <div class="container blog__width">
                 <div class="react__title__section text-center">                           
-                    <h2 class="react__tittle"> Noticias y Comunicados </h2>
+                    <h2 class="react__tittle"> Comunicados </h2>
                     <img src="maxplanck/assets/images/line.png" alt="image">
                 </div>
                 <div class="row">
+                    @foreach ($comunicados as $item)
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                         <div class="blog__card mb-50">
-                            <div class="blog__thumb w-img p-relative">
-                                <a class="blog__thumb--image" href="blog-details.html">
-                                    <img src="maxplanck/assets/images/blog/1.jpg" alt="This the first card image">
+                            <div class="blog__thumb w-fluid p-relative">
+                                <a class="blog__thumb--image" href="#">
+                                    <img src="/storage/comunicados/{{ $item->nombreImagen }}" style="height: 400px" alt="{{ $item->titulo }}">
                                 </a>
-                                <em class="b_date">April 12</em>
+                                <em class="b_date">{{ $item->titulo }}</em>
                             </div>
                             <div class="blog__card--content">
                                 <div class="blog__card--content-area mb-25">
-                                    <span class="blog__card--date">Campaigns</span>
-                                    <h3 class="blog__card--title"><a href="blog-details.html">Fostering future Schools <br> & social Innovation</a></h3>
+                                    <span class="blog__card--date">{{ $item->titulo }}</span>
+                                    <h3 class="blog__card--title"><a href="#">{{ $item->titulo }}</a></h3>
                                 </div>
                                 <div class="blog__card--icon ">
                                     <div class="blog__card--icon-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span>Nerte Gronw</span>
+                                        <span>{{ $item->titulo }}</span>
                                     </div>                                            
                                 </div>
                             </div>
-                        </div>
+                        </div>        
                     </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="blog__card mb-50">
-                            <div class="blog__thumb w-img p-relative">
-                                <a class="blog__thumb--image" href="blog-details.html">
-                                    <img src="maxplanck/assets/images/blog/2.jpg" alt="This the first card image">
-                                </a>
-                                <em class="b_date">April 18</em>
-                            </div>
-                            <div class="blog__card--content">
-                                <div class="blog__card--content-area mb-25">
-                                    <span class="blog__card--date">Education</span>
-                                    <h3 class="blog__card--title"><a href="blog-details.html">The Surprising Reason <br> CollegeTuition</a></h3>
-                                </div>
-                                <div class="blog__card--icon d-flex align-items-center">
-                                    <div class="blog__card--icon-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span>Charlie Doyle</span>
-                                    </div>                                            
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="blog__card mb-50">
-                            <div class="blog__thumb w-img p-relative">
-                                <a class="blog__thumb--image" href="blog-details.html">
-                                    <img src="maxplanck/assets/images/blog/3.jpg" alt="This the first card image">
-                                </a>
-                                <em class="b_date">June 16</em>
-                            </div>
-                            <div class="blog__card--content">
-                                <div class="blog__card--content-area mb-25">
-                                    <span class="blog__card--date">Students</span>
-                                    <h3 class="blog__card--title"><a href="blog-details.html">Those other <br> College Expenses about</a></h3>
-                                </div>
-                                <div class="blog__card--icon d-flex align-items-center">
-                                    <div class="blog__card--icon-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span>Owen Christ</span>
-                                    </div>                                            
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="blog__card mb-50">
-                            <div class="blog__thumb w-img p-relative">
-                                <a class="blog__thumb--image" href="blog-details.html">
-                                    <img src="maxplanck/assets/images/blog/3.jpg" alt="This the first card image">
-                                </a>
-                                <em class="b_date">May 22</em>
-                            </div>
-                            <div class="blog__card--content">
-                                <div class="blog__card--content-area mb-25">
-                                    <span class="blog__card--date">Strategy</span>
-                                    <h3 class="blog__card--title"><a href="blog-details.html">Those other <br> College Expenses about</a></h3>
-                                </div>
-                                <div class="blog__card--icon d-flex align-items-center">
-                                    <div class="blog__card--icon-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span>Owen Christ</span>
+                    @endforeach
+                </div>                        
+            </div>
+        </div>
+
+
+
+
+
+        <!--================= Blog Section Start Here =================-->
+        <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
+            <div class="container blog__width">
+                <div class="react__title__section text-center">                           
+                    <h2 class="react__tittle"> GALERIA </h2>
+                    <img src="maxplanck/assets/images/line.png" alt="image">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section class="section-content-block no-padding">
+                            <div class="container-fluid no-padding-gallery">
+                                <div class="row">               
+                                <div class="no-padding-gallery gallery-carousel owl-carousel" data-items='5' data-dots="false" data-autoplaytimeout="150000">
+                                    @foreach ($registrosgaleria as $item)
+                                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 gallery-container">
+                                    <a class="gallery-light-box" href="galeria-imagenes?id={{$item->id}}">
+                                        <figure class="gallery-img">
+                                        <img src="storage/galeria/{{ $item->primeraImagen->nombreimagen }}" alt="{{ $item->titulo }}">
+                                        </figure>
+                                    </a>
                                     </div>
+                                    @endforeach
+                                </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </div>                        
             </div>
         </div>
-        <!--================= Blog Section End Here =================-->
+
+
+
+
+
+        <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
+            <div class="container blog__width">
+               <div class="react__title__section text-center">
+                  <h2 class="react__tittle">Noticias</h2>
+                  <img src="maxplanck/assets/images/line.png" alt="image">
+               </div>
+               <div class="row">
+
+                @foreach ($noticias as $registro)
+                  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp" data-wow-duration="0.3s">
+                     <div class="blog__card mb-50">
+                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
+                            href="noticia?s={{$registro->slug}}"><img src="{{'storage/noticias/'.$registro->imagen->nombreimagen}}"
+                            alt="{{ strlen($registro->subtitulo) > 50 ? substr($registro->subtitulo, 0,50).'...' : $registro->subtitulo }}"></a><em class="b_date" class="bg-primary">{{ $registro->fecha_publicacion }}</em></div>
+                        <div class="blog__card--content">
+                           <div class="blog__card--content-area mb-25">
+                              <span class="blog__card--date">{{$registro->titulo}}</span>
+                              <h3 class="blog__card--title"><a href="noticia?s={{$registro->slug}}"> {{ strlen($registro->subtitulo) > 35 ? substr($registro->subtitulo, 0,35).'...' : $registro->subtitulo }}</a></h3>
+                           </div>
+                           <div class="blog__card--icon d-flex align-items-center">
+                              <div class="blog__card--icon-1">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                 </svg>
+                                 <span>{{ $registro->fecha_publicacion }}</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                @endforeach
+
+
+               </div>
+            </div>
+         </div>
+
+
+        <div class="react-upcoming__event blog__area mb-0 pb-4">
+            <div class="container mb-0 pb-0">
+                <div class="react__title__section text-center mb-0 pb-0">
+                    <h2 class="react__tittle mb-0">Ubicacion</h2>
+                    <img src="maxplanck/assets/images/line.png" alt="image">
+                </div>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3927.6552473326938!2d-76.20448182496715!3d-10.127279589984663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDA3JzM4LjIiUyA3NsKwMTInMDYuOSJX!5e0!3m2!1ses!2spe!4v1712433889027!5m2!1ses!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <!--================= Wrapper End Here =================-->

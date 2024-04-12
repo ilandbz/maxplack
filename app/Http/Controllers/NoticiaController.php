@@ -21,6 +21,7 @@ class NoticiaController extends Controller
             'subtitulo'        => $request->subtitulo,
             'slug'             => $request->slug,
             'contenido'        => $request->contenido,
+            'fecha_publicacion'        => $request->fecha_publicacion,
             'user_id'          => Auth::user()->id,
         ]);
         $file = $request->file('imagen');
@@ -53,6 +54,8 @@ class NoticiaController extends Controller
             'subtitulo'        => $request->subtitulo,
             'slug'             => $request->slug,
             'contenido'        => $request->contenido,
+            'fecha_publicacion'        => $request->fecha_publicacion,
+            'user_id'          => Auth::user()->id,
         ]);
         return response()->json([
             'ok' => 1,

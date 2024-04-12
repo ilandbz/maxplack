@@ -1126,7 +1126,7 @@ ul {
   padding: 4px 14px;
 }
 .home-banner-part .react__hero__card .hero__card-content .react-course-title {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   margin: 14px 0 16px;
   font-weight: 800;
@@ -7839,7 +7839,7 @@ ul {
   color: #0674D6;
 }
 .react-blog__area.graybg-home .b_date {
-  background: #d2093c;
+  background: #0674D6;
 }
 .react-blog__area.graybg-home .blog__card--title a {
   color: #0674D6;
@@ -8107,7 +8107,7 @@ ul {
   margin-right: 0;
 }
 .popular__course__area .course__item .react-course-title {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   margin: 14px 0 30px;
   font-weight: 600;
@@ -8217,11 +8217,30 @@ ul {
   background: #fff;
   padding: 25px 32px 42px;
 }
+.event__card{
+  min-height: 500px;
+}
 .react-upcoming__event .event__card .event__card--date {
   font-size: 16px;
   line-height: 20px;
   color: #4d5765;
 }
+
+.section_enlaces_externos {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section_enlaces_externos {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .section_enlaces_externos {
+    padding-top: 70px;
+  }
+}
+
 .react-upcoming__event .event__card .event__card--date em {
   font-size: 50px;
   line-height: 62px;

@@ -12,19 +12,19 @@ class DirectorioController extends Controller
 {
     public function store(StoreDirectorioRequest $request)
     {
-
         $file = $request->file('foto');
         $nombre_archivo = $request->dni.".".mb_strtolower($file->extension());
         Storage::disk('fotos')->put($nombre_archivo,File::get($file));
-
         $directorio = Directorio::create([
             'titulo'    => $request->titulo,
             'dni'       => $request->dni,
             'area_id'   => $request->area_id,
-            'cargo_id'  => $request->cargo_id ,
+            'cargo_id'  => $request->cargo_id,
+            'funciones' => $request->funciones,
             'email'     => $request->email,
             'celular'   => $request->celular,
             'foto'      => $nombre_archivo,
+            'link'      => $request->link,
         ]);
         return response()->json([
             'ok' => 1,
@@ -44,7 +44,6 @@ class DirectorioController extends Controller
             'dni'           => 'required',
             'area_id'       => 'required|integer',
             'cargo_id'      => 'required|integer',
-            'email'         => 'required|email',
             'celular'       => 'required|numeric',
         ];
         $mensajesComunes = [
@@ -53,7 +52,7 @@ class DirectorioController extends Controller
             'numeric' => 'Ingrese solo numeros',
             'integer' => 'Solo Numero Enteros',
             'email'  => 'No es un formato de correo Valido',
-            'email.required'    => 'El email es requerido'
+            'celular.required'    => 'El celular es requerido'
         ];
         if ($request->hasFile('foto')) {
             $reglasArchivo = [
@@ -78,10 +77,11 @@ class DirectorioController extends Controller
         $directorio->titulo = $request->titulo;
         $directorio->dni = $request->dni;
         $directorio->area_id = $request->area_id;
+        $directorio->funciones = $request->funciones;
         $directorio->cargo_id = $request->cargo_id;
         $directorio->email = $request->email;
         $directorio->celular = $request->celular;
-        
+        $directorio->link = $request->link;
         $directorio->save();
         
         return response()->json([

@@ -29,6 +29,7 @@ const crud = {
         formData.append('cargo_id', form.value.cargo_id);
         formData.append('email', form.value.email ?? ''); 
         formData.append('celular', form.value.celular ?? ''); 
+        formData.append('funciones', form.value.funciones ?? ''); 
         formData.append('foto', file.value);
         formData.append('link', form.value.link ?? ''); 
         await agregarDirectorio(formData)
@@ -55,6 +56,7 @@ const crud = {
         formData.append('cargo_id', form.value.cargo_id);
         formData.append('email', form.value.email ?? ''); 
         formData.append('celular', form.value.celular ?? ''); 
+        formData.append('funciones', form.value.funciones ?? ''); 
         formData.append('foto', file.value);
         formData.append('link', form.value.link ?? ''); 
         await actualizarDirectorio(formData)
@@ -151,6 +153,12 @@ onMounted(() => {
                                 <label for="celular" class="form-label">Celular</label>
                                 <input type="text" class="form-control" v-model="form.celular" :class="{ 'is-invalid': form.errors.celular }" placeholder="Celular">
                                 <small class="text-danger" v-for="error in form.errors.celular" :key="error">{{ error
+                                        }}</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="funciones" class="form-label">Funciones</label>
+                                <textarea class="form-control" v-model="form.funciones" :class="{ 'is-invalid': form.errors.funciones }" placeholder="funciones"></textarea>
+                                <small class="text-danger" v-for="error in form.errors.funciones" :key="error">{{ error
                                         }}</small>
                             </div>
                             <div class="mb-3">

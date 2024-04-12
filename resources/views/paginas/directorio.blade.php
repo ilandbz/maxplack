@@ -29,158 +29,29 @@
         <div class="instructors___page pt---120 pb---140">
             <div class="container pb---60">                        
                 <div class="row">
+                    @foreach ($registros as $item)
                     <div class="col-lg-3">
                         <div class="instructor__content">
                             <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/1.jpg" alt="course instructor">
+                                <img src="{{asset('storage/fotos/'.$item->foto)}}" alt="course instructor">
                                 <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
+                                    <p>{{ $item->funciones }}</p>
                                     <ul>                                            
                                         <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                        <li><a title="Curriculum" target="_blank" href="{{ $item->link }}"><i class="fas fa-file-alt"></i></a></li>
                                     </ul>
                                 </div>
                             </div>                                    
                             <div class="bottom-content"> 
-                                <h4><a href="#">Douglas Lyphe</a></h4>
-                                <p>Principal</p>
+                                <h4><a href="#">{{ $item->titulo }}</a></h4>
+                                <p>{{ $item->cargo->nombre }}</p>
                             </div>                                 
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/2.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Eleanor Fant</a></h4>
-                                <p>Lead Teacher</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/3.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Magnus Lee</a></h4>
-                                <p>Administration</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/4.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Hanson Deck</a></h4>
-                                <p>Professor</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/5.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Becky Curry</a></h4>
-                                <p>Teacher</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/6.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Giles Posture</a></h4>
-                                <p>Assistant</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/7.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Jackson Pot</a></h4>
-                                <p>Special Assistant</p>
-                            </div>                                 
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="instructor__content">
-                            <div class="instructor__image">
-                                <img src="maxplanck/assets/images/instructors/8.jpg" alt="course instructor">
-                                <div class="content__hover">
-                                    <p>Why I say old chap that is spiffing he legged easy peasy.</p>
-                                    <ul>                                            
-                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
-                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>                                    
-                            <div class="bottom-content"> 
-                                <h4><a href="#">Douglas Lyphe</a></h4>
-                                <p>Teacher</p>
-                            </div>                                 
-                        </div>
-                    </div>
+                    </div>                        
+                    @endforeach
+
+
+
                 </div>
             </div>
         </div>      
