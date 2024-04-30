@@ -1,374 +1,443 @@
-<!--================= Wrapper Start Here =================-->
-<div class="react-wrapper">
-    <div class="react-wrapper-inner">
-        <!--================= Slider Section Start Here =================-->
-        @include('componentes.slider')
-        <!--================= Slider Section End Here =================--> 
-
-        <!--=================  Service Section Start Here ================= -->
-        <div class="react_popular_topics pt---100 pb---70">
-            <div class="container"> 
-            
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="item__inner">                                    
-                            <div class="icon">
-                                <img src="maxplanck/assets/images/service/1.png" alt="image">
-                            </div>
-                            <div class="react-content">
-                                <h3 class="react-title"><a href="coureses-grid.html">TITULACION</a></h3>
-                                <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>                                    
+@include('componentes.slider')
+@foreach ($secciones as $item)
+    @php
+        echo $item->contenido;
+    @endphp
+@endforeach
+<style>
+.single-courses-2 {
+    height: 400px; /* Establece la altura deseada */
+}
+</style>
+<section class="top-courses-area">
+    <div class="container">
+        <h1 class="text-center bg-info text-white font-weight-bold" style="font-weight: 900">SERVICIOS</h1><br>
+        <div class="courses-wrapper fadeInUpBig">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-municipal"><img src="imagenes/gmunicipal.jpg" width="270" height="170" alt="courses"></a>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item__inner">                                    
-                            <div class="icon">
-                                <img src="maxplanck/assets/images/service/2.png" alt="image">
-                            </div>
-                            <div class="react-content">
-                                <h3 class="react-title"><a href="https://elibro.net/es/lc/ietpmaxplanck/inicio/">BIBLIOTECA VIRTUAL</a></h3>
-                                <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>                                    
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item__inner">                                    
-                            <div class="icon">
-                                <img src="maxplanck/assets/images/service/3.png" alt="image">
-                            </div>
-                            <div class="react-content">
-                                <h3 class="react-title"><a href="coureses-grid.html">ADMISION</a></h3>
-                                <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>                                    
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item__inner">                                    
-                            <div class="icon">
-                                <img src="maxplanck/assets/images/service/4.png" alt="image">
-                            </div>
-                            <div class="react-content">
-                                <h3 class="react-title"><a href="coureses-grid.html">MESA DE PARTES</a></h3>
-                                <a href="#" class="r__link">Leer Mas <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-                            </div>                                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--=================  Service Section End Here ================= -->
-
-        <!--=================  About Section Start Here ================= -->
-
-        
-        <div class="about__area about__area_one p-relative pt---10 pb---120">
-            <div class="container">
-                @if (isset($popup))
-                    <div class="modal fade" id="modalpopup" tabindex="600" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalpopupLabel">
-                                        {{$popup->titulo}}&nbsp;&nbsp;&nbsp;
-                                        @if ($popup->link!='#')
-                                        <a target="_blank" class="btn btn-primary" href="{{$popup->link}}" role="button">
-                                            Ver Más <i class="fas fa-chevron-circle-down"></i>
-                                        </a>                                                    
-                                        @endif
-                                    </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="react-clients react-clientso p-0 m-0">
-                                        <div class="client-slider owl-carousel p-0">
-                                            @foreach($popup->imagenesPopup as $row)
-                                            <div class="single-client p-2">
-                                                <div class="container-fluid">
-                                                    <a href="{{$row->link}}">
-                                                        <img src="{{ Storage::url('popup/'.$row->nombreImagen) }}" class="w-fluid" width="" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-municipal">GERENCIA MUNICIPAL</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Gerencia Municipal</p>
+                                    <p class="fee">Gerencia Municipal</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                @endif
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about__image">
-                            <img src="imagenes/princ.jpg" alt="About">
-                            <img class="react__shape__ab" src="storage/imagenes/loader.png" width="100" alt="Max Planck">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about__content">
-                            <h2 class="about__title">Sobre Nosotros</h2>
-                            <p class="about__paragraph">{{$organizacion->quienes_somos}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--================= About Section End Here ================= -->
-
-        <!--================= Popular Course Section Start Here =================-->
-        <div class="popular__course__area pt---100 pb---100">
-            <div class="container">
-                <div class="react__title__section text-center">
-                    <h2 class="react__tittle">Programas de Estudio</h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="course__item mb-30">
-                            <div class="course__thumb">
-                                <a href="enfermeria-tecnica"><img src="maxplanck/assets/images/course/1.png" alt="image"></a>
-                            </div>
-                            <div class="course__inner">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
-                                    <li><i class="fas fa-clock"></i> Horas : 3240</li>
-                                </ul>
-                                <h2 class="react-course-title text-center"><a href="enfermeria-tecnica">Enfermeria Tecnica</a></h2>
-                                <div class="course__card-icon d-flex align-items-center">
-                                    <div class="course__card-icon--1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                        <span>77 Estudiantes</span>
-                                    </div>                                            
-                                    <div class="react__user">
-                                        Creditos : 134
-                                    </div>
-                                </div>
-                            </div>                                    
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="course__item mb-30">
-                            <div class="course__thumb">
-                                <a href="produccion-agropecuaria"><img src="maxplanck/assets/images/course/2.png" alt="image"></a>
-                            </div>
-                            <div class="course__inner">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
-                                    <li><i class="fas fa-clock"></i> Horas : 3240</li>
-                                </ul>
-                                <h2 class="react-course-title text-center"><a href="produccion-agropecuaria">Produccion Agropecuaria</a></h2>
-                                <div class="course__card-icon d-flex align-items-center">
-                                    <div class="course__card-icon--1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                        <span>99 Estudiantes</span>
-                                    </div>                                            
-                                    <div class="react__user">
-                                        Creditos : 134
-                                    </div>
-                                </div>
-                            </div>                                    
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="course__item mb-30">
-                            <div class="course__thumb">
-                                <a href="mecanica-automotriz"><img src="maxplanck/assets/images/course/3.png" alt="image"></a>
-                            </div>
-                            <div class="course__inner">
-                                <ul class="list-unstyled d-flex justify-content-between">
-                                    <li class="mr-3"><i class="fas fa-calendar-alt"></i> Semestres : VI</li>
-                                    <li><i class="fas fa-clock"></i> Horas : 3240</li>
-                                </ul>
-                                <h2 class="react-course-title text-center"><a href="mecanica-automotriz">Mecanica Automotriz</a></h2>
-                                <div class="course__card-icon d-flex align-items-center">
-                                    <div class="course__card-icon--1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                        <span>68 Estudiantes</span>
-                                    </div>                                            
-                                    <div class="react__user">
-                                        Creditos : 134
-                                    </div>
-                                </div>
-                            </div>                                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--================= Popular Course Section End Here =================-->
-
-        <!--================= Counter Section Start Here =================-->
-        <div class="count__area pb---110">
-            <div class="container count__width">
-                <div class="row">
-                    <div class="col-xxl-11 col-xl-11 col-lg-11 offset-lg-1">
-                        <div class="row">
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                <div class="count__content">
-                                    <p class="count__content--paragraph">Estudiantes</p>
-                                    <h3 class="count__content--title-1 counter">1478</h3>                                       
-                                </div>
-                            </div>
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                <div class="count__content">
-                                    <p class="count__content--paragraph">Graduados</p>
-                                    <h3 class="count__content--title-1 counter">1731</h3>
+                            <div class="courses-link">
                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-atencion-ciudadano"><img src="imagenes/secretaria.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-atencion-ciudadano">GERENCIA DE LA OFICINA DE ATENCIÓN AL CIUDADANO</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Gerencia de Oficina</p>
+                                    <p class="fee">de Atencion al Ciudadano</p>
                                 </div>
                             </div>
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                <div class="count__content">
-                                    <p class="count__content--paragraph">Años de Creacion Institucional</p>
-                                    <h3 class="count__content--title-1 counter">280</h3>                                      
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-oficina-administracion"><img src="imagenes/administracion.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-oficina-administracion">GERENCIA DE LA OFICINA GENERAL DE ADMINISTRACIÓN</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Gerencia de Oficina</p>
+                                    <p class="fee">General de Administracion</p>
                                 </div>
                             </div>
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                                <div class="count__content">
-                                    <p class="count__content--paragraph">Programas de Estudio</p>
-                                    <h3 class="count__content--title-1 counter">3</h3>                                       
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-oficina-planeamiento"><img src="imagenes/presupuesto.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-oficina-planeamiento">GERENCIA DE LA OFICINA GENERAL DE PLANEAMIENTO Y PRESUPUESTO</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">GERENCIA DE LA OFICINA GENERAL</p>
+                                    <p class="fee">DE PLANEAMIENTO Y PRESUPUESTO</p>
                                 </div>
+                            </div>
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-territorial-infraestructura"><img src="imagenes/territorial.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-territorial-infraestructura">GERENCIA TERRITORIAL E INFRAESTRUCTURA</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">GERENCIA TERRITORIAL</p>
+                                    <p class="fee">INFRAESTRUCTURA</p>
+                                </div>
+                            </div>
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gerencia-asesoria-legal"><img src="imagenes/asesorialegal.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gerencia-asesoria-legal">GERENCIA DE LA OFICINA GENERAL DE ASESORÍA LEGAL</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">GERENCIA DE LA OFICINA</p>
+                                    <p class="fee">GENERAL DE ASESORÍA LEGAL</p>
+                                </div>
+                            </div>
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>                                                                   
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="gestion-ambiental"><img src="imagenes/rga.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="gestion-ambiental">GERENCIA DE GESTION AMBIENTAL Y RECURSOS NATURALES</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Gestion Ambiental</p>
+                                    <p class="fee">Recursos Naturales</p>
+                                </div>
+                            </div>
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="desarrollo-social"><img src="imagenes/sociales.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="desarrollo-social">GERENCIA DE DESARROLLO SOCIAL</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Gerencia</span></p>
+                                    <p class="fee">Desarrollo Social</p>
+                                </div>
+                            </div>
+                            <div class="courses-link">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 courses-col">
+                    <div class="single-courses-2 mt-30">
+                        <div class="courses-image">
+                            <a href="desarrollo-economico"><img src="imagenes/economico.jpg" width="270" height="170" alt="courses"></a>
+                        </div>
+                        <div class="courses-content">
+                            <h4 class="courses-title"><a href="desarrollo-economico">GERENCIA DE DESARROLLO ECONOMICO Y ADMINISTRACION TRIBUTARIO</a></h4>
+                            <div class="duration-rating">
+                                <div class="duration-fee">
+                                    <p class="duration">Desarrollo Economico</p>
+                                    <p class="fee">Administracion Tributario</p>
+                                </div>
+                            </div>
+                            <div class="courses-link">
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--================= Counter Section End Here =================-->
-
-
-        <!--================= Blog Section Start Here =================-->
-        <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
-            <div class="container blog__width">
-                <div class="react__title__section text-center">                           
-                    <h2 class="react__tittle"> Comunicados </h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-                <div class="row">
-                    @foreach ($comunicados as $item)
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="blog__card mb-50">
-                            <div class="blog__thumb w-fluid p-relative">
-                                <a class="blog__thumb--image" href="#">
-                                    <img src="/storage/comunicados/{{ $item->nombreImagen }}" style="height: 400px" alt="{{ $item->titulo }}">
-                                </a>
-                                <em class="b_date">{{ $item->titulo }}</em>
-                            </div>
-                            <div class="blog__card--content">
-                                <div class="blog__card--content-area mb-25">
-                                    <span class="blog__card--date">{{ $item->titulo }}</span>
-                                    <h3 class="blog__card--title"><a href="#">{{ $item->titulo }}</a></h3>
-                                </div>
-                                <div class="blog__card--icon ">
-                                    <div class="blog__card--icon-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                        <span>{{ $item->titulo }}</span>
-                                    </div>                                            
-                                </div>
-                            </div>
-                        </div>        
-                    </div>
-                    @endforeach
-                </div>                        
-            </div>
-        </div>
-
-
-
-
-
-        <!--================= Blog Section Start Here =================-->
-        <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
-            <div class="container blog__width">
-                <div class="react__title__section text-center">                           
-                    <h2 class="react__tittle"> GALERIA </h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <section class="section-content-block no-padding">
-                            <div class="container-fluid no-padding-gallery">
-                                <div class="row">               
-                                <div class="no-padding-gallery gallery-carousel owl-carousel" data-items='5' data-dots="false" data-autoplaytimeout="150000">
-                                    @foreach ($registrosgaleria as $item)
-                                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 gallery-container">
-                                    <a class="gallery-light-box" href="galeria-imagenes?id={{$item->id}}">
-                                        <figure class="gallery-img">
-                                        <img src="storage/galeria/{{ $item->primeraImagen->nombreimagen }}" alt="{{ $item->titulo }}">
-                                        </figure>
-                                    </a>
-                                    </div>
-                                    @endforeach
-                                </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>                        
-            </div>
-        </div>
-
-
-
-
-
-        <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
-            <div class="container blog__width">
-               <div class="react__title__section text-center">
-                  <h2 class="react__tittle">Noticias</h2>
-                  <img src="maxplanck/assets/images/line.png" alt="image">
-               </div>
-               <div class="row">
-
-                @foreach ($noticias as $registro)
-                  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 wow animate__fadeInUp" data-wow-duration="0.3s">
-                     <div class="blog__card mb-50">
-                        <div class="blog__thumb w-img p-relative"><a class="blog__thumb--image"
-                            href="noticia?s={{$registro->slug}}"><img src="{{'storage/noticias/'.$registro->imagen->nombreimagen}}"
-                            alt="{{ strlen($registro->subtitulo) > 50 ? substr($registro->subtitulo, 0,50).'...' : $registro->subtitulo }}"></a><em class="b_date" class="bg-primary">{{ $registro->fecha_publicacion }}</em></div>
-                        <div class="blog__card--content">
-                           <div class="blog__card--content-area mb-25">
-                              <span class="blog__card--date">{{$registro->titulo}}</span>
-                              <h3 class="blog__card--title"><a href="noticia?s={{$registro->slug}}"> {{ strlen($registro->subtitulo) > 35 ? substr($registro->subtitulo, 0,35).'...' : $registro->subtitulo }}</a></h3>
-                           </div>
-                           <div class="blog__card--icon d-flex align-items-center">
-                              <div class="blog__card--icon-1">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                 </svg>
-                                 <span>{{ $registro->fecha_publicacion }}</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                @endforeach
-
-
-               </div>
-            </div>
-         </div>
-
-
-        <div class="react-upcoming__event blog__area mb-0 pb-4">
-            <div class="container mb-0 pb-0">
-                <div class="react__title__section text-center mb-0 pb-0">
-                    <h2 class="react__tittle mb-0">Ubicacion</h2>
-                    <img src="maxplanck/assets/images/line.png" alt="image">
-                </div>
-            </div>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3927.6552473326938!2d-76.20448182496715!3d-10.127279589984663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDA3JzM4LjIiUyA3NsKwMTInMDYuOSJX!5e0!3m2!1ses!2spe!4v1712433889027!5m2!1ses!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-</div>
-<!--================= Wrapper End Here =================-->
+</section>
+<section class="event-area">
+    <div class="container">
+        <h1 class="text-center bg-info text-white font-weight-bold" style="font-weight: 900">COMUNICADOS</h1><br>
+        <div class="tab-content event-tab-items wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+            <div class="tab-pane fade show active" id="courses">
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            @php
+                                $active = true;
+                            @endphp
+                            @foreach ($comunicados as $comunicado)
+                            <div class="carousel-item {{$active == true ? 'active' : ''}}">
+                                <div class="col-lg-4">
+                                    <div class="single-event text-center mt-30">
+                                        @if($comunicado->titulo != '')
+                                            <h4 class="event-title"><a href="event-details.html">{{ $comunicado->titulo }}</a></h4>
+                                        @endif
+                                        <img src="{{asset('storage/comunicados/'.$comunicado->nombreImagen)}}" class="img-fluid" style="height: 450px" alt="">
+                                        @if ($comunicado->link)
+                                            <a href="{{$comunicado->link}}" class="more">Leer Mas <i class="far fa-chevron-right"></i></a>                                  
+                                        @endif
+                                    </div>
+                                </div>    
+                            </div>
+
+                            @php
+                                $active = false;
+                            @endphp   
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-btn text-center">
+                <a href="comunicados" class="view-more">Ver Mas <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog-area">
+    <div class="container">
+        <h1 class="text-center bg-info text-white font-weight-bold" style="font-weight: 900">NOTICIAS</h1><br>
+        <div class="blog-wrapper">
+            <div class="row-wrapper blog-active">
+                @foreach ($noticias as $registro)
+                <div class="custom-col">
+                    <div class="single-blog mt-30">
+                        <div class="blog-image" style="height: 190px">
+                            <a href="noticia?s={{$registro->slug}}">
+                                <img src="{{ asset('storage/noticias/'.$registro->id .'/'. $registro->imagen->nombreimagen) }}" width="370" height="250" alt="blog">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <?php
+                                $fechaPublicacion = Carbon\Carbon::parse($registro->fecha_publicacion);
+                                $fechaFormateada = $fechaPublicacion->isoFormat('dddd D [de] MMMM [de] YYYY', 'Do [de] MMMM [de] YYYY');
+                            ?>
+                            <ul class="meta">
+                                <li><a href="#">{{$fechaFormateada}}</a></li>
+                            </ul>
+                            <h4 class="blog-title"><a href="noticia?s={{$registro->slug}}">{{$registro->titulo}}</a></h4>
+                            <a href="noticia?s={{$registro->slug}}" class="more">Leer Mas <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <h1 class="text-center bg-info text-white font-weight-bold" style="font-weight: 900">INFORMACION SOCIAL</h1><br>
+        <div class="row">
+            <div class="col">
+                <style>
+                    .playlist-section {
+                        max-height: 250px;
+                        overflow-y: auto;
+                        overflow-x: hidden
+                    }
+                        .playlist-section::-webkit-scrollbar {
+                            width: 0.5em;
+                        }
+
+                        .playlist-section::-webkit-scrollbar-thumb {
+                            background-color: #555;
+                        }
+                    .playlist-item {
+                        background-color: #333; /* Color de fondo oscuro para cada elemento de la lista */
+                        border-color: #555; /* Color del borde */
+                        color: white;
+                    }
+                    .playlist-item img {
+                        max-width: 100px; /* Ancho máximo de la imagen previsualizada */
+                        margin-right: 10px; /* Espaciado a la derecha de la imagen */
+                    }
+                </style>
+
+                <iframe id="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=d4qEeVLCoSdWLmLm&amp;list=UULFVmWraKZdpxlQJ97dSGryyQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <div id="playlist-section" class="list-group p-0 playlist-section">
+
+                </div>
+                <script>
+                    // Cargar la lista de reproducción utilizando la API de YouTube
+                    const playlistSection = document.getElementById('playlist-section');
+                    const playlistId = 'UULFVmWraKZdpxlQJ97dSGryyQ'; // ID de la lista de reproducción
+                    const apiKey = 'AIzaSyD7zQpnJ6wpgcGMjaQoUXeCxHLZWgvoWrs'; // Reemplazar con tu clave de API
+                    const player = document.getElementById('youtube-player');
+
+                    fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${apiKey}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            // Crear la lista de reproducción
+                            data.items.forEach(item => {
+                                const videoTitle = item.snippet.title;
+                                const videoId = item.snippet.resourceId.videoId;
+                                const thumbnailUrl = item.snippet.thumbnails.default.url;
+
+                                // Obtener la duración del video
+                                fetch(`https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoId}&key=${apiKey}`)
+                                    .then(response => response.json())
+                                    .then(videoData => {
+                                        const videoDuration = parseISO8601Duration(videoData.items[0].contentDetails.duration);
+                                        // Crear un enlace para cada video con miniatura, reproducción y duración
+                                        const videoLink = document.createElement('a');
+                                        videoLink.href = `javascript:changeVideo('${videoId}')`; // Llama a la función para cambiar y reproducir el video
+                                        videoLink.classList.add('list-group-item', 'list-group-item-action', 'playlist-item'); // Agregar la clase 'playlist-item'
+                                        videoLink.innerHTML = `<div class="row"><div class="col-md-3"><img src="${thumbnailUrl}" alt="${videoTitle}" class="img-fluid"></div><div class="col-md-9">${videoTitle}<br>Duración: ${videoDuration}</div></div>`;
+                                        // Agregar el enlace a la lista de reproducción
+                                        playlistSection.appendChild(videoLink);
+                                    })
+                                    .catch(error => console.error('Error al obtener la duración del video:', error));
+                            });
+                        })
+                        .catch(error => console.error('Error al cargar la lista de reproducción:', error));
+
+                    // Función para cambiar y reproducir el video en el reproductor iframe
+                    function changeVideo(videoId) {
+                        player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    }
+
+                    // Función para convertir la duración de ISO 8601 a un formato más legible
+                    function parseISO8601Duration(duration) {
+                        const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+
+                        const hours = match[1] ? parseInt(match[1], 10) : 0;
+                        const minutes = match[2] ? parseInt(match[2], 10) : 0;
+                        const seconds = match[3] ? parseInt(match[3], 10) : 0;
+
+                        return `${hours > 0 ? hours + 'h ' : ''}${minutes > 0 ? minutes + 'm ' : ''}${seconds > 0 ? seconds + 's' : ''}`;
+                    }
+                </script>                           
+            </div>
+            <div class="col">
+            <div class="fb-page" data-href="https://www.facebook.com/muniambo.pe" data-tabs="timeline" data-width="500" data-height="560" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/muniambo.pe" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/muniambo.pe">Municipalidad Provincial de Ambo</a></blockquote></div>
+            </div>
+            <div class="col">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@municipalidaddeambo" 
+                data-unique-id="municipalidaddeambo" 
+                data-embed-type="creator" 
+                style="max-width: 780px; min-width: 288px;" > <section>
+                    <a target="_blank" href="https://www.tiktok.com/@municipalidaddeambo?refer=creator_embed">@municipalidaddeambo</a> </section> </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section_enlaces_externos">
+    <div class="container">
+        <h1 class="text-center bg-info text-white font-weight-bold" style="font-weight: 900">ENLACES EXTERNOS</h1><br>
+        <div class="row">
+            <div class="col-md-12 animation" data-animation="fadeInUp">
+                <div class="cl_logo_slider carousel_slider owl-carousel owl-theme" data-margin="15" data-loop="true" data-autoplay="true" data-dots="false"
+                data-responsive='{"0":{"items": "2"}, "100":{"items": "3"}, "100":{"items": "4"}, "100":{"items": "5"}, "100": {"items": "6"}}'>
+                    @foreach ($enlaces as $item)
+                    <div class="item">
+                        <a href="{{$item->link}}"><img src="{{asset('storage/enlacesexternos/'.$item->nombreImagen);}}" width="170px" alt="{{$item->title}}"/></a>
+                    </div>                        
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@if ($popup)
+    <div class="modal fade" id="modalPopup" tabindex="-1" aria-labelledby="modalPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-info">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalPopupLabel">Emergente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div id="imagenesPopupCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#imagenesPopupCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#imagenesPopupCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#imagenesPopupCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        @php
+                            $valor = true;
+                        @endphp
+                        @foreach ($popup->imagenesPopup as $imagen)
+                            <div class="carousel-item {{ $valor == true ? 'active' : '' }}" data-bs-interval="3000">
+                                <img src="{{ asset('storage/popup/'.$imagen->nombreImagen) }}" class="d-block w-100" alt="...">
+                            </div>
+                            @php
+                                $valor = false;
+                            @endphp
+                        @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imagenesPopupCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imagenesPopupCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>    
+@endif
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.629145476826!2d-76.20727122406618!3d-10.129411109172679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a7ee3c3391333b%3A0x9999056b8e25c935!2sMunicipalidad%20Provincial%20de%20Ambo!5e0!3m2!1ses-419!2spe!4v1689300311725!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 @include('componentes.footer')
 
-<!--================= Scroll to Top Start =================-->
-<div id="backscrollUp" class="home">
-    <span aria-hidden="true" class="arrow_carrot-up"></span>
-</div> 
-<!--================= Scroll to Top End =================-->
+
+@section('script')
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0" nonce="MNXupTpv"></script>
+<script async src="https://www.tiktok.com/embed.js"></script>
+@endsection

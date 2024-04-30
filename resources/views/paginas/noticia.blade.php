@@ -62,7 +62,7 @@
                             <h2 class="about__title">{{$noticia->titulo}}</h2>
                             <h4 class="about__sub-title">{{$noticia->subtitulo}}</h4>
                             <p class="about__paragraph">
-                                {{ $noticia->contenido }}
+                                <?= $noticia->contenido ?>
                             </p>
                         </div>
                     </div>

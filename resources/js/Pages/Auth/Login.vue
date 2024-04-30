@@ -23,7 +23,7 @@ import {useAutenticacion} from '@/Composables/autenticacion';
 <template>
     <div class="login-logo ">
         <img src="/adminlte4/assets/img/log.png">
-        <h2 class="text-white"><b>ILAN CMS</b></h2>
+        <h2 class="text-white"><b>IETP MAX PLANCK</b></h2>
     </div>
     <div class="card">
         <div class="card-body login-card-body">

@@ -1,5 +1,5 @@
 export const defineTitle = (title) => {
-    document.title =title + ' | MUNI AMBO'
+    document.title =title + ' | IETP MAX PLANCK'
 }
 
 export const getdataParamsPagination = ( data) => {

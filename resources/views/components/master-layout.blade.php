@@ -41,6 +41,9 @@
             <script src="{{ asset("adminlte4/js/adminlte.min.js") }}"></script>
             <script src="{{ asset("maxplanck/assets/js/jquery.min.js") }}"></script>
             <script src="{{ asset("adminlte4/plugins/summernote/summernote-bs4.min.js") }}"></script>
+
+
+
             <script>
                 $(function () {
                   // Summernote
@@ -48,7 +51,7 @@
               
             
                 })
-              </script>
+            </script>
             <script>
                 const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
                 const Default = {

@@ -159,7 +159,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="slogan">Slogan</label>
-                            <input class="form-control" v-model="form.slogan" type="text" placeholder="Materno" :class="{ 'is-invalid': form.errors.slogan }" />
+                            <input class="form-control" v-model="form.slogan" type="text" placeholder="Slogan" :class="{ 'is-invalid': form.errors.slogan }" />
                             <small class="text-danger" v-for="error in form.errors.slogan" :key="error">{{ error }}</small>
                         </div>
                         <div class="mb-3">
@@ -187,6 +187,11 @@
                                     <input class="form-control" v-model="form.telefono" type="tel" placeholder="Teléfono" :class="{ 'is-invalid': form.errors.telefono }" />
                                     <small class="text-danger" v-for="error in form.errors.telefono" :key="error">{{ error }}</small>
                                 </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" v-model="form.email" type="tel" placeholder="Email" :class="{ 'is-invalid': form.errors.email }" />
+                                    <small class="text-danger" v-for="error in form.errors.email" :key="error">{{ error }}</small>
+                                </div>                                
                             </div>
                             <div class="col">
                                 <div class="mb-3">

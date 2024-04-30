@@ -21,23 +21,17 @@ use Illuminate\Support\Facades\Storage;
 class HomeController extends Controller
 {
     public function __invoke(){
+        $fechaActual = Carbon::now();
+        $data['fechaActual'] = $fechaActual->isoFormat('dddd D [de] MMMM [de] YYYY', 'Do [de] MMMM [de] YYYY');
         $data['sliders']=Slider::where('es_activo', 1)->get();
-        $data['popup']=Popup::with('imagenesPopup')
-        ->where('es_activo', 1)
-        ->orderBy('created_at', 'desc')
-        ->first();
         $data['secciones']=SeccionesPrincipal::where('es_activo', 1)->get();
-        $data['registrosgaleria'] = Galeria::with([
-            'imagenes:id,nombreimagen',
-            'primeraImagen:id,nombreimagen,galeria_id'
-            ])->get();
         $data['organizacion'] = Organizacion::first();
         $data['redessociales'] = RedSocial::where('url', '!=', '#')->get();
         $data['enlaces'] = Enlace::get();
-        $data['noticias']=Noticia::with('imagen')->latest()->limit(6)->get();
         $data['menus'] = Nav::with('children')->whereNull('padre_id')->get();
-        $data['comunicados'] =Comunicado::limit(4)->get();
-        //return $data['comunicados'];
+        $data['noticias']=Noticia::with('imagen')->latest()->limit(3)->get();
+        $data['comunicados']=Comunicado::latest()->limit(8)->get();
+        $data['popup'] = Popup::with('imagenesPopup')->where('es_activo', 1)->latest()->first();
         return view('app', $data);
     }
     public function noticia(Request $request){
@@ -50,7 +44,7 @@ class HomeController extends Controller
         $data['redessociales'] = RedSocial::where('url', '!=', '#')->get();
         $data['enlaces'] = Enlace::get();
         $data['menus'] = Nav::with('children')->whereNull('padre_id')->get();
-        $data['noticia'] = Noticia::with('imagenes')->where('slug', $request->s)->first();
+        $data['noticia'] = Noticia::with('imagenes')->where('slug', 'like',$request->s)->first();
         return view('paginas.noticia', $data);
     }
     public function nosotros(){

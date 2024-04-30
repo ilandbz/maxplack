@@ -24,7 +24,7 @@ const ruta = (String(route.path).toLowerCase()).substring(1);
                     class="brand-image opacity-75 shadow rounded-circle" />
                 <!--end::Brand Image-->
                 <!--begin::Brand Text-->
-                <span class="brand-text fw-light">ILAN CMS</span>
+                <span class="brand-text fw-light">IETP MAX PLANCK</span>
                 <!--end::Brand Text-->
             </a>
             <!--end::Brand Link-->

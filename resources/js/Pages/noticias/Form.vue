@@ -107,7 +107,7 @@ const guardar = () => {
                             </div>
                             <div class="mb-3">
                                 <label for="slug" class="form-label">Slug </label>
-                                <input type="text" readonly class="form-control" v-model="form.slug" :class="{ 'is-invalid': form.errors.slug }">
+                                <input type="text" class="form-control" v-model="form.slug" :class="{ 'is-invalid': form.errors.slug }">
                                 <small class="text-danger" v-for="error in form.errors.slug" :key="error">{{ error
                                         }}</small>
                             </div>  

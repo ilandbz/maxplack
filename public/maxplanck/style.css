@@ -7876,8 +7876,11 @@ ul {
   overflow: hidden;
 }
 .react-blog__area .blog__thumb--image img {
+  display: block;
+  margin: auto;
   border-radius: 6px 6px 0 0;
   transition: all 0.5s ease 0s;
+  height: 150px;
 }
 .react-blog__area .blog__thumb--image img:hover {
   -webkit-transform: scale(1.1);
